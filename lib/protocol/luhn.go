@@ -24,7 +24,7 @@ func codepoint32(b byte) int {
 // luhn32 returns a check digit for the string s, which should be composed
 // of characters from the alphabet luhnBase32.
 // Doesn't follow the actual Luhn algorithm
-// see https://forum.universalsync.net/t/v0-9-0-new-node-id-format/478/6 for more.
+// see https://forum.syncthing.net/t/v0-9-0-new-node-id-format/478/6 for more.
 func luhn32(s string) (rune, error) {
 	factor := 1
 	sum := 0

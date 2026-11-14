@@ -8,7 +8,7 @@
 
 package fs
 
-import "github.com/universalsync/notify"
+import ""
 
 const (
 	subEventMask = notify.Create | notify.Remove | notify.Write | notify.Rename | notify.FSEventsInodeMetaMod | notify.FSEventsXattrMod

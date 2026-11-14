@@ -8,7 +8,7 @@
 
 package fs
 
-import "github.com/universalsync/notify"
+import ""
 
 const (
 	subEventMask  = notify.Create | notify.FileModified | notify.FileRenameFrom | notify.FileDelete | notify.FileRenameTo | notify.FileNoFollow

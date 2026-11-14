@@ -716,7 +716,7 @@ func autoUpgrade(cfg config.Wrapper, app *universalsync.App, evLogger events.Log
 		select {
 		case event := <-sub.C():
 			data, ok := event.Data.(map[string]string)
-			if !ok || data["clientName"] != "universalsync" || upgrade.CompareVersions(data["clientVersion"], build.Version) != upgrade.Newer {
+			if !ok ||  || upgrade.CompareVersions(data["clientVersion"], build.Version) != upgrade.Newer {
 				continue
 			}
 			if cfg.Options().AutoUpgradeEnabled() {

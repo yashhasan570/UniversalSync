@@ -197,7 +197,7 @@ func (s *Service) reportData(ctx context.Context, urVersion int, preview bool) (
 	report.Relays.Enabled = opts.RelaysEnabled
 	for _, addr := range s.cfg.Options().ListenAddresses() {
 		switch {
-		case addr == "dynamic+https://relays.universalsync.net/endpoint":
+		case addr == "dynamic+https:///endpoint":
 			report.Relays.DefaultServers++
 		case strings.HasPrefix(addr, "relay://") || strings.HasPrefix(addr, "dynamic+http"):
 			report.Relays.OtherServers++
@@ -224,7 +224,7 @@ func (s *Service) reportData(ctx context.Context, urVersion int, preview bool) (
 		report.TemporariesDisabled = opts.KeepTemporariesH == 0
 		report.TemporariesCustom = opts.KeepTemporariesH != 24
 		report.LimitBandwidthInLan = opts.LimitBandwidthInLan
-		report.CustomReleaseURL = opts.ReleasesURL != "https://upgrades.universalsync.net/meta.json"
+		report.CustomReleaseURL = opts.ReleasesURL != "https:///meta.json"
 		report.CustomStunServers = len(opts.RawStunServers) != 1 || opts.RawStunServers[0] != "default"
 
 		for _, cfg := range s.cfg.Folders() {

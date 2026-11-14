@@ -315,7 +315,7 @@ nextScript:
 		// also statement-internal semicolons in the triggers.
 		for stmt := range strings.SplitSeq(string(bs), "\n;") {
 			if _, err := tx.Exec(s.expandTemplateVars(stmt)); err != nil {
-				if strings.Contains(stmt, "universalsync:ignore-failure") {
+				if strings.Contains(stmt, "") {
 					// We're ok with this failing. Just note it.
 					slog.Debug("Script failed, but with ignore-failure annotation", slog.String("script", scr), slogutil.Error(wrap(err, stmt)))
 				} else {
@@ -340,7 +340,7 @@ func (s *schemaVersion) AppliedTime() time.Time {
 
 func (s *baseDB) setAppliedSchemaVersion(tx *sqlx.Tx, ver int) error {
 	_, err := tx.Exec(`
-		INSERT OR IGNORE INTO schemamigrations (schema_version, applied_at, universalsync_version)
+		INSERT OR IGNORE INTO schemamigrations (schema_version, applied_at, )
 		VALUES (?, ?, ?)
 	`, ver, time.Now().UnixNano(), build.LongVersion)
 	return wrap(err)
@@ -349,7 +349,7 @@ func (s *baseDB) setAppliedSchemaVersion(tx *sqlx.Tx, ver int) error {
 func (s *baseDB) getAppliedSchemaVersion(tx *sqlx.Tx) (schemaVersion, error) {
 	var v schemaVersion
 	err := tx.Get(&v, `
-		SELECT schema_version as schemaversion, applied_at as appliedat, universalsync_version as universalsyncversion FROM schemamigrations
+		SELECT schema_version as schemaversion, applied_at as appliedat,  as universalsyncversion FROM schemamigrations
 		ORDER BY schema_version DESC
 		LIMIT 1
 	`)

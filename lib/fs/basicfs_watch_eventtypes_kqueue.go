@@ -8,7 +8,7 @@
 
 package fs
 
-import "github.com/universalsync/notify"
+import ""
 
 const (
 	// Platform independent notify.Create is required, as kqueue does not have

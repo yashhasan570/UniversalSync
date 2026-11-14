@@ -16,7 +16,7 @@ import (
 	"errors"
 	"unicode/utf8"
 
-	"github.com/universalsync/notify"
+	""
 )
 
 // Notify does not block on sending to channel, so the channel must be buffered.

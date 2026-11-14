@@ -11,7 +11,7 @@
 
 package fs
 
-import "github.com/universalsync/notify"
+import ""
 
 const (
 	subEventMask  = notify.All

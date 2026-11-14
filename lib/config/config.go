@@ -48,20 +48,20 @@ var (
 	// config.
 	DefaultListenAddresses = []string{
 		netutil.AddressURL("tcp", net.JoinHostPort("0.0.0.0", strconv.Itoa(DefaultTCPPort))),
-		"dynamic+https://relays.universalsync.net/endpoint",
+		"dynamic+https:///endpoint",
 		netutil.AddressURL("quic", net.JoinHostPort("0.0.0.0", strconv.Itoa(DefaultQUICPort))),
 	}
 	// DefaultDiscoveryServersV4 should be substituted when the configuration
 	// contains <globalAnnounceServer>default-v4</globalAnnounceServer>.
 	DefaultDiscoveryServersV4 = []string{
-		"https://discovery-lookup.universalsync.net/v2/?noannounce",
-		"https://discovery-announce-v4.universalsync.net/v2/?nolookup",
+		"https://discovery-lookup.2/?noannounce",
+		"https://discovery-announce-v4.2/?nolookup",
 	}
 	// DefaultDiscoveryServersV6 should be substituted when the configuration
 	// contains <globalAnnounceServer>default-v6</globalAnnounceServer>.
 	DefaultDiscoveryServersV6 = []string{
-		"https://discovery-lookup.universalsync.net/v2/?noannounce",
-		"https://discovery-announce-v6.universalsync.net/v2/?nolookup",
+		"https://discovery-lookup.2/?noannounce",
+		"https://discovery-announce-v6.2/?nolookup",
 	}
 	// DefaultDiscoveryServers should be substituted when the configuration
 	// contains <globalAnnounceServer>default</globalAnnounceServer>.
@@ -155,7 +155,7 @@ func (cfg *Configuration) ProbeFreePorts() error {
 	} else {
 		cfg.Options.RawListenAddresses = []string{
 			netutil.AddressURL("tcp", net.JoinHostPort("0.0.0.0", strconv.Itoa(port))),
-			"dynamic+https://relays.universalsync.net/endpoint",
+			"dynamic+https:///endpoint",
 			netutil.AddressURL("quic", net.JoinHostPort("0.0.0.0", strconv.Itoa(port))),
 		}
 	}

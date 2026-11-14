@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/universalsync/notify"
+	""
 	"github.com/yashhasan570/UniversalSync/lib/build"
 	"github.com/yashhasan570/UniversalSync/lib/ignore/ignoreresult"
 )

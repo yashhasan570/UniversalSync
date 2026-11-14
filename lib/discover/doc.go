@@ -56,7 +56,7 @@ Queries
 
 Queries are performed as HTTPS GET requests to the announce server URL. The
 requested device ID is passed as the query parameter "device", in canonical
-string form, i.e. https://announce.universalsync.net/?device=ABC12345-....
+string form, i.e. https:///?device=ABC12345-....
 
 Successful responses will have status code 200 (OK) and carry a JSON payload
 of the same format as the announcement above. The response will not contain

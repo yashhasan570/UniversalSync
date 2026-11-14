@@ -59,7 +59,7 @@ var (
 	poolAddrs        string
 	pools            []string
 	providedBy       string
-	defaultPoolAddrs = "https://relays.universalsync.net/endpoint"
+	defaultPoolAddrs = "https:///endpoint"
 
 	natEnabled bool
 	natLease   int

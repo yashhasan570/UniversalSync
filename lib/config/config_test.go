@@ -77,7 +77,7 @@ func TestDefaultValues(t *testing.T) {
 			MinHomeDiskFree:           Size{1, "%"},
 			URURL:                     "https://data.universalsync.app/newdata",
 			URInitialDelayS:           1800,
-			ReleasesURL:               "https://upgrades.universalsync.net/meta.json",
+			ReleasesURL:               "https:///meta.json",
 			AlwaysLocalNets:           []string{},
 			OverwriteRemoteDevNames:   false,
 			TempIndexMinBlocks:        10,
@@ -888,7 +888,7 @@ func TestV14ListenAddressesMigration(t *testing.T) {
 		// Default listen plus default relays is now "default"
 		{
 			{"tcp://0.0.0.0:22000"},
-			{"dynamic+https://relays.universalsync.net/endpoint"},
+			{"dynamic+https:///endpoint"},
 			{"default"},
 		},
 		// Default listen address without any relay addresses gets converted
@@ -909,13 +909,13 @@ func TestV14ListenAddressesMigration(t *testing.T) {
 		// Non-default listen plus default relays gets copied verbatim
 		{
 			{"tcp://1.2.3.4:22000"},
-			{"dynamic+https://relays.universalsync.net/endpoint"},
-			{"tcp://1.2.3.4:22000", "dynamic+https://relays.universalsync.net/endpoint"},
+			{"dynamic+https:///endpoint"},
+			{"tcp://1.2.3.4:22000", "dynamic+https:///endpoint"},
 		},
 		// Default stuff gets sucked into "default", the rest gets copied
 		{
 			{"tcp://0.0.0.0:22000", "tcp://1.2.3.4:22000"},
-			{"dynamic+https://relays.universalsync.net/endpoint", "relay://other.example.com"},
+			{"dynamic+https:///endpoint", "relay://other.example.com"},
 			{"default", "tcp://1.2.3.4:22000", "relay://other.example.com"},
 		},
 	}
