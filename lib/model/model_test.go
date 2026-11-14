@@ -265,7 +265,7 @@ func BenchmarkRequestInSingleFile(b *testing.B) {
 
 func TestDeviceRename(t *testing.T) {
 	hello := protocol.Hello{
-		ClientName:    "syncthing",
+		ClientName:    "universalsync",
 		ClientVersion: "v0.9.4",
 	}
 

@@ -13,47 +13,47 @@ import (
 
 var (
 	metricCrashReportsTotal = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "crash_reports_total",
 	}, []string{"result"})
 	metricFailureReportsTotal = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "failure_reports_total",
 	}, []string{"result"})
 	metricDiskstoreFilesTotal = promauto.NewGauge(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "diskstore_files_total",
 	})
 	metricDiskstoreBytesTotal = promauto.NewGauge(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "diskstore_bytes_total",
 	})
 	metricDiskstoreOldestAgeSeconds = promauto.NewGauge(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "diskstore_oldest_age_seconds",
 	})
 	metricSentryReportsTotal = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "sentry_reports_total",
 	}, []string{"result"})
 	metricIgnoreMatchesTotal = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "ignore_matches_total",
 	}, []string{"pattern"})
 	metricSourceCodeLoadsTotal = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "source_code_loads_total",
 	}, []string{"result"})
 	metricSourceCodeCacheSize = promauto.NewGauge(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "crashreceiver",
 		Name:      "source_code_cache_size",
 	})

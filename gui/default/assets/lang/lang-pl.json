@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Uwaga: ta ścieżka to nadkatalog istniejącego folderu \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Uwaga: ta ścieżka to podkatalog istniejącego folderu \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Uwaga: ten folder to podkatalog istniejącego folderu \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Uwaga: jeżeli korzystasz z zewnętrznego obserwatora, np. {{syncthingInotify}}, upewnij się, że to ustawienie jest wyłączone.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Uwaga: jeżeli korzystasz z zewnętrznego obserwatora, np. {{universalSyncInotify}}, upewnij się, że to ustawienie jest wyłączone.",
     "Watch for Changes": "Obserwuj zmiany",
     "Watching for Changes": "Obserwowanie zmian",
     "Watching for changes discovers most changes without periodic scanning.": "Obserwowanie wykrywa większość zmian bez potrzeby okresowego skanowania.",

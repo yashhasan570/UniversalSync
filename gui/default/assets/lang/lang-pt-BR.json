@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Aviso: este caminho é o diretório pai da pasta \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Atenção, este caminho é um subdiretório de uma pasta já existente: \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Aviso: este caminho é um subdiretório da pasta \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Aviso: caso você esteja usando um observador externo como o {{syncthingInotify}}, tenha certeza de que ele está desativado.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Aviso: caso você esteja usando um observador externo como o {{universalSyncInotify}}, tenha certeza de que ele está desativado.",
     "Watch for Changes": "Observar alterações",
     "Watching for Changes": "Observando alterações",
     "Watching for changes discovers most changes without periodic scanning.": "Observar as mudanças descobre a maioria das mudanças sem uma verificação periódica.",

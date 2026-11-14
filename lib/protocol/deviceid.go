@@ -19,7 +19,7 @@ import (
 
 const (
 	DeviceIDLength = 32
-	// keep consistent with shortIDStringLength in gui/default/syncthing/app.js
+	// keep consistent with shortIDStringLength in gui/default/universalsync/app.js
 	ShortIDStringLength = 7
 )
 

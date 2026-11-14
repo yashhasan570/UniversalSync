@@ -1,4 +1,4 @@
-/syncthing
+/universal sync
 /stdiscosrv
 *.tar.gz
 *.zip
@@ -11,10 +11,10 @@ files/pidx
 bin
 perfstats*.csv
 coverage.xml
-syncthing.sig
+universal sync.sig
 RELEASE
 deb
 *.bz2
 /repos
-/proto/scripts/protoc-gen-gosyncthing
+/proto/scripts/protoc-gen-gouniversal sync
 /compat.json

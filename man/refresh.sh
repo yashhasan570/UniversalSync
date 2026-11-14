@@ -1,23 +1,23 @@
 #!/bin/bash
 
-base=https://docs.syncthing.net/man/
+base=https://docs.universalsync.net/man/
 pages=(
-	syncthing.1
+	universalsync.1
 	stdiscosrv.1
 	strelaysrv.1
-	syncthing-config.5
-	syncthing-stignore.5
-	syncthing-device-ids.7
-	syncthing-event-api.7
-	syncthing-faq.7
-	syncthing-networking.7
-	syncthing-rest-api.7
-	syncthing-security.7
-	syncthing-versioning.7
-	syncthing-bep.7
-	syncthing-localdisco.7
-	syncthing-globaldisco.7
-	syncthing-relay.7
+	universalsync-config.5
+	universalsync-stignore.5
+	universalsync-device-ids.7
+	universalsync-event-api.7
+	universalsync-faq.7
+	universalsync-networking.7
+	universalsync-rest-api.7
+	universalsync-security.7
+	universalsync-versioning.7
+	universalsync-bep.7
+	universalsync-localdisco.7
+	universalsync-globaldisco.7
+	universalsync-relay.7
 )
 
 for page in "${pages[@]}" ; do

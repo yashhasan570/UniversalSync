@@ -45,7 +45,7 @@ func main() {
 	}
 	log.Println(curValidLangs)
 
-	resp := req("https://hosted.weblate.org/api/components/syncthing/gui/statistics/", token)
+	resp := req("https://hosted.weblate.org/api/components/universalsync/gui/statistics/", token)
 	var statRes struct {
 		Results []stat
 	}
@@ -72,7 +72,7 @@ func main() {
 
 		log.Printf("Updating language %q", code)
 
-		resp := req("https://hosted.weblate.org/api/translations/syncthing/gui/"+stat.Code+"/file/", token)
+		resp := req("https://hosted.weblate.org/api/translations/universalsync/gui/"+stat.Code+"/file/", token)
 		bs, err := io.ReadAll(resp.Body)
 		if err != nil {
 			log.Fatal(err)

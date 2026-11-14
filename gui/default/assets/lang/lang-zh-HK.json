@@ -472,7 +472,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "警告，該路徑是已有文件夾「{{otherFolderLabel}}」（{{otherFolder}}）的上級目錄。",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "警告，該路徑是已有文件夾「{{otherFolder}}」的下級目錄。",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "警告，該路徑是已有文件夾「{{otherFolderLabel}}」（{{otherFolder}}）的下級目錄。",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "警告：如果你在使用外部的監視器如 {{syncthingInotify}}，你應該確保它已經取消激活。",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "警告：如果你在使用外部的監視器如 {{universalSyncInotify}}，你應該確保它已經取消激活。",
     "Watch for Changes": "監視更改",
     "Watching for Changes": "正在監視更改",
     "Watching for changes discovers most changes without periodic scanning.": "對更改的監視無需定期掃瞄就可以發現大多數更改。",

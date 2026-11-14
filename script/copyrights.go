@@ -67,7 +67,7 @@ var urlMap = map[string]string{
 	"sigs.k8s.io/yaml": "https://github.com/kubernetes-sigs/yaml",
 }
 
-const htmlFile = "gui/default/syncthing/core/aboutModalView.html"
+const htmlFile = "gui/default/universalsync/core/aboutModalView.html"
 
 type Type int
 
@@ -272,7 +272,7 @@ func writeFile(path string, data string) {
 }
 
 func getModules() []string {
-	ignoreRe := regexp.MustCompile(`golang\.org/x/|github\.com/syncthing|^[^.]+(/|$)`)
+	ignoreRe := regexp.MustCompile(`golang\.org/x/|github\.com/universalsync|^[^.]+(/|$)`)
 
 	// List all modules (used for mapping packages to modules)
 	data, err := exec.Command("go", "list", "-m", "all").Output()
@@ -285,10 +285,10 @@ func getModules() []string {
 	}
 	modules = slices.DeleteFunc(modules, func(s string) bool { return s == "" })
 
-	// List all packages in use by the syncthing binary, map them to modules
-	data, err = exec.Command("go", "list", "-deps", "./cmd/syncthing").Output()
+	// List all packages in use by the universalsync binary, map them to modules
+	data, err = exec.Command("go", "list", "-deps", "./cmd/universalsync").Output()
 	if err != nil {
-		log.Fatalf("go list -deps ./cmd/syncthing: %v", err)
+		log.Fatalf("go list -deps ./cmd/universalsync: %v", err)
 	}
 	packages := strings.Split(string(data), "\n")
 	packages = slices.DeleteFunc(packages, func(s string) bool { return s == "" })

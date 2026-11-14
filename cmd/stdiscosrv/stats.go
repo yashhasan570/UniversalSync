@@ -15,14 +15,14 @@ import (
 var (
 	apiRequestsTotal = prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "api_requests_total",
 			Help:      "Number of API requests.",
 		}, []string{"type", "result"})
 	apiRequestsSeconds = prometheus.NewSummaryVec(
 		prometheus.SummaryOpts{
-			Namespace:  "syncthing",
+			Namespace:  "universalsync",
 			Subsystem:  "discovery",
 			Name:       "api_requests_seconds",
 			Help:       "Latency of API requests.",
@@ -31,14 +31,14 @@ var (
 
 	lookupRequestsTotal = prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "lookup_requests_total",
 			Help:      "Number of lookup requests.",
 		}, []string{"result"})
 	announceRequestsTotal = prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "announcement_requests_total",
 			Help:      "Number of announcement requests.",
@@ -46,14 +46,14 @@ var (
 
 	replicationSendsTotal = prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "replication_sends_total",
 			Help:      "Number of replication sends.",
 		}, []string{"result"})
 	replicationRecvsTotal = prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "replication_recvs_total",
 			Help:      "Number of replication receives.",
@@ -61,14 +61,14 @@ var (
 
 	databaseKeys = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "database_keys",
 			Help:      "Number of database keys at last count.",
 		}, []string{"category"})
 	databaseStatisticsSeconds = prometheus.NewGauge(
 		prometheus.GaugeOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "database_statistics_seconds",
 			Help:      "Time spent running the statistics routine.",
@@ -76,14 +76,14 @@ var (
 
 	databaseOperations = prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "database_operations_total",
 			Help:      "Number of database operations.",
 		}, []string{"operation", "result"})
 	databaseOperationSeconds = prometheus.NewSummaryVec(
 		prometheus.SummaryOpts{
-			Namespace:  "syncthing",
+			Namespace:  "universalsync",
 			Subsystem:  "discovery",
 			Name:       "database_operation_seconds",
 			Help:       "Latency of database operations.",
@@ -92,14 +92,14 @@ var (
 
 	databaseWriteSeconds = prometheus.NewGauge(
 		prometheus.GaugeOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "database_write_seconds",
 			Help:      "Time spent writing the database.",
 		})
 	databaseLastWritten = prometheus.NewGauge(
 		prometheus.GaugeOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "database_last_written",
 			Help:      "Timestamp of the last successful database write.",
@@ -107,7 +107,7 @@ var (
 
 	retryAfterLevel = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "discovery",
 			Name:      "retry_after_seconds",
 			Help:      "Retry-After header value in seconds.",

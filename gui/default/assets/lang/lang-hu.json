@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Figyelem, ez az útvonal a meglévő „{{otherFolderLabel}}” ({{otherFolder}}) mappa szülőmappája.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Figyelem, ez az útvonal a meglévő „{{otherFolder}}” mappa almappája.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Figyelem, ez az útvonal a meglévő „{{otherFolderLabel}}” ({{otherFolder}}) mappa almappája.",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Figyelem: Ha eddig külső megfigyelő volt erre a célra alkalmazva, mint pl. a(z) {{syncthingInotify}}, akkor előbb meg kell győződni arról, hogy az ki lett kapcsolva.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Figyelem: Ha eddig külső megfigyelő volt erre a célra alkalmazva, mint pl. a(z) {{universalSyncInotify}}, akkor előbb meg kell győződni arról, hogy az ki lett kapcsolva.",
     "Watch for Changes": "Változásfigyelés",
     "Watching for Changes": "Változások figyelése",
     "Watching for changes discovers most changes without periodic scanning.": "A változások keresése felfedezi a legtöbb változást periodikus átnézés nélkül.",

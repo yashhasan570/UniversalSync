@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Varning: Den här sökvägen är en överordnad mapp till den befintliga mappen ”{{otherFolderLabel}}” ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Varning: Den här sökvägen är en undermapp till den befintliga mappen ”{{otherFolder}}”.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Varning: Den här sökvägen är en undermapp till den befintliga mappen ”{{otherFolderLabel}}” ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Varning: Om du använder en extern bevakare som {{syncthingInotify}}, bör du se till att den är inaktiverad.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Varning: Om du använder en extern bevakare som {{universalSyncInotify}}, bör du se till att den är inaktiverad.",
     "Watch for Changes": "Bevaka ändringar",
     "Watching for Changes": "Bevakar ändringar",
     "Watching for changes discovers most changes without periodic scanning.": "Bevakning av ändringar upptäcker de flesta ändringar utan periodisk skanning.",

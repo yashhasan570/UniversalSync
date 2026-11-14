@@ -27,7 +27,7 @@ import (
 
 var (
 	githubToken = os.Getenv("GITHUB_TOKEN")
-	githubRepo  = cmp.Or(os.Getenv("GITHUB_REPOSITORY"), "syncthing/syncthing")
+	githubRepo  = cmp.Or(os.Getenv("GITHUB_REPOSITORY"), "universalsync/universalsync")
 )
 
 func main() {

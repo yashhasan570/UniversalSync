@@ -15,7 +15,7 @@ import (
 )
 
 // Lstat is like os.Lstat, except lobotomized for Android. See
-// https://forum.syncthing.net/t/2395
+// https://forum.universalsync.net/t/2395
 func (*BasicFilesystem) underlyingLstat(name string) (fi os.FileInfo, err error) {
 	for i := 0; i < 10; i++ { // We have to draw the line somewhere
 		fi, err = os.Lstat(name)

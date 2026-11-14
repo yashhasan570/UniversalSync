@@ -77,7 +77,7 @@ func generatePrefixed(prefix string, count *atomic.Int64, found chan<- result, s
 	template := x509.Certificate{
 		SerialNumber: new(big.Int).SetInt64(mr.Int63()),
 		Subject: pkix.Name{
-			CommonName: "syncthing",
+			CommonName: "universalsync",
 		},
 		NotBefore: notBefore,
 		NotAfter:  notAfter,

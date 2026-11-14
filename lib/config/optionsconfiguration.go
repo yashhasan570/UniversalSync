@@ -39,7 +39,7 @@ type OptionsConfiguration struct {
 	URAccepted                  int      `json:"urAccepted" xml:"urAccepted"`
 	URSeen                      int      `json:"urSeen" xml:"urSeen"`
 	URUniqueID                  string   `json:"urUniqueId" xml:"urUniqueID"`
-	URURL                       string   `json:"urURL" xml:"urURL" default:"https://data.syncthing.net/newdata"`
+	URURL                       string   `json:"urURL" xml:"urURL" default:"https://data.universalsync.app/newdata"`
 	URInitialDelayS             int      `json:"urInitialDelayS" xml:"urInitialDelayS" default:"1800"`
 	AutoUpgradeIntervalH        int      `json:"autoUpgradeIntervalH" xml:"autoUpgradeIntervalH" default:"12"`
 	UpgradeToPreReleases        bool     `json:"upgradeToPreReleases" xml:"upgradeToPreReleases"`
@@ -47,7 +47,7 @@ type OptionsConfiguration struct {
 	ProgressUpdateIntervalS     int      `json:"progressUpdateIntervalS" xml:"progressUpdateIntervalS" default:"5"`
 	LimitBandwidthInLan         bool     `json:"limitBandwidthInLan" xml:"limitBandwidthInLan" default:"false"`
 	MinHomeDiskFree             Size     `json:"minHomeDiskFree" xml:"minHomeDiskFree" default:"1 %"`
-	ReleasesURL                 string   `json:"releasesURL" xml:"releasesURL" default:"https://upgrades.syncthing.net/meta.json"`
+	ReleasesURL                 string   `json:"releasesURL" xml:"releasesURL" default:"https://upgrades.universalsync.net/meta.json"`
 	AlwaysLocalNets             []string `json:"alwaysLocalNets" xml:"alwaysLocalNet"`
 	OverwriteRemoteDevNames     bool     `json:"overwriteRemoteDeviceNamesOnConnect" xml:"overwriteRemoteDeviceNamesOnConnect" default:"false"`
 	TempIndexMinBlocks          int      `json:"tempIndexMinBlocks" xml:"tempIndexMinBlocks" default:"10"`
@@ -56,7 +56,7 @@ type OptionsConfiguration struct {
 	DeprecatedDefaultFolderPath string   `json:"-" xml:"defaultFolderPath,omitempty"` // Deprecated: Do not use.
 	SetLowPriority              bool     `json:"setLowPriority" xml:"setLowPriority" default:"true"`
 	RawMaxFolderConcurrency     int      `json:"maxFolderConcurrency" xml:"maxFolderConcurrency"`
-	CRURL                       string   `json:"crURL" xml:"crashReportingURL" default:"https://crash.syncthing.net/newcrash"`
+	CRURL                       string   `json:"crURL" xml:"crashReportingURL" default:"https://crash.universalsync.net/newcrash"`
 	CREnabled                   bool     `json:"crashReportingEnabled" xml:"crashReportingEnabled" default:"true"`
 	StunKeepaliveStartS         int      `json:"stunKeepaliveStartS" xml:"stunKeepaliveStartS" default:"180"`
 	StunKeepaliveMinS           int      `json:"stunKeepaliveMinS" xml:"stunKeepaliveMinS" default:"20"`
@@ -180,7 +180,7 @@ func (opts OptionsConfiguration) StunServers() []string {
 	for _, addr := range opts.RawStunServers {
 		switch addr {
 		case "default":
-			_, records, err := net.LookupSRV("stun", "udp", "syncthing.net")
+			_, records, err := net.LookupSRV("stun", "udp", "universalsync.net")
 			if err != nil {
 				l.Debugln("Unable to resolve primary STUN servers via DNS:", err)
 			}

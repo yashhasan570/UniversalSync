@@ -110,7 +110,7 @@ func isNoAuthPath(path string, metricsWithoutAuth bool) bool {
 	noAuthPrefixes := []string{
 		// Static assets
 		"/assets/",
-		"/syncthing/",
+		"/universalsync/",
 		"/vendor/",
 		"/theme-assets/", // This leaks information from config, but probably not sensitive
 

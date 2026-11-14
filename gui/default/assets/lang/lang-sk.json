@@ -505,7 +505,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Upozornenie, táto cesta je nadradeným adresárom existujúceho priečinka \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Upozornenie, táto cesta je podadresárom existujúceho priečinka \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Upozornenie, táto cesta je podadresárom existujúceho priečinka \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Upozornenie: Ak používate externý sledovač, ako je {{syncthingInotify}}, mali by ste sa uistiť, že toto sledovanie je vypnuté.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Upozornenie: Ak používate externý sledovač, ako je {{universalSyncInotify}}, mali by ste sa uistiť, že toto sledovanie je vypnuté.",
     "Watch for Changes": "Sleduj zmeny",
     "Watching for Changes": "Sledujú sa zmeny",
     "Watching for changes discovers most changes without periodic scanning.": "Sledovanie zmien odhalí väčšinu zmien bez pravidelného skenovania.",

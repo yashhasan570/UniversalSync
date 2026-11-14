@@ -156,7 +156,7 @@ func (s *service) getListener(guiCfg config.GUIConfiguration) (net.Listener, err
 		slog.Info("Creating new HTTPS certificate")
 
 		// When generating the HTTPS certificate, use the system host name per
-		// default. If that isn't available, use the "syncthing" default.
+		// default. If that isn't available, use the "universalsync" default.
 		var name string
 		name, err = os.Hostname()
 		if err != nil {
@@ -1201,7 +1201,7 @@ func (s *service) getSupportBundle(w http.ResponseWriter, r *http.Request) {
 	if p := pprof.Lookup("goroutine"); p != nil {
 		var goroutineBuf bytes.Buffer
 		_ = p.WriteTo(&goroutineBuf, 0)
-		filename := fmt.Sprintf("syncthing-goroutines-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
+		filename := fmt.Sprintf("universalsync-goroutines-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
 		files = append(files, fileEntry{name: filename, data: goroutineBuf.Bytes()})
 	}
 
@@ -1209,7 +1209,7 @@ func (s *service) getSupportBundle(w http.ResponseWriter, r *http.Request) {
 	var heapBuf bytes.Buffer
 	runtime.GC()
 	if err := pprof.WriteHeapProfile(&heapBuf); err == nil {
-		filename := fmt.Sprintf("syncthing-heap-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
+		filename := fmt.Sprintf("universalsync-heap-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
 		files = append(files, fileEntry{name: filename, data: heapBuf.Bytes()})
 	}
 
@@ -1223,7 +1223,7 @@ func (s *service) getSupportBundle(w http.ResponseWriter, r *http.Request) {
 	if err := pprof.StartCPUProfile(&cpuBuf); err == nil {
 		time.Sleep(profilingDuration)
 		pprof.StopCPUProfile()
-		filename := fmt.Sprintf("syncthing-cpu-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
+		filename := fmt.Sprintf("universalsync-cpu-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
 		files = append(files, fileEntry{name: filename, data: cpuBuf.Bytes()})
 	}
 
@@ -1231,7 +1231,7 @@ func (s *service) getSupportBundle(w http.ResponseWriter, r *http.Request) {
 	if p := pprof.Lookup("block"); p != nil {
 		var blockBuf bytes.Buffer
 		_ = p.WriteTo(&blockBuf, 0)
-		filename := fmt.Sprintf("syncthing-block-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
+		filename := fmt.Sprintf("universalsync-block-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
 		files = append(files, fileEntry{name: filename, data: blockBuf.Bytes()})
 	}
 
@@ -1741,7 +1741,7 @@ func (*service) getCPUProf(w http.ResponseWriter, r *http.Request) {
 		duration = 30 * time.Second
 	}
 
-	filename := fmt.Sprintf("syncthing-cpu-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
+	filename := fmt.Sprintf("universalsync-cpu-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
 
 	w.Header().Set("Content-Type", "application/octet-stream")
 	w.Header().Set("Content-Disposition", "attachment; filename="+filename)
@@ -1753,7 +1753,7 @@ func (*service) getCPUProf(w http.ResponseWriter, r *http.Request) {
 }
 
 func (*service) getHeapProf(w http.ResponseWriter, _ *http.Request) {
-	filename := fmt.Sprintf("syncthing-heap-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
+	filename := fmt.Sprintf("universalsync-heap-%s-%s-%s-%s.pprof", runtime.GOOS, runtime.GOARCH, build.Version, time.Now().Format("150405")) // hhmmss
 
 	w.Header().Set("Content-Type", "application/octet-stream")
 	w.Header().Set("Content-Disposition", "attachment; filename="+filename)

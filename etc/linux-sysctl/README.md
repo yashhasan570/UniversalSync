@@ -2,9 +2,9 @@ sysctl configuration to raise UDP buffer size
 ===================
 Installation
 -----------
-**Please note:** When you installed syncthing using the official deb package, you can skip the copying.
+**Please note:** When you installed universal sync using the official deb package, you can skip the copying.
 
-Copy the file `30-syncthing.conf` to `/etc/sysctl.d/` (root permissions required).
+Copy the file `30-universal sync.conf` to `/etc/sysctl.d/` (root permissions required).
 
 In a terminal run
 ```

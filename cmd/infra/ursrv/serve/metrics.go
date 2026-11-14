@@ -13,42 +13,42 @@ import (
 
 var (
 	metricReportsTotal = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "ursrv_v2",
 		Name:      "incoming_reports_total",
 	}, []string{"result"})
 	metricsCollectsTotal = promauto.NewCounter(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "ursrv_v2",
 		Name:      "collects_total",
 	})
 	metricsCollectSecondsTotal = promauto.NewCounter(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "ursrv_v2",
 		Name:      "collect_seconds_total",
 	})
 	metricsCollectSecondsLast = promauto.NewGauge(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "ursrv_v2",
 		Name:      "collect_seconds_last",
 	})
 	metricsRecalcsTotal = promauto.NewCounter(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "ursrv_v2",
 		Name:      "recalcs_total",
 	})
 	metricsRecalcSecondsTotal = promauto.NewCounter(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "ursrv_v2",
 		Name:      "recalc_seconds_total",
 	})
 	metricsRecalcSecondsLast = promauto.NewGauge(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "ursrv_v2",
 		Name:      "recalc_seconds_last",
 	})
 	metricsWriteSecondsLast = promauto.NewGauge(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "ursrv_v2",
 		Name:      "write_seconds_last",
 	})

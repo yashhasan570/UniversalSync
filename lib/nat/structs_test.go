@@ -59,7 +59,7 @@ func TestMappingValidGateway(t *testing.T) {
 }
 
 func TestMappingClearAddresses(t *testing.T) {
-	tmpFile, err := os.CreateTemp("", "syncthing-testConfig-")
+	tmpFile, err := os.CreateTemp("", "universalsync-testConfig-")
 	if err != nil {
 		t.Fatal(err)
 	}

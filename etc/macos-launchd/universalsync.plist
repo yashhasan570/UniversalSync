@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+	Make sure the "universal sync" executable is located at ~/bin/universal sync.
+	Replace the string "USERNAME" in this file with your username, such as "jb".
+	Copy this file to ~/Library/LaunchAgents/universal sync.plist.
+	Execute "launchctl load ~/Library/LaunchAgents/universal sync.plist".
+-->
+<plist version="1.0">
+	<dict>
+		<key>Label</key>
+		<string>net.universal sync.universal sync</string>
+
+		<key>ProgramArguments</key>
+		<array>
+			<string>/Users/USERNAME/bin/universal sync</string>
+		</array>
+
+		<key>EnvironmentVariables</key>
+		<dict>
+			<key>HOME</key>
+			<string>/Users/USERNAME</string>
+			<key>STNORESTART</key>
+			<string>1</string>
+		</dict>
+
+		<key>KeepAlive</key>
+		<true/>
+
+		<key>LowPriorityIO</key>
+		<true/>
+
+		<key>ProcessType</key>
+		<string>Background</string>
+
+		<key>StandardOutPath</key>
+		<string>/Users/USERNAME/Library/Logs/Universal Sync.log</string>
+
+		<key>StandardErrorPath</key>
+		<string>/Users/USERNAME/Library/Logs/Universal Sync-Errors.log</string>
+	</dict>
+</plist>

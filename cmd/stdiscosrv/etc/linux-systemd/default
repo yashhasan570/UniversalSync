@@ -1,3 +1,3 @@
-# Default settings for syncthing-discosrv (stdiscosrv).
+# Default settings for universal sync-discosrv (stdiscosrv).
 ## Add Options here:
 DISCOSRV_OPTS=

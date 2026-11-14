@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "تحذير، هذا المجلد يحتوي داخله على مجلد آخر أضيف مسبقا\"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "تحذير، هذا المجلد هو أحد محتويات مجلد مضاف مسبقا \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "تحذير، هذا المجلد هو أحد محتويات مجلد مضاف مسبقا \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "تحذير: إذا كنت مستخدما لمراقب خارجي كـ {{syncthingInotify}}، تأكد من تعطيله.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "تحذير: إذا كنت مستخدما لمراقب خارجي كـ {{universalSyncInotify}}، تأكد من تعطيله.",
     "Watch for Changes": "راقب التغييرات",
     "Watching for Changes": "يراقب التغيرات",
     "Watching for changes discovers most changes without periodic scanning.": "مراقبة التغييرات تكشف معظم التغييرات دون إجراء المسح الدوري.",

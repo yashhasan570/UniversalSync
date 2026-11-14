@@ -47,7 +47,7 @@ var (
 func makeGauge(name string, help string, labels ...string) *prometheus.GaugeVec {
 	gauge := prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "relaypoolsrv",
 			Name:      name,
 			Help:      help,
@@ -61,7 +61,7 @@ func makeGauge(name string, help string, labels ...string) *prometheus.GaugeVec 
 func makeSummary(name string, help string, labels ...string) *prometheus.SummaryVec {
 	summary := prometheus.NewSummaryVec(
 		prometheus.SummaryOpts{
-			Namespace:  "syncthing",
+			Namespace:  "universalsync",
 			Subsystem:  "relaypoolsrv",
 			Name:       name,
 			Help:       help,
@@ -76,7 +76,7 @@ func makeSummary(name string, help string, labels ...string) *prometheus.Summary
 func makeCounter(name string, help string, labels ...string) *prometheus.CounterVec {
 	counter := prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Namespace: "syncthing",
+			Namespace: "universalsync",
 			Subsystem: "relaypoolsrv",
 			Name:      name,
 			Help:      help,

@@ -85,13 +85,13 @@ var targets = map[string]target{
 		// Only valid for the "build" and "install" commands as it lacks all
 		// the archive creation stuff. buildPkgs gets filled out in init()
 	},
-	"syncthing": {
+	"universalsync": {
 		// The default target for "build", "install", "tar", "zip", "deb", etc.
 		name:        "universalsync",
 		debname:     "universalsync",
 		debdeps:     []string{"libc6", "procps"},
 		description: "Open Source Continuous File Synchronization",
-		buildPkgs:   []string{"github.com/yashhasan570/UniversalSync/cmd/syncthing"},
+		buildPkgs:   []string{"github.com/yashhasan570/UniversalSync/cmd/universalsync"},
 		binaryName:  "universalsync", // .exe will be added automatically for Windows builds
 		archiveFiles: []archiveFile{
 			{src: "{{binary}}", dst: "{{binary}}", perm: 0o755},
@@ -100,39 +100,39 @@ var targets = map[string]target{
 			{src: "AUTHORS", dst: "AUTHORS.txt", perm: 0o644},
 			// All files from etc/ and extra/ added automatically in init().
 		},
-		systemdService: "syncthing@*.service",
+		systemdService: "universalsync@*.service",
 		installationFiles: []archiveFile{
 			{src: "{{binary}}", dst: "deb/usr/bin/{{binary}}", perm: 0o755},
-			{src: "README.md", dst: "deb/usr/share/doc/syncthing/README.txt", perm: 0o644},
-			{src: "LICENSE", dst: "deb/usr/share/doc/syncthing/LICENSE.txt", perm: 0o644},
-			{src: "AUTHORS", dst: "deb/usr/share/doc/syncthing/AUTHORS.txt", perm: 0o644},
-			{src: "man/syncthing.1", dst: "deb/usr/share/man/man1/syncthing.1", perm: 0o644},
-			{src: "man/syncthing-config.5", dst: "deb/usr/share/man/man5/syncthing-config.5", perm: 0o644},
-			{src: "man/syncthing-stignore.5", dst: "deb/usr/share/man/man5/syncthing-stignore.5", perm: 0o644},
-			{src: "man/syncthing-device-ids.7", dst: "deb/usr/share/man/man7/syncthing-device-ids.7", perm: 0o644},
-			{src: "man/syncthing-event-api.7", dst: "deb/usr/share/man/man7/syncthing-event-api.7", perm: 0o644},
-			{src: "man/syncthing-faq.7", dst: "deb/usr/share/man/man7/syncthing-faq.7", perm: 0o644},
-			{src: "man/syncthing-networking.7", dst: "deb/usr/share/man/man7/syncthing-networking.7", perm: 0o644},
-			{src: "man/syncthing-rest-api.7", dst: "deb/usr/share/man/man7/syncthing-rest-api.7", perm: 0o644},
-			{src: "man/syncthing-security.7", dst: "deb/usr/share/man/man7/syncthing-security.7", perm: 0o644},
-			{src: "man/syncthing-versioning.7", dst: "deb/usr/share/man/man7/syncthing-versioning.7", perm: 0o644},
-			{src: "etc/linux-systemd/system/syncthing@.service", dst: "deb/lib/systemd/system/syncthing@.service", perm: 0o644},
-			{src: "etc/linux-systemd/user/syncthing.service", dst: "deb/usr/lib/systemd/user/syncthing.service", perm: 0o644},
-			{src: "etc/linux-sysctl/30-syncthing.conf", dst: "deb/usr/lib/sysctl.d/30-syncthing.conf", perm: 0o644},
-			{src: "etc/firewall-ufw/syncthing", dst: "deb/etc/ufw/applications.d/syncthing", perm: 0o644},
-			{src: "etc/linux-desktop/syncthing-start.desktop", dst: "deb/usr/share/applications/syncthing-start.desktop", perm: 0o644},
-			{src: "etc/linux-desktop/syncthing-ui.desktop", dst: "deb/usr/share/applications/syncthing-ui.desktop", perm: 0o644},
-			{src: "assets/logo-32.png", dst: "deb/usr/share/icons/hicolor/32x32/apps/syncthing.png", perm: 0o644},
-			{src: "assets/logo-64.png", dst: "deb/usr/share/icons/hicolor/64x64/apps/syncthing.png", perm: 0o644},
-			{src: "assets/logo-128.png", dst: "deb/usr/share/icons/hicolor/128x128/apps/syncthing.png", perm: 0o644},
-			{src: "assets/logo-256.png", dst: "deb/usr/share/icons/hicolor/256x256/apps/syncthing.png", perm: 0o644},
-			{src: "assets/logo-512.png", dst: "deb/usr/share/icons/hicolor/512x512/apps/syncthing.png", perm: 0o644},
-			{src: "assets/logo-only.svg", dst: "deb/usr/share/icons/hicolor/scalable/apps/syncthing.svg", perm: 0o644},
+			{src: "README.md", dst: "deb/usr/share/doc/universalsync/README.txt", perm: 0o644},
+			{src: "LICENSE", dst: "deb/usr/share/doc/universalsync/LICENSE.txt", perm: 0o644},
+			{src: "AUTHORS", dst: "deb/usr/share/doc/universalsync/AUTHORS.txt", perm: 0o644},
+			{src: "man/universalsync.1", dst: "deb/usr/share/man/man1/universalsync.1", perm: 0o644},
+			{src: "man/universalsync-config.5", dst: "deb/usr/share/man/man5/universalsync-config.5", perm: 0o644},
+			{src: "man/universalsync-stignore.5", dst: "deb/usr/share/man/man5/universalsync-stignore.5", perm: 0o644},
+			{src: "man/universalsync-device-ids.7", dst: "deb/usr/share/man/man7/universalsync-device-ids.7", perm: 0o644},
+			{src: "man/universalsync-event-api.7", dst: "deb/usr/share/man/man7/universalsync-event-api.7", perm: 0o644},
+			{src: "man/universalsync-faq.7", dst: "deb/usr/share/man/man7/universalsync-faq.7", perm: 0o644},
+			{src: "man/universalsync-networking.7", dst: "deb/usr/share/man/man7/universalsync-networking.7", perm: 0o644},
+			{src: "man/universalsync-rest-api.7", dst: "deb/usr/share/man/man7/universalsync-rest-api.7", perm: 0o644},
+			{src: "man/universalsync-security.7", dst: "deb/usr/share/man/man7/universalsync-security.7", perm: 0o644},
+			{src: "man/universalsync-versioning.7", dst: "deb/usr/share/man/man7/universalsync-versioning.7", perm: 0o644},
+			{src: "etc/linux-systemd/system/universalsync@.service", dst: "deb/lib/systemd/system/universalsync@.service", perm: 0o644},
+			{src: "etc/linux-systemd/user/universalsync.service", dst: "deb/usr/lib/systemd/user/universalsync.service", perm: 0o644},
+			{src: "etc/linux-sysctl/30-universalsync.conf", dst: "deb/usr/lib/sysctl.d/30-universalsync.conf", perm: 0o644},
+			{src: "etc/firewall-ufw/universalsync", dst: "deb/etc/ufw/applications.d/universalsync", perm: 0o644},
+			{src: "etc/linux-desktop/universalsync-start.desktop", dst: "deb/usr/share/applications/universalsync-start.desktop", perm: 0o644},
+			{src: "etc/linux-desktop/universalsync-ui.desktop", dst: "deb/usr/share/applications/universalsync-ui.desktop", perm: 0o644},
+			{src: "assets/logo-32.png", dst: "deb/usr/share/icons/hicolor/32x32/apps/universalsync.png", perm: 0o644},
+			{src: "assets/logo-64.png", dst: "deb/usr/share/icons/hicolor/64x64/apps/universalsync.png", perm: 0o644},
+			{src: "assets/logo-128.png", dst: "deb/usr/share/icons/hicolor/128x128/apps/universalsync.png", perm: 0o644},
+			{src: "assets/logo-256.png", dst: "deb/usr/share/icons/hicolor/256x256/apps/universalsync.png", perm: 0o644},
+			{src: "assets/logo-512.png", dst: "deb/usr/share/icons/hicolor/512x512/apps/universalsync.png", perm: 0o644},
+			{src: "assets/logo-only.svg", dst: "deb/usr/share/icons/hicolor/scalable/apps/universalsync.svg", perm: 0o644},
 		},
 	},
 	"stdiscosrv": {
 		name:        "stdiscosrv",
-		debname:     "syncthing-discosrv",
+		debname:     "universalsync-discosrv",
 		debdeps:     []string{"libc6"},
 		debpre:      "cmd/stdiscosrv/scripts/preinst",
 		description: "Universal Sync Discovery Server",
@@ -147,18 +147,18 @@ var targets = map[string]target{
 		systemdService: "stdiscosrv.service",
 		installationFiles: []archiveFile{
 			{src: "{{binary}}", dst: "deb/usr/bin/{{binary}}", perm: 0o755},
-			{src: "cmd/stdiscosrv/README.md", dst: "deb/usr/share/doc/syncthing-discosrv/README.txt", perm: 0o644},
-			{src: "LICENSE", dst: "deb/usr/share/doc/syncthing-discosrv/LICENSE.txt", perm: 0o644},
-			{src: "AUTHORS", dst: "deb/usr/share/doc/syncthing-discosrv/AUTHORS.txt", perm: 0o644},
+			{src: "cmd/stdiscosrv/README.md", dst: "deb/usr/share/doc/universalsync-discosrv/README.txt", perm: 0o644},
+			{src: "LICENSE", dst: "deb/usr/share/doc/universalsync-discosrv/LICENSE.txt", perm: 0o644},
+			{src: "AUTHORS", dst: "deb/usr/share/doc/universalsync-discosrv/AUTHORS.txt", perm: 0o644},
 			{src: "man/stdiscosrv.1", dst: "deb/usr/share/man/man1/stdiscosrv.1", perm: 0o644},
 			{src: "cmd/stdiscosrv/etc/linux-systemd/stdiscosrv.service", dst: "deb/lib/systemd/system/stdiscosrv.service", perm: 0o644},
-			{src: "cmd/stdiscosrv/etc/linux-systemd/default", dst: "deb/etc/default/syncthing-discosrv", perm: 0o644},
+			{src: "cmd/stdiscosrv/etc/linux-systemd/default", dst: "deb/etc/default/universalsync-discosrv", perm: 0o644},
 			{src: "cmd/stdiscosrv/etc/firewall-ufw/stdiscosrv", dst: "deb/etc/ufw/applications.d/stdiscosrv", perm: 0o644},
 		},
 	},
 	"strelaysrv": {
 		name:        "strelaysrv",
-		debname:     "syncthing-relaysrv",
+		debname:     "universalsync-relaysrv",
 		debdeps:     []string{"libc6"},
 		debpre:      "cmd/strelaysrv/scripts/preinst",
 		description: "Universal Sync Relay Server",
@@ -174,13 +174,13 @@ var targets = map[string]target{
 		systemdService: "strelaysrv.service",
 		installationFiles: []archiveFile{
 			{src: "{{binary}}", dst: "deb/usr/bin/{{binary}}", perm: 0o755},
-			{src: "cmd/strelaysrv/README.md", dst: "deb/usr/share/doc/syncthing-relaysrv/README.txt", perm: 0o644},
-			{src: "cmd/strelaysrv/LICENSE", dst: "deb/usr/share/doc/syncthing-relaysrv/LICENSE.txt", perm: 0o644},
-			{src: "LICENSE", dst: "deb/usr/share/doc/syncthing-relaysrv/LICENSE.txt", perm: 0o644},
-			{src: "AUTHORS", dst: "deb/usr/share/doc/syncthing-relaysrv/AUTHORS.txt", perm: 0o644},
+			{src: "cmd/strelaysrv/README.md", dst: "deb/usr/share/doc/universalsync-relaysrv/README.txt", perm: 0o644},
+			{src: "cmd/strelaysrv/LICENSE", dst: "deb/usr/share/doc/universalsync-relaysrv/LICENSE.txt", perm: 0o644},
+			{src: "LICENSE", dst: "deb/usr/share/doc/universalsync-relaysrv/LICENSE.txt", perm: 0o644},
+			{src: "AUTHORS", dst: "deb/usr/share/doc/universalsync-relaysrv/AUTHORS.txt", perm: 0o644},
 			{src: "man/strelaysrv.1", dst: "deb/usr/share/man/man1/strelaysrv.1", perm: 0o644},
 			{src: "cmd/strelaysrv/etc/linux-systemd/strelaysrv.service", dst: "deb/lib/systemd/system/strelaysrv.service", perm: 0o644},
-			{src: "cmd/strelaysrv/etc/linux-systemd/default", dst: "deb/etc/default/syncthing-relaysrv", perm: 0o644},
+			{src: "cmd/strelaysrv/etc/linux-systemd/default", dst: "deb/etc/default/universalsync-relaysrv", perm: 0o644},
 			{src: "cmd/strelaysrv/etc/firewall-ufw/strelaysrv", dst: "deb/etc/ufw/applications.d/strelaysrv", perm: 0o644},
 		},
 	},
@@ -222,19 +222,19 @@ func initTargets() {
 	}
 	targets["all"] = all
 
-	// The "syncthing" target includes a few more files found in the "etc"
+	// The "universalsync" target includes a few more files found in the "etc"
 	// and "extra" dirs.
-	syncthingPkg := targets["syncthing"]
+	universalsyncPkg := targets["universalsync"]
 	for _, file := range listFiles("etc") {
-		syncthingPkg.archiveFiles = append(syncthingPkg.archiveFiles, archiveFile{src: file, dst: file, perm: 0o644})
+		universalsyncPkg.archiveFiles = append(universalsyncPkg.archiveFiles, archiveFile{src: file, dst: file, perm: 0o644})
 	}
 	for _, file := range listFiles("extra") {
-		syncthingPkg.archiveFiles = append(syncthingPkg.archiveFiles, archiveFile{src: file, dst: file, perm: 0o644})
+		universalsyncPkg.archiveFiles = append(universalsyncPkg.archiveFiles, archiveFile{src: file, dst: file, perm: 0o644})
 	}
 	for _, file := range listFiles("extra") {
-		syncthingPkg.installationFiles = append(syncthingPkg.installationFiles, archiveFile{src: file, dst: "deb/usr/share/doc/syncthing/" + filepath.Base(file), perm: 0o644})
+		universalsyncPkg.installationFiles = append(universalsyncPkg.installationFiles, archiveFile{src: file, dst: "deb/usr/share/doc/universalsync/" + filepath.Base(file), perm: 0o644})
 	}
-	targets["syncthing"] = syncthingPkg
+	targets["universalsync"] = universalsyncPkg
 }
 
 func main() {
@@ -257,9 +257,9 @@ func main() {
 		runCommand("install", targets["all"])
 	} else {
 		// with any command given but not a target, the target is
-		// "syncthing". So "go run build.go install" is "go run build.go install
-		// syncthing" etc.
-		targetName := "syncthing"
+		// "universalsync". So "go run build.go install" is "go run build.go install
+		// universalsync" etc.
+		targetName := "universalsync"
 		if flag.NArg() > 1 {
 			targetName = flag.Arg(1)
 		}
@@ -619,7 +619,7 @@ func buildDeb(target target, tags []string) {
 		}
 	}
 
-	maintainer := "Universal Sync Release Management <release@syncthing.net>"
+	maintainer := "Universal Sync Release Management <release@universalsync.net>"
 	debver := version
 	if strings.HasPrefix(debver, "v") {
 		debver = debver[1:]
@@ -641,7 +641,7 @@ func buildDeb(target target, tags []string) {
 		"-m", maintainer,
 		"--vendor", maintainer,
 		"--description", target.description,
-		"--url", "https://syncthing.net/",
+		"--url", "https://universalsync.net/",
 		"--license", "MPL-2",
 	}
 	for _, dep := range target.debdeps {
@@ -705,9 +705,9 @@ func shouldBuildSyso(dir string) (string, error) {
 			"CompanyName":      "The Universal Sync Authors",
 			"FileDescription":  "Universal Sync - Open Source Continuous File Synchronization",
 			"FileVersion":      version,
-			"InternalName":     "syncthing",
+			"InternalName":     "universalsync",
 			"LegalCopyright":   "The Universal Sync Authors",
-			"OriginalFilename": "syncthing",
+			"OriginalFilename": "universalsync",
 			"ProductName":      "Universal Sync",
 			"ProductVersion":   version,
 		},
@@ -729,7 +729,7 @@ func shouldBuildSyso(dir string) (string, error) {
 		}
 	}()
 
-	sysoPath := filepath.Join(dir, "cmd", "syncthing", "resource.syso")
+	sysoPath := filepath.Join(dir, "cmd", "universalsync", "resource.syso")
 
 	// See https://github.com/josephspurrier/goversioninfo#command-line-flags
 	// For manifest see https://learn.microsoft.com/en-us/windows/console/console-allocation-policy
@@ -737,7 +737,7 @@ func shouldBuildSyso(dir string) (string, error) {
 	is64Bit := strings.Contains(goarch, "64")
 
 	args := []string{
-		"-manifest=assets/windows/syncthing.exe.manifest", // console-allocation-policy
+		"-manifest=assets/windows/universalsync.exe.manifest", // console-allocation-policy
 		"-o", sysoPath, // output path
 		fmt.Sprintf("-arm=%v", isARM),
 		fmt.Sprintf("-64=%v", is64Bit),

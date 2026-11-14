@@ -13,22 +13,22 @@ import (
 
 var (
 	metricUpgradeChecks = promauto.NewCounter(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "upgrade",
 		Name:      "metadata_requests",
 	})
 	metricFilterCalls = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "upgrade",
 		Name:      "filter_calls",
 	}, []string{"result"})
 	metricHTTPRequests = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "upgrade",
 		Name:      "http_requests",
 	}, []string{"target", "result"})
 	metricLatestReleaseInfo = promauto.NewGaugeVec(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "upgrade",
 		Name:      "latest_release_info",
 		Help:      "Release information",

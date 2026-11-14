@@ -343,10 +343,10 @@ func archiveFileVisitor(dir string, tempFile *string, signature *[]byte, archive
 	archiveDir := path.Dir(archivePath)
 	l.Debugf("considering file %s", archivePath)
 	switch filename {
-	case "syncthing", "syncthing.exe":
+	case "universalsync", "universalsync.exe":
 		archiveDirs := strings.Split(archiveDir, "/")
 		if len(archiveDirs) > 1 {
-			// Don't consider "syncthing" files found too deeply, as they may be
+			// Don't consider "universalsync" files found too deeply, as they may be
 			// other things.
 			return nil
 		}
@@ -384,13 +384,13 @@ func verifyUpgrade(archiveName, tempName string, sig []byte) error {
 
 	// Create a new reader that will serve reads from, in order:
 	//
-	// - the archive name ("syncthing-linux-amd64-v0.13.0-beta.4.tar.gz")
+	// - the archive name ("universalsync-linux-amd64-v0.13.0-beta.4.tar.gz")
 	//   followed by a newline
 	//
 	// - the temp file contents
 	//
 	// We then verify the release signature against the contents of this
-	// multireader. This ensures that it is not only a bonafide syncthing
+	// multireader. This ensures that it is not only a bonafide universalsync
 	// binary, but it is also of exactly the platform and version we expect.
 
 	mr := io.MultiReader(strings.NewReader(archiveName+"\n"), fd)
@@ -408,7 +408,7 @@ func verifyUpgrade(archiveName, tempName string, sig []byte) error {
 func writeBinary(dir string, inFile io.Reader) (filename string, err error) {
 	// Write the binary to a temporary file.
 
-	outFile, err := os.CreateTemp(dir, "syncthing")
+	outFile, err := os.CreateTemp(dir, "universalsync")
 	if err != nil {
 		return "", err
 	}

@@ -75,7 +75,7 @@ func TestCrashReportFingerprint(t *testing.T) {
 			ldb:     true,
 		},
 		{
-			message: `panic: write /var/syncthing/config/index-v0.14.0.db/2732813.log: cannot allocate memory`,
+			message: `panic: write /var/universalsync/config/index-v0.14.0.db/2732813.log: cannot allocate memory`,
 			exp:     `panic: write x: cannot allocate memory`,
 			ldb:     true,
 		},

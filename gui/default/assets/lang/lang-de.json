@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Warnung, dieser Pfad ist ein übergeordneter Ordner eines existierenden Ordners „{{otherFolderLabel}}“ ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Warnung, dieser Pfad ist ein Unterordner des existierenden Ordners „{{otherFolder}}“.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Warnung, dieser Pfad ist ein Unterordner eines existierenden Ordners „{{otherFolderLabel}}“ ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Warnung: Wenn Sie ein externes Überwachungsprogramm wie {{syncthingInotify}} verwenden, sollten Sie sicherstellen, dass dieses deaktiviert ist.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Warnung: Wenn Sie ein externes Überwachungsprogramm wie {{universalSyncInotify}} verwenden, sollten Sie sicherstellen, dass dieses deaktiviert ist.",
     "Watch for Changes": "Änderungen überwachen",
     "Watching for Changes": "Überwachung von Änderungen",
     "Watching for changes discovers most changes without periodic scanning.": "Das Überwachen von Änderungen entdeckt die meisten Änderungen ohne regelmäßiges Scannen.",

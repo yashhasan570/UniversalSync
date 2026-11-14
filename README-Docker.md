@@ -1,15 +1,15 @@
 # Docker Container for Universal Sync
 
-Use the Dockerfile in this repo, or pull the `syncthing/syncthing` image
+Use the Dockerfile in this repo, or pull the `universal sync/universal sync` image
 from Docker Hub.
 
-Use the `/var/syncthing` volume to have the synchronized files available on the
+Use the `/var/universal sync` volume to have the synchronized files available on the
 host. You can add more folders and map them as you prefer.
 
 Note that Universal Sync runs as UID 1000 and GID 1000 by default. These may be
 altered with the `PUID` and `PGID` environment variables. In addition
 the name of the Universal Sync instance can be optionally defined by using
-`--hostname=syncthing` parameter.
+`--hostname=universal sync` parameter.
 
 To grant Universal Sync additional capabilities without running as root, use the
 `PCAP` environment variable with the same syntax as that for `setcap(8)`.
@@ -22,10 +22,10 @@ example `UMASK=002`.
 
 **Docker cli**
 ```
-$ docker pull syncthing/syncthing
+$ docker pull universal sync/universal sync
 $ docker run --network=host  -e STGUIADDRESS= \
-    -v /wherever/st-sync:/var/syncthing \
-    syncthing/syncthing:latest
+    -v /wherever/st-sync:/var/universal sync \
+    universal sync/universal sync:latest
 ```
 
 **Docker compose**
@@ -33,16 +33,16 @@ $ docker run --network=host  -e STGUIADDRESS= \
 ---
 version: "3"
 services:
-  syncthing:
-    image: syncthing/syncthing
-    container_name: syncthing
-    hostname: my-syncthing
+  universal sync:
+    image: universal sync/universal sync
+    container_name: universal sync
+    hostname: my-universal sync
     environment:
       - PUID=1000
       - PGID=1000
       - STGUIADDRESS=
     volumes:
-      - /wherever/st-sync:/var/syncthing
+      - /wherever/st-sync:/var/universal sync
     network_mode: host
     restart: unless-stopped
     healthcheck:
@@ -63,8 +63,8 @@ rates unless local device addresses are configured manually.
 It is therefore strongly recommended to stick to the [host network mode](https://docs.docker.com/network/host/),
 as shown above.
 
-Be aware that syncthing alone is now in control of what interfaces and ports it
-listens on. You can edit the syncthing configuration to change the defaults if
+Be aware that universal sync alone is now in control of what interfaces and ports it
+listens on. You can edit the universal sync configuration to change the defaults if
 there are conflicts.
 
 ## GUI Security

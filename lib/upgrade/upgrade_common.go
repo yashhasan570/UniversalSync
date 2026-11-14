@@ -250,11 +250,11 @@ func releaseNames(tag string) []string {
 	// tricking us into doing a downgrade.
 	if build.IsDarwin {
 		return []string{
-			fmt.Sprintf("syncthing-macos-%s-%s.", runtime.GOARCH, tag),
-			fmt.Sprintf("syncthing-macosx-%s-%s.", runtime.GOARCH, tag),
+			fmt.Sprintf("universalsync-macos-%s-%s.", runtime.GOARCH, tag),
+			fmt.Sprintf("universalsync-macosx-%s-%s.", runtime.GOARCH, tag),
 		}
 	}
 	return []string{
-		fmt.Sprintf("syncthing-%s-%s-%s.", runtime.GOOS, runtime.GOARCH, tag),
+		fmt.Sprintf("universalsync-%s-%s-%s.", runtime.GOOS, runtime.GOARCH, tag),
 	}
 }

@@ -416,7 +416,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Warskôging, dit paad is in boppelizzende triemtafel fan in besteande map \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Warskôging, dit paad is in ûnderlizzende triemtafel fan in besteande map \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Warskôging, dit paad is in ûnderlizzende triemtafel fan in besteande map \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Warskôging: As jo in eksterne sjogger lykas {{syncthingInotify}} brûke, bin der dan wiis fan dat dizze út stiet.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Warskôging: As jo in eksterne sjogger lykas {{universalSyncInotify}} brûke, bin der dan wiis fan dat dizze út stiet.",
     "Watch for Changes": "Sjoch foar Feroarings",
     "Watching for Changes": "Sjocht foar Feroarings",
     "Watching for changes discovers most changes without periodic scanning.": "Sjen foar feroarings ûntdekt de measte feroarings sûnder periodyk skennen.",

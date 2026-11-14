@@ -10,9 +10,9 @@ import "testing"
 
 func TestCompilerRe(t *testing.T) {
 	tests := [][3]string{
-		{`syncthing v0.11.0 (xgcc (Ubuntu 4.9.3-0ubuntu4) 4.9.3 linux-amd64 default) niklas@Niklas-Netbook 2015-04-26 13:15:08 UTC`, "xgcc (Ubuntu 4.9.3-0ubuntu4) 4.9.3", "niklas@Niklas-Netbook"},
-		{`syncthing v0.12.0-rc5 "Beryllium Bedbug" (go1.4.2 linux-arm android) unknown-user@Felix-T420 2015-10-22 18:32:15 UTC`, "go1.4.2", "unknown-user@Felix-T420"},
-		{`syncthing v0.13.0-beta.0+39-ge267bf3 "Copper Cockroach" (go1.4.2 linux-amd64) portage@slevermann.de 2016-01-20 08:41:52 UTC`, "go1.4.2", "portage@slevermann.de"},
+		{`universalsync v0.11.0 (xgcc (Ubuntu 4.9.3-0ubuntu4) 4.9.3 linux-amd64 default) niklas@Niklas-Netbook 2015-04-26 13:15:08 UTC`, "xgcc (Ubuntu 4.9.3-0ubuntu4) 4.9.3", "niklas@Niklas-Netbook"},
+		{`universalsync v0.12.0-rc5 "Beryllium Bedbug" (go1.4.2 linux-arm android) unknown-user@Felix-T420 2015-10-22 18:32:15 UTC`, "go1.4.2", "unknown-user@Felix-T420"},
+		{`universalsync v0.13.0-beta.0+39-ge267bf3 "Copper Cockroach" (go1.4.2 linux-amd64) portage@slevermann.de 2016-01-20 08:41:52 UTC`, "go1.4.2", "portage@slevermann.de"},
 	}
 
 	for _, tc := range tests {

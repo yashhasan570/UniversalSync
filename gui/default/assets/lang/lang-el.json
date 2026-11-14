@@ -510,7 +510,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Προσοχή, αυτό το μονοπάτι είναι γονικός φάκελος ενός υπάρχοντος φακέλου \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Προσοχή, αυτό το μονοπάτι είναι υποφάκελος του υπάρχοντος φακέλου \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Προσοχή, αυτό το μονοπάτι είναι υποφάκελος ενός υπάρχοντος φακέλου \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Προσοχή: αν χρησιμοποιείτε ένα εξωτερικό εργαλείο επιτήρησης, όπως το {{syncthingInotify}}, σιγουρευτείτε ότι έχει απενεργοποιηθεί.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Προσοχή: αν χρησιμοποιείτε ένα εξωτερικό εργαλείο επιτήρησης, όπως το {{universalSyncInotify}}, σιγουρευτείτε ότι έχει απενεργοποιηθεί.",
     "Watch for Changes": "Επιτήρηση αλλαγών",
     "Watching for Changes": "Εκτελείται η επιτήρηση αλλαγών",
     "Watching for changes discovers most changes without periodic scanning.": "Με την επιτήρηση αλλαγών ανιχνεύονται οι περισσότερες αλλαγές χωρίς τακτικές σαρώσεις.",

@@ -14,7 +14,7 @@ Requires Go (see `go.mod`):
 go run build.go
 ```
 
-The web GUI lives in the separate syncthing gui project and is fetched at build time.
+The web GUI lives in the separate universal sync gui project and is fetched at build time.
 
 ## Sync
 

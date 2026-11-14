@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Внимание, този път е родителска папка съществуващата „{{otherFolderLabel}}“ ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Внимание, този път е подпапка съществуващата „{{otherFolder}}“.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Внимание, този път е подпапка на съществуващата „{{otherFolderLabel}}“ ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Внимание: Ако използвате външно приложение за наблюдение като {{syncthingInotify}}, трябва да го спрете.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Внимание: Ако използвате външно приложение за наблюдение като {{universalSyncInotify}}, трябва да го спрете.",
     "Watch for Changes": "Наблюдаване за промени",
     "Watching for Changes": "Наблюдаване за промени",
     "Watching for changes discovers most changes without periodic scanning.": "Наблюдението за промени открива повечето изменения без периодични обхождания.",

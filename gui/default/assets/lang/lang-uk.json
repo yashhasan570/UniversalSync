@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Попередження, цей шлях є батьківським каталогом наявної папки «{{otherFolderLabel}}» ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Попередження, цей шлях є підкаталогом наявної папки «{{otherFolder}}».",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Попередження, цей шлях є підкаталогом наявної папки «{{otherFolderLabel}}» ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Попередження: якщо ви використовуєте зовнішній монітор, як-от {{syncthingInotify}}, переконайтеся, що він деактивований.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Попередження: якщо ви використовуєте зовнішній монітор, як-от {{universalSyncInotify}}, переконайтеся, що він деактивований.",
     "Watch for Changes": "Відстежувати зміни",
     "Watching for Changes": "Відстеження змін",
     "Watching for changes discovers most changes without periodic scanning.": "Відстеження змін виявляє більшість змін без періодичного сканування.",

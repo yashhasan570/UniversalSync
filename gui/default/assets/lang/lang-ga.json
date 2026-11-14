@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Rabhadh, is máthairchomhadlann é an cosán seo d'fhillteán atá ann cheana féin \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Rabhadh, is fochomhadlann é an cosán seo d'fhillteán atá ann cheana féin \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Rabhadh, is fochomhadlann é an cosán seo d'fhillteán atá ann cheana féin \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Rabhadh: Má tá uaireadóir seachtrach á úsáid agat mar {{syncthingInotify}}, ba chóir duit a chinntiú go bhfuil sé díghníomhachtaithe.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Rabhadh: Má tá uaireadóir seachtrach á úsáid agat mar {{universalSyncInotify}}, ba chóir duit a chinntiú go bhfuil sé díghníomhachtaithe.",
     "Watch for Changes": "Bí ag faire ar athruithe",
     "Watching for Changes": "Ag Faire ar Athruithe",
     "Watching for changes discovers most changes without periodic scanning.": "Má bhreathnaíonn tú ar athruithe, faightear amach an chuid is mó de na hathruithe gan scanadh tréimhsiúil.",

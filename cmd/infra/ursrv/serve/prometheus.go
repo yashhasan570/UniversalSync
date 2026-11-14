@@ -21,7 +21,7 @@ import (
 	"github.com/yashhasan570/UniversalSync/lib/ur/contract"
 )
 
-const namePrefix = "syncthing_usage_"
+const namePrefix = "universalsync_usage_"
 
 type metricsSet struct {
 	srv *server

@@ -43,7 +43,7 @@ func main() {
 	}
 	log.Println(curValidLangs)
 
-	resp := req("https://www.transifex.com/api/2/project/syncthing/resource/gui/stats")
+	resp := req("https://www.transifex.com/api/2/project/universalsync/resource/gui/stats")
 
 	var stats map[string]stat
 	err := json.NewDecoder(resp.Body).Decode(&stats)
@@ -72,7 +72,7 @@ func main() {
 
 		log.Printf("Updating language %q", code)
 
-		resp := req("https://www.transifex.com/api/2/project/syncthing/resource/gui/translation/" + code)
+		resp := req("https://www.transifex.com/api/2/project/universalsync/resource/gui/translation/" + code)
 		var t translation
 		err := json.NewDecoder(resp.Body).Decode(&t)
 		if err != nil {

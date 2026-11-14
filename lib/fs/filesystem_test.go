@@ -219,7 +219,7 @@ func TestRepro9677MissingMtimeFS(t *testing.T) {
 
 	checkMtime(firstFS)
 
-	// Now syncthing gets upgraded (or even just restarted), which resets the
+	// Now universalsync gets upgraded (or even just restarted), which resets the
 	// case FS registry as it lives in memory.
 	globalCaseFilesystemRegistry = caseFilesystemRegistry{caseCaches: make(map[fskey]*caseCache)}
 

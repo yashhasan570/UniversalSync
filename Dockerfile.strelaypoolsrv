@@ -1,13 +1,13 @@
 FROM alpine
 ARG TARGETARCH
 
-LABEL org.opencontainers.image.authors="The Syncthing Project" \
-      org.opencontainers.image.url="https://syncthing.net" \
-      org.opencontainers.image.documentation="https://docs.syncthing.net" \
-      org.opencontainers.image.source="https://github.com/syncthing/syncthing" \
-      org.opencontainers.image.vendor="The Syncthing Project" \
+LABEL org.opencontainers.image.authors="The Universal Sync Project" \
+      org.opencontainers.image.url="https://universal sync.net" \
+      org.opencontainers.image.documentation="https://docs.universal sync.net" \
+      org.opencontainers.image.source="https://github.com/universal sync/universal sync" \
+      org.opencontainers.image.vendor="The Universal Sync Project" \
       org.opencontainers.image.licenses="MPL-2.0" \
-      org.opencontainers.image.title="Syncthing Relay Pool Server"
+      org.opencontainers.image.title="Universal Sync Relay Pool Server"
 
 EXPOSE 8080
 

@@ -347,7 +347,7 @@ func (s *Service) tryNATDevice(ctx context.Context, natd Device, intAddr Address
 
 	if extPort != 0 {
 		// First try renewing our existing mapping, if we have one.
-		name := fmt.Sprintf("syncthing-%d", extPort)
+		name := fmt.Sprintf("universalsync-%d", extPort)
 		port, err = natd.AddPortMapping(ctx, protocol, intAddr.Port, extPort, name, leaseTime)
 		if err == nil {
 			extPort = port
@@ -365,7 +365,7 @@ func (s *Service) tryNATDevice(ctx context.Context, natd Device, intAddr Address
 
 		// Then try up to ten random ports.
 		extPort = 1024 + predictableRand.Intn(65535-1024)
-		name := fmt.Sprintf("syncthing-%d", extPort)
+		name := fmt.Sprintf("universalsync-%d", extPort)
 		port, err = natd.AddPortMapping(ctx, protocol, intAddr.Port, extPort, name, leaseTime)
 		if err == nil {
 			extPort = port

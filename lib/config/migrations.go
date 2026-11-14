@@ -336,7 +336,7 @@ func migrateToConfigV14(cfg *Configuration) {
 	// entry.
 	hasDefault := false
 	for _, raddr := range cfg.Options.DeprecatedRelayServers {
-		if raddr == "dynamic+https://relays.syncthing.net/endpoint" {
+		if raddr == "dynamic+https://relays.universalsync.net/endpoint" {
 			for i, addr := range cfg.Options.RawListenAddresses {
 				if addr == "tcp://0.0.0.0:22000" {
 					cfg.Options.RawListenAddresses[i] = "default"
@@ -350,7 +350,7 @@ func migrateToConfigV14(cfg *Configuration) {
 
 	// Copy relay addresses into listen addresses.
 	for _, addr := range cfg.Options.DeprecatedRelayServers {
-		if hasDefault && addr == "dynamic+https://relays.syncthing.net/endpoint" {
+		if hasDefault && addr == "dynamic+https://relays.universalsync.net/endpoint" {
 			// Skip the default relay address if we already have the
 			// "default" entry in the list.
 			continue
@@ -391,14 +391,14 @@ func migrateToConfigV14(cfg *Configuration) {
 		cfg.Folders[i].DeprecatedReadOnly = false
 	}
 	// v0.13-beta already had config version 13 but did not get the new URL
-	if cfg.Options.ReleasesURL == "https://api.github.com/repos/syncthing/syncthing/releases?per_page=30" {
-		cfg.Options.ReleasesURL = "https://upgrades.syncthing.net/meta.json"
+	if cfg.Options.ReleasesURL == "https://api.github.com/repos/yashhasan570/UniversalSync/releases?per_page=30" {
+		cfg.Options.ReleasesURL = "https://upgrades.universalsync.net/meta.json"
 	}
 }
 
 func migrateToConfigV13(cfg *Configuration) {
-	if cfg.Options.ReleasesURL == "https://api.github.com/repos/syncthing/syncthing/releases?per_page=30" {
-		cfg.Options.ReleasesURL = "https://upgrades.syncthing.net/meta.json"
+	if cfg.Options.ReleasesURL == "https://api.github.com/repos/yashhasan570/UniversalSync/releases?per_page=30" {
+		cfg.Options.ReleasesURL = "https://upgrades.universalsync.net/meta.json"
 	}
 }
 
@@ -423,9 +423,9 @@ func migrateToConfigV12(cfg *Configuration) {
 	var useDefault bool
 	for _, addr := range cfg.Options.RawGlobalAnnServers {
 		switch addr {
-		case "udp4://announce.syncthing.net:22026":
+		case "udp4://announce.universalsync.net:22026":
 			useDefault = true
-		case "udp6://announce-v6.syncthing.net:22026":
+		case "udp6://announce-v6.universalsync.net:22026":
 			useDefault = true
 		default:
 			newDiscoServers = append(newDiscoServers, addr)

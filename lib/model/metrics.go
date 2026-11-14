@@ -13,53 +13,53 @@ import (
 
 var (
 	metricFolderState = promauto.NewGaugeVec(prometheus.GaugeOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "model",
 		Name:      "folder_state",
 		Help:      "Current folder state",
 	}, []string{"folder"})
 	metricFolderSummary = promauto.NewGaugeVec(prometheus.GaugeOpts{ //nolint:promlinter
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "model",
 		Name:      "folder_summary",
 		Help:      "Current folder summary data (counts for global/local/need files/directories/symlinks/deleted/bytes)",
 	}, []string{"folder", "scope", "type"})
 
 	metricFolderPulls = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "model",
 		Name:      "folder_pulls_total",
 		Help:      "Total number of folder pull iterations, per folder ID",
 	}, []string{"folder"})
 	metricFolderPullSeconds = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "model",
 		Name:      "folder_pull_seconds_total",
 		Help:      "Total time spent in folder pull iterations, per folder ID",
 	}, []string{"folder"})
 
 	metricFolderScans = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "model",
 		Name:      "folder_scans_total",
 		Help:      "Total number of folder scan iterations, per folder ID",
 	}, []string{"folder"})
 	metricFolderScanSeconds = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "model",
 		Name:      "folder_scan_seconds_total",
 		Help:      "Total time spent in folder scan iterations, per folder ID",
 	}, []string{"folder"})
 
 	metricFolderProcessedBytesTotal = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "model",
 		Name:      "folder_processed_bytes_total",
 		Help:      "Total amount of data processed during folder syncing, per folder ID and data source (network/local_origin/local_other/skipped)",
 	}, []string{"folder", "source"})
 
 	metricFolderConflictsTotal = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "model",
 		Name:      "folder_conflicts_total",
 		Help:      "Total number of conflicts",

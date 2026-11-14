@@ -17,7 +17,7 @@ func TestParseVersion(t *testing.T) {
 		parsed      VersionParts
 	}{
 		{
-			longVersion: `syncthing v1.1.4-rc.1+30-g6aaae618-dirty-crashrep "Erbium Earthworm" (go1.12.5 darwin-amd64) jb@kvin.kastelo.net 2019-05-23 16:08:14 UTC`,
+			longVersion: `universalsync v1.1.4-rc.1+30-g6aaae618-dirty-crashrep "Erbium Earthworm" (go1.12.5 darwin-amd64) jb@kvin.kastelo.net 2019-05-23 16:08:14 UTC`,
 			parsed: VersionParts{
 				Version:  "v1.1.4-rc.1+30-g6aaae618-dirty-crashrep",
 				Tag:      "v1.1.4-rc.1",
@@ -30,7 +30,7 @@ func TestParseVersion(t *testing.T) {
 			},
 		},
 		{
-			longVersion: `syncthing v1.1.4-rc.1+30-g6aaae618-dirty-crashrep "Erbium Earthworm" (go1.12.5 darwin-amd64) jb@kvin.kastelo.net 2019-05-23 16:08:14 UTC [foo, bar]`,
+			longVersion: `universalsync v1.1.4-rc.1+30-g6aaae618-dirty-crashrep "Erbium Earthworm" (go1.12.5 darwin-amd64) jb@kvin.kastelo.net 2019-05-23 16:08:14 UTC [foo, bar]`,
 			parsed: VersionParts{
 				Version:  "v1.1.4-rc.1+30-g6aaae618-dirty-crashrep",
 				Tag:      "v1.1.4-rc.1",
@@ -44,7 +44,7 @@ func TestParseVersion(t *testing.T) {
 			},
 		},
 		{
-			longVersion: `syncthing v1.23.7-dev.26.gdf7b56ae-stversionextra "Fermium Flea" (go1.20.5 darwin-arm64) jb@ok.kastelo.net 2023-07-12 06:55:26 UTC [Some Wrapper, purego, stnoupgrade]`,
+			longVersion: `universalsync v1.23.7-dev.26.gdf7b56ae-stversionextra "Fermium Flea" (go1.20.5 darwin-arm64) jb@ok.kastelo.net 2023-07-12 06:55:26 UTC [Some Wrapper, purego, stnoupgrade]`,
 			parsed: VersionParts{
 				Version:  "v1.23.7-dev.26.gdf7b56ae-stversionextra",
 				Tag:      "v1.23.7-dev",
@@ -58,7 +58,7 @@ func TestParseVersion(t *testing.T) {
 			},
 		},
 		{
-			longVersion: `2026-05-18 14:53:32 INF syncthing v2.0.3 "Hafnium Hornet" (go1.25.0 darwin-amd64) builder@github.syncthing.net 2025-08-22 07:00:05 UTC [stnoupgrade] (log.pkg=main)`,
+			longVersion: `2026-05-18 14:53:32 INF universalsync v2.0.3 "Hafnium Hornet" (go1.25.0 darwin-amd64) builder@github.universalsync.net 2025-08-22 07:00:05 UTC [stnoupgrade] (log.pkg=main)`,
 			parsed: VersionParts{
 				Version:  "v2.0.3",
 				Tag:      "v2.0.3",
@@ -67,7 +67,7 @@ func TestParseVersion(t *testing.T) {
 				Runtime:  "go1.25.0",
 				GOOS:     "darwin",
 				GOARCH:   "amd64",
-				Builder:  "builder@github.syncthing.net",
+				Builder:  "builder@github.universalsync.net",
 				Extra:    []string{"stnoupgrade"},
 			},
 		},

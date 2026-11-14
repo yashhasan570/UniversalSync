@@ -16,7 +16,7 @@ dirs-*
 s4d
 http
 h*/index*
-*.syncthing-reset*
+*.universal sync-reset*
 panic-*.log
 audit-*.log
 h*/config.xml.v*

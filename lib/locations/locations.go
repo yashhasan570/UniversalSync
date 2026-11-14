@@ -51,8 +51,8 @@ const (
 	levelDBDir          = "index-v0.14.0.db"
 	databaseName        = "index-v2"
 	configFileName      = "config.xml"
-	defaultStateDir     = ".local/state/syncthing"
-	oldDefaultConfigDir = ".config/syncthing"
+	defaultStateDir     = ".local/state/universalsync"
+	oldDefaultConfigDir = ".config/universalsync"
 )
 
 // Platform dependent directories
@@ -123,12 +123,12 @@ var locationTemplates = map[LocationEnum]string{
 	HTTPSKeyFile:   "${config}/https-key.pem",
 	LegacyDatabase: "${data}/" + levelDBDir,
 	Database:       "${data}/" + databaseName,
-	LogFile:        "${data}/syncthing.log", // --logfile on Windows
+	LogFile:        "${data}/universalsync.log", // --logfile on Windows
 	PanicLog:       "${data}/panic-%{timestamp}.log",
 	AuditLog:       "${data}/audit-%{timestamp}.log",
 	GUIAssets:      "${config}/gui",
 	DefFolder:      "${userHome}/Sync",
-	LockFile:       "${data}/syncthing.lock",
+	LockFile:       "${data}/universalsync.lock",
 }
 
 var locations = make(map[LocationEnum]string)
@@ -215,18 +215,18 @@ func darwinConfigDataDir(userHome string) string {
 }
 
 func unixConfigDir(userHome, xdgConfigHome, xdgStateHome string, fileExists func(string) bool) string {
-	// Legacy: if our config exists under $XDG_CONFIG_HOME/syncthing,
+	// Legacy: if our config exists under $XDG_CONFIG_HOME/universalsync,
 	// use that. The variable should be set to an absolute path or be
 	// ignored, but that's not what we did previously, so we retain the
 	// old behavior.
 	if xdgConfigHome != "" {
-		candidate := filepath.Join(xdgConfigHome, "syncthing")
+		candidate := filepath.Join(xdgConfigHome, "universalsync")
 		if fileExists(filepath.Join(candidate, configFileName)) {
 			return candidate
 		}
 	}
 
-	// Legacy: if our config exists under ~/.config/syncthing, use that
+	// Legacy: if our config exists under ~/.config/universalsync, use that
 	candidate := filepath.Join(userHome, oldDefaultConfigDir)
 	if fileExists(filepath.Join(candidate, configFileName)) {
 		return candidate
@@ -234,7 +234,7 @@ func unixConfigDir(userHome, xdgConfigHome, xdgStateHome string, fileExists func
 
 	// If XDG_STATE_HOME is set to an absolute path, use that
 	if filepath.IsAbs(xdgStateHome) {
-		return filepath.Join(xdgStateHome, "syncthing")
+		return filepath.Join(xdgStateHome, "universalsync")
 	}
 
 	// Use our default
@@ -245,25 +245,25 @@ func unixConfigDir(userHome, xdgConfigHome, xdgStateHome string, fileExists func
 // database, log files, etc, on Unix-like systems.
 func unixDataDir(userHome, configDir, xdgDataHome, xdgStateHome string, fileExists func(string) bool) string {
 	// If a database exists at the config location, use that. This is the
-	// most common case for both legacy (~/.config/syncthing) and current
-	// (~/.local/state/syncthing) setups.
+	// most common case for both legacy (~/.config/universalsync) and current
+	// (~/.local/state/universalsync) setups.
 	if fileExists(filepath.Join(configDir, databaseName)) ||
 		fileExists(filepath.Join(configDir, levelDBDir)) {
 		return configDir
 	}
 
-	// Legacy: if a database exists under $XDG_DATA_HOME/syncthing, use
+	// Legacy: if a database exists under $XDG_DATA_HOME/universalsync, use
 	// that. The variable should be set to an absolute path or be ignored,
 	// but that's not what we did previously, so we retain the old behavior.
 	if xdgDataHome != "" {
-		candidate := filepath.Join(xdgDataHome, "syncthing")
+		candidate := filepath.Join(xdgDataHome, "universalsync")
 		if fileExists(filepath.Join(candidate, databaseName)) ||
 			fileExists(filepath.Join(candidate, levelDBDir)) {
 			return candidate
 		}
 	}
 
-	// Legacy: if a database exists under ~/.config/syncthing, use that
+	// Legacy: if a database exists under ~/.config/universalsync, use that
 	candidate := filepath.Join(userHome, oldDefaultConfigDir)
 	if fileExists(filepath.Join(candidate, databaseName)) ||
 		fileExists(filepath.Join(candidate, levelDBDir)) {
@@ -272,7 +272,7 @@ func unixDataDir(userHome, configDir, xdgDataHome, xdgStateHome string, fileExis
 
 	// If XDG_STATE_HOME is set to an absolute path, use that
 	if filepath.IsAbs(xdgStateHome) {
-		return filepath.Join(xdgStateHome, "syncthing")
+		return filepath.Join(xdgStateHome, "universalsync")
 	}
 
 	// Use our default

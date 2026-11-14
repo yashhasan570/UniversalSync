@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Uyarı, bu yol, varolan bir \"{{otherFolderLabel}}\" ({{otherFolder}}) klasörünün ana dizinidir.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Uyarı, bu yol, varolan bir \"{{otherFolder}}\" klasörünün alt dizinidir.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Uyarı, bu yol, varolan bir \"{{otherFolderLabel}}\" ({{otherFolder}}) klasörünün alt dizinidir.",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Uyarı: Eğer {{syncthingInotify}} gibi bir harici izleyici kullanıyorsanız, devre dışı olduğundan emin olmalısınız.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Uyarı: Eğer {{universalSyncInotify}} gibi bir harici izleyici kullanıyorsanız, devre dışı olduğundan emin olmalısınız.",
     "Watch for Changes": "Değişiklikleri İzle",
     "Watching for Changes": "Değişiklikleri İzleme",
     "Watching for changes discovers most changes without periodic scanning.": "Değişiklikleri izleme, düzenli tarama yapmadan çoğu değişikliği keşfeder.",

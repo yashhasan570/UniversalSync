@@ -15,7 +15,7 @@ import (
 	"github.com/yashhasan570/UniversalSync/internal/slogutil"
 	"github.com/yashhasan570/UniversalSync/lib/dialer"
 	"github.com/yashhasan570/UniversalSync/lib/osutil"
-	syncthingprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
+	universalSyncprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
 	"github.com/yashhasan570/UniversalSync/lib/relay/protocol"
 )
 
@@ -216,7 +216,7 @@ func performHandshakeAndValidation(conn *tls.Conn, uri *url.URL) error {
 	q := uri.Query()
 	relayIDs := q.Get("id")
 	if relayIDs != "" {
-		relayID, err := syncthingprotocol.DeviceIDFromString(relayIDs)
+		relayID, err := universalSyncprotocol.DeviceIDFromString(relayIDs)
 		if err != nil {
 			return fmt.Errorf("relay address contains invalid verification id: %w", err)
 		}
@@ -226,7 +226,7 @@ func performHandshakeAndValidation(conn *tls.Conn, uri *url.URL) error {
 			return fmt.Errorf("unexpected certificate count: %d", cl)
 		}
 
-		remoteID := syncthingprotocol.NewDeviceID(certs[0].Raw)
+		remoteID := universalSyncprotocol.NewDeviceID(certs[0].Raw)
 		if remoteID != relayID {
 			return fmt.Errorf("relay id does not match. Expected %v got %v", relayID, remoteID)
 		}

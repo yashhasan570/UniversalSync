@@ -14,7 +14,7 @@ import (
 
 	"github.com/yashhasan570/UniversalSync/lib/dialer"
 	"github.com/yashhasan570/UniversalSync/lib/osutil"
-	syncthingprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
+	universalSyncprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
 	"github.com/yashhasan570/UniversalSync/lib/relay/protocol"
 )
 
@@ -27,7 +27,7 @@ func (e *incorrectResponseCodeErr) Error() string {
 	return fmt.Sprintf("incorrect response code %d: %s", e.code, e.msg)
 }
 
-func GetInvitationFromRelay(ctx context.Context, uri *url.URL, id syncthingprotocol.DeviceID, certs []tls.Certificate, timeout time.Duration) (protocol.SessionInvitation, error) {
+func GetInvitationFromRelay(ctx context.Context, uri *url.URL, id universalSyncprotocol.DeviceID, certs []tls.Certificate, timeout time.Duration) (protocol.SessionInvitation, error) {
 	if uri.Scheme != "relay" {
 		return protocol.SessionInvitation{}, fmt.Errorf("unsupported relay scheme: %v", uri.Scheme)
 	}
@@ -115,7 +115,7 @@ func JoinSession(ctx context.Context, invitation protocol.SessionInvitation) (ne
 }
 
 func TestRelay(ctx context.Context, uri *url.URL, certs []tls.Certificate, sleep, timeout time.Duration, times int) error {
-	id := syncthingprotocol.NewDeviceID(certs[0].Certificate[0])
+	id := universalSyncprotocol.NewDeviceID(certs[0].Certificate[0])
 	c, err := NewClient(uri, certs, timeout)
 	if err != nil {
 		return fmt.Errorf("creating client: %w", err)

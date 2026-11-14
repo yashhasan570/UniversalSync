@@ -383,5 +383,5 @@ func (e *WatchEventOutsideRootError) Error() string {
 }
 
 func (f *BasicFilesystem) newErrWatchEventOutsideRoot(absPath string, roots []string) *WatchEventOutsideRootError {
-	return &WatchEventOutsideRootError{fmt.Sprintf("Watching for changes encountered an event outside of the filesystem root: f.root==%v, roots==%v, path==%v. This should never happen, please report this message to forum.syncthing.net.", f.root, roots, absPath)}
+	return &WatchEventOutsideRootError{fmt.Sprintf("Watching for changes encountered an event outside of the filesystem root: f.root==%v, roots==%v, path==%v. This should never happen, please report this message to forum.universalsync.net.", f.root, roots, absPath)}
 }

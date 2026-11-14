@@ -440,7 +440,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Advarsel, denne stien er en foreldremappe for en eksisterende mappe \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Advarsel, denne stien er en undermappe i en eksisterende mappe \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Advarsel, denne stien er en undermappe for en eksisterende mappe \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Advarsel: Hvis du bruker en ekstern viser, som {{syncthingInotify}}, burde du forsikre deg om at den avslått.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Advarsel: Hvis du bruker en ekstern viser, som {{universalSyncInotify}}, burde du forsikre deg om at den avslått.",
     "Watch for Changes": "Hold oppsyn med endringer",
     "Watching for Changes": "Holder oppsyn med endringer",
     "When adding a new device, keep in mind that this device must be added on the other side too.": "Når du legger til en ny enhet, husk at enheten må legges til på andre siden også.",

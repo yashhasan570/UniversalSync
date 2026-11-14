@@ -12,7 +12,7 @@
             </g>
         </mask>
     </defs>
-    <g id="syncthing-logo" mask="url(#bitemask)">
+    <g id="universal sync-logo" mask="url(#bitemask)">
         <circle id="outer" cx="8" cy="8" r="8" style="fill:url(#grad)"/>
         <circle id="inner" cx="8" cy="7.9727402" r="5.9557071" style="fill:none;stroke:#ffffff;stroke-width:0.81771719"/>
         <line id="arm-l" x1="9.1993189" y1="8.776825" x2="2.262351" y2="9.4173737" style="stroke:#ffffff;stroke-width:0.81771719"/>

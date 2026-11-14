@@ -185,7 +185,7 @@ HOST: [FF05::C]:1900
 ST: %s
 MAN: "ssdp:discover"
 MX: %d
-USER-AGENT: syncthing/%s
+USER-AGENT: universalsync/%s
 
 `
 	} else {
@@ -196,7 +196,7 @@ HOST: 239.255.255.250:1900
 ST: %s
 MAN: "ssdp:discover"
 MX: %d
-USER-AGENT: syncthing/%s
+USER-AGENT: universalsync/%s
 
 `
 	}

@@ -1,0 +1,9 @@
+[universal sync]
+title=Universal Sync
+description=Universal Sync file synchronisation
+ports=22000|21027/udp
+
+[universal sync-gui]
+title=Universal Sync-GUI
+description=Universal Sync web gui
+ports=8384/tcp

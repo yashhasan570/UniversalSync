@@ -212,7 +212,7 @@ func (m *Matcher) parseLocked(r io.Reader, file string) error {
 // Match matches the patterns plus temporary and internal files.
 //
 // The "file" parameter must be in the OS' native unicode format (NFD on macos,
-// NFC everywhere else). This is always the case in real usage in syncthing, as
+// NFC everywhere else). This is always the case in real usage in universalsync, as
 // we ensure native unicode normalisation on all entry points (scanning and from
 // protocol) - so no need to normalize when calling this, except e.g. in tests.
 func (m *Matcher) Match(file string) ignoreresult.R {

@@ -13,38 +13,38 @@ import (
 
 var (
 	metricDeviceSentBytes = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "protocol",
 		Name:      "sent_bytes_total",
 		Help:      "Total amount of data sent, per device",
 	}, []string{"device"})
 	metricDeviceSentUncompressedBytes = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "protocol",
 		Name:      "sent_uncompressed_bytes_total",
 		Help:      "Total amount of data sent, before compression, per device",
 	}, []string{"device"})
 	metricDeviceSentMessages = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "protocol",
 		Name:      "sent_messages_total",
 		Help:      "Total number of messages sent, per device",
 	}, []string{"device"})
 
 	metricDeviceRecvBytes = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "protocol",
 		Name:      "recv_bytes_total",
 		Help:      "Total amount of data received, per device",
 	}, []string{"device"})
 	metricDeviceRecvDecompressedBytes = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "protocol",
 		Name:      "recv_decompressed_bytes_total",
 		Help:      "Total amount of data received, after decompression, per device",
 	}, []string{"device"})
 	metricDeviceRecvMessages = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "protocol",
 		Name:      "recv_messages_total",
 		Help:      "Total number of messages received, per device",

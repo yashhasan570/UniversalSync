@@ -642,7 +642,7 @@ func (w *walker) applyNormalization(path, normPath string, info fs.FileInfo) (st
 		// version exists, it responds with true. Therefore we need to check fs.SameFile as well.
 		// In this case, a call to Rename won't do anything, so we have to rename via a temp file.
 
-		// We don't want to use the standard syncthing prefix here, as that will result in the file being ignored
+		// We don't want to use the standard universalsync prefix here, as that will result in the file being ignored
 		// and eventually deleted by Universal Sync if the rename back fails.
 
 		tempPath := fs.TempNameWithPrefix(normPath, "")

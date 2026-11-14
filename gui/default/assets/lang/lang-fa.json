@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "هشدار، این مسیر پوشهٔ والد یک پوشهٔ موجود به نام «{{otherFolderLabel}}» ({{otherFolder}}) است.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "هشدار، این مسیر زیرپوشهٔ یک پوشهٔ موجود به نام «{{otherFolder}}» است.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "هشدار، این مسیر زیرپوشهٔ یک پوشهٔ موجود به نام «{{otherFolderLabel}}» ({{otherFolder}}) است.",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "هشدار: اگر از یک پایشگر خارجی مانند {{syncthingInotify}} استفاده می‌کنید، باید مطمئن شوید که غیرفعال شده است.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "هشدار: اگر از یک پایشگر خارجی مانند {{universalSyncInotify}} استفاده می‌کنید، باید مطمئن شوید که غیرفعال شده است.",
     "Watch for Changes": "پایش تغییرات",
     "Watching for Changes": "در حال پایش تغییرات",
     "Watching for changes discovers most changes without periodic scanning.": "پایش تغییرات بیشتر تغییرات را بدون پیمایش دوره‌ای کشف می‌کند.",

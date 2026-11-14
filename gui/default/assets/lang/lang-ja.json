@@ -424,7 +424,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "警告: 入力されたパスは、設定済みのフォルダー「{{otherFolderLabel}}」 ({{otherFolder}}) の親ディレクトリです。",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "警告: 入力されたパスは、設定済みのフォルダー「{{otherFolder}}」のサブディレクトリです。",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "警告: 入力されたパスは、設定済みのフォルダー「{{otherFolderLabel}}」 ({{otherFolder}}) のサブディレクトリです。",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "注意： {{syncthingInotify}} などの外部の監視ソフトは必ず無効にしてください。",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "注意： {{universalSyncInotify}} などの外部の監視ソフトは必ず無効にしてください。",
     "Watch for Changes": "変更の監視",
     "Watching for Changes": "変更の監視",
     "Watching for changes discovers most changes without periodic scanning.": "変更の監視は、定期スキャンを行わずにほとんどの変更を検出できます。",

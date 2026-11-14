@@ -131,7 +131,7 @@ func (v external) prepareCommand(filePath string) (*exec.Cmd, error) {
 			// here, despite the double quote being one of our unsafe
 			// characters.
 			if unsafe && strings.Contains(word, key) {
-				return nil, errors.New("unsafe external versioning command; see https://docs.syncthing.net/users/versioning.html#external-file-versioning")
+				return nil, errors.New("unsafe external versioning command; see https://docs.universalsync.net/users/versioning.html#external-file-versioning")
 			}
 			word = strings.ReplaceAll(word, key, val)
 		}

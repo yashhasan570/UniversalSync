@@ -513,7 +513,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Peringatan, ini adalah lokasi direktori induk dari sebuah folder yang sudah ada \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Peringatan, lokasi ini adalah subdirektori dari sebuah folder yang sudah ada \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Peringata, lokasi ini adalah subdirektori dari sebuah folder yang sudah ada \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Peringatan: Jika anda menggunakan pemantau eksternal seperti {{syncthingInotify}}, anda sebaiknya memastikan bahwa itu sudah dinonaktifkan.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Peringatan: Jika anda menggunakan pemantau eksternal seperti {{universalSyncInotify}}, anda sebaiknya memastikan bahwa itu sudah dinonaktifkan.",
     "Watch for Changes": "Pantau Perubahan",
     "Watching for Changes": "Memantau Perubahan",
     "Watching for changes discovers most changes without periodic scanning.": "Memantau perubahan menemukan kebanyakan perubahan tanpa pemindaian periodik.",

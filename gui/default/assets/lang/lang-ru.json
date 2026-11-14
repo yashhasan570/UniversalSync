@@ -520,7 +520,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Внимание! Этот путь — родительская директория уже существующей папки «{{otherFolderLabel}}» ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Осторожно, этот путь является подкаталогом существующей папки «{{otherFolder}}».",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Внимание! Этот путь — поддиректория уже существующей папки «{{otherFolderLabel}}» ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Внимание! Если вы используете внешнюю программу для отслеживания изменений, например, {{syncthingInotify}}, убедитесь, что она отключена.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Внимание! Если вы используете внешнюю программу для отслеживания изменений, например, {{universalSyncInotify}}, убедитесь, что она отключена.",
     "Watch for Changes": "Следить за изменениями",
     "Watching for Changes": "Слежение за изменениями",
     "Watching for changes discovers most changes without periodic scanning.": "Отслеживание обнаруживает изменения без периодического сканирования.",

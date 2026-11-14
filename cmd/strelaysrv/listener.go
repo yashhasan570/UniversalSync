@@ -11,14 +11,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	syncthingprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
+	universalSyncprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
 	"github.com/yashhasan570/UniversalSync/lib/relay/protocol"
 	"github.com/yashhasan570/UniversalSync/lib/tlsutil"
 )
 
 var (
 	outboxesMut    = sync.RWMutex{}
-	outboxes       = make(map[syncthingprotocol.DeviceID]chan any)
+	outboxes       = make(map[universalSyncprotocol.DeviceID]chan any)
 	numConnections atomic.Int64
 )
 
@@ -95,7 +95,7 @@ func protocolConnectionHandler(tcpConn net.Conn, config *tls.Config, token strin
 	}
 	conn.SetDeadline(time.Time{})
 
-	id := syncthingprotocol.NewDeviceID(certs[0].Raw)
+	id := universalSyncprotocol.NewDeviceID(certs[0].Raw)
 
 	messages := make(chan any)
 	errors := make(chan error, 1)
@@ -163,7 +163,7 @@ func protocolConnectionHandler(tcpConn net.Conn, config *tls.Config, token strin
 				protocol.WriteMessage(conn, protocol.ResponseSuccess)
 
 			case protocol.ConnectRequest:
-				requestedPeer, err := syncthingprotocol.DeviceIDFromBytes(msg.ID)
+				requestedPeer, err := universalSyncprotocol.DeviceIDFromBytes(msg.ID)
 				if err != nil {
 					if debug {
 						log.Println(id, "is looking for an invalid peer ID")

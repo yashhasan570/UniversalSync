@@ -38,7 +38,7 @@ type GUIConfiguration struct {
 }
 
 func (c GUIConfiguration) IsAuthEnabled() bool {
-	// This function should match isAuthEnabled() in syncthingController.js
+	// This function should match isAuthEnabled() in universalsyncController.js
 	return c.AuthMode == AuthModeLDAP || (len(c.User) > 0 && len(c.Password) > 0)
 }
 

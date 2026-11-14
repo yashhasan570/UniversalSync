@@ -303,7 +303,7 @@ func (s *service) handleConns(ctx context.Context) error {
 
 func (s *service) helloForDevice(remoteID protocol.DeviceID) protocol.Hello {
 	hello := protocol.Hello{
-		ClientName:    "syncthing",
+		ClientName:    "universalsync",
 		ClientVersion: build.Version,
 		Timestamp:     time.Now().UnixNano(),
 	}
@@ -402,7 +402,7 @@ func (s *service) handleHellos(ctx context.Context) error {
 		}
 
 		// Verify the name on the certificate. By default we set it to
-		// "syncthing" when generating, but the user may have replaced
+		// "universalsync" when generating, but the user may have replaced
 		// the certificate and used another name.
 		certName := deviceCfg.CertName
 		if certName == "" {
@@ -410,7 +410,7 @@ func (s *service) handleHellos(ctx context.Context) error {
 		}
 		if remoteCert.Subject.CommonName == certName {
 			// All good. We do this check because our old style certificates
-			// have "syncthing" in the CommonName field and no SANs, which
+			// have "universalsync" in the CommonName field and no SANs, which
 			// is not accepted by VerifyHostname() any more as of Go 1.15.
 		} else if err := remoteCert.VerifyHostname(certName); err != nil {
 			// Incorrect certificate name is something the user most

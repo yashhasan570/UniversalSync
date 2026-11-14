@@ -28,7 +28,7 @@ import (
 	"github.com/yashhasan570/UniversalSync/lib/nat"
 	"github.com/yashhasan570/UniversalSync/lib/osutil"
 	_ "github.com/yashhasan570/UniversalSync/lib/pmp"
-	syncthingprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
+	universalSyncprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
 	"github.com/yashhasan570/UniversalSync/lib/relay/protocol"
 	"github.com/yashhasan570/UniversalSync/lib/tlsutil"
 	_ "github.com/yashhasan570/UniversalSync/lib/upnp"
@@ -59,7 +59,7 @@ var (
 	poolAddrs        string
 	pools            []string
 	providedBy       string
-	defaultPoolAddrs = "https://relays.syncthing.net/endpoint"
+	defaultPoolAddrs = "https://relays.universalsync.net/endpoint"
 
 	natEnabled bool
 	natLease   int
@@ -187,7 +187,7 @@ func main() {
 		},
 	}
 
-	id := syncthingprotocol.NewDeviceID(cert.Certificate[0])
+	id := universalSyncprotocol.NewDeviceID(cert.Certificate[0])
 	if debug {
 		log.Println("ID:", id)
 	}

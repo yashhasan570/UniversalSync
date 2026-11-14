@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/syncthing/notify"
+	"github.com/universalsync/notify"
 	"github.com/yashhasan570/UniversalSync/lib/build"
 	"github.com/yashhasan570/UniversalSync/lib/ignore/ignoreresult"
 )
@@ -452,7 +452,7 @@ func TestModifyFile(t *testing.T) {
 	name := "modify"
 
 	old := createTestFile(name, "file")
-	modifyTestFile(name, old, "syncthing")
+	modifyTestFile(name, old, "universalsync")
 
 	testCase := func() {
 		modifyTestFile(name, old, "modified")
@@ -473,7 +473,7 @@ func TestTruncateFileOnly(t *testing.T) {
 	name := "truncate"
 
 	file := createTestFile(name, "file")
-	modifyTestFile(name, file, "syncthing")
+	modifyTestFile(name, file, "universalsync")
 
 	// modified the content to empty use os.WriteFile will first truncate the file
 	// (/os/file.go:696) then write nothing. This logic is also used in many editors,

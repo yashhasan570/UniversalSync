@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Averto, ĉi tiu vojo estas parenca dosierujo de ekzistanta dosierujo \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Averto, ĉi tiu vojo estas subdosierujo de ekzistanta dosierujo \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Averto, ĉi tiu vojo estas subdosierujo de ekzistanta dosierujo \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Averto: se vi uzas eksteran rigardanton, similan al {{syncthingInotify}}, vi devas certiĝi, ke ĝi estas malaktiva.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Averto: se vi uzas eksteran rigardanton, similan al {{universalSyncInotify}}, vi devas certiĝi, ke ĝi estas malaktiva.",
     "Watch for Changes": "Atendi por ŝanĝoj",
     "Watching for Changes": "Atendado por ŝanĝoj",
     "Watching for changes discovers most changes without periodic scanning.": "Atendado por ŝanĝoj malkovras plejparton de la ŝanĝoj sen perioda skanado.",

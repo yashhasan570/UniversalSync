@@ -197,7 +197,7 @@ func TestOverrideIgnores(t *testing.T) {
 	}
 
 	log.Println("Starting sendOnly...")
-	sendOnly := syncthingProcess{ // id1
+	sendOnly := universalsyncProcess{ // id1
 		instance: "1",
 		argv:     []string{"--home", "h1"},
 		port:     8081,
@@ -210,7 +210,7 @@ func TestOverrideIgnores(t *testing.T) {
 	defer sendOnly.stop()
 
 	log.Println("Starting sendRecv...")
-	sendRecv := syncthingProcess{ // id2
+	sendRecv := universalsyncProcess{ // id2
 		instance: "2",
 		argv:     []string{"--home", "h2"},
 		port:     8082,

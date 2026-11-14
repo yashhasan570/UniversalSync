@@ -471,7 +471,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "අවවාදයයි, මෙම මාර්ගය පවතින ෆෝල්ඩරයක මව් නාමාවලියකි \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "අවවාදයයි, මෙම මාර්ගය පවතින \"{{otherFolder}}\" ෆෝල්ඩරයක උප බහලුමකි.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "අවවාදයයි, මෙම මාර්ගය පවතින \"{{otherFolderLabel}}\" ({{otherFolder}}) ෆෝල්ඩරයක උප බහලුමකි.",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "අවවාදයයි: ඔබ {{syncthingInotify}}වැනි බාහිර නිරීක්ෂකයක් භාවිතා කරන්නේ නම්, එය අක්‍රිය කර ඇති බවට ඔබ සහතික විය යුතුය.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "අවවාදයයි: ඔබ {{universalSyncInotify}}වැනි බාහිර නිරීක්ෂකයක් භාවිතා කරන්නේ නම්, එය අක්‍රිය කර ඇති බවට ඔබ සහතික විය යුතුය.",
     "Watch for Changes": "වෙනස්කම් සඳහා නරඹන්න",
     "Watching for Changes": "වෙනස්කම් නරඹමින්",
     "Watching for changes discovers most changes without periodic scanning.": "වෙනස්කම් නිරීක්ෂණය කිරීම කාලානුරූප ස්කෑන් කිරීමකින් තොරව බොහෝ වෙනස්කම් සොයා ගනී.",

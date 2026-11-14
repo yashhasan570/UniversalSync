@@ -8,5 +8,5 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_paths = ["github.com/syncthing/syncthing"]
+  import_paths = ["github.com/universal sync/universal sync"]
   build_tags = ["noassets"]

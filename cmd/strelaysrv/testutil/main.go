@@ -15,7 +15,7 @@ import (
 	"path/filepath"
 	"time"
 
-	syncthingprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
+	universalSyncprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
 	"github.com/yashhasan570/UniversalSync/lib/relay/client"
 	"github.com/yashhasan570/UniversalSync/lib/relay/protocol"
 )
@@ -44,7 +44,7 @@ func main() {
 		log.Fatalln("Failed to load X509 key pair:", err)
 	}
 
-	id := syncthingprotocol.NewDeviceID(cert.Certificate[0])
+	id := universalSyncprotocol.NewDeviceID(cert.Certificate[0])
 	log.Println("ID:", id)
 
 	uri, err := url.Parse(relay)
@@ -90,7 +90,7 @@ func main() {
 			log.Println("Finished", conn.RemoteAddr(), conn.LocalAddr())
 		}
 	} else if connect != "" {
-		id, err := syncthingprotocol.DeviceIDFromString(connect)
+		id, err := universalSyncprotocol.DeviceIDFromString(connect)
 		if err != nil {
 			log.Fatal(err)
 		}

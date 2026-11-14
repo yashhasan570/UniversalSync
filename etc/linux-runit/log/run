@@ -1,4 +1,4 @@
 #!/bin/sh
 
-exec logger -t syncthing
+exec logger -t universal sync
 

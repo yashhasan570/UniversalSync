@@ -15,7 +15,7 @@ import (
 
 	"golang.org/x/time/rate"
 
-	syncthingprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
+	universalSyncprotocol "github.com/yashhasan570/UniversalSync/lib/protocol"
 	"github.com/yashhasan570/UniversalSync/lib/relay/protocol"
 )
 
@@ -27,7 +27,7 @@ var (
 	bytesProxied    atomic.Int64
 )
 
-func newSession(serverid, clientid syncthingprotocol.DeviceID, sessionLimitBps int, globalRateLimit *rate.Limiter) *session {
+func newSession(serverid, clientid universalSyncprotocol.DeviceID, sessionLimitBps int, globalRateLimit *rate.Limiter) *session {
 	serverkey := make([]byte, 32)
 	_, err := rand.Read(serverkey)
 	if err != nil {
@@ -78,7 +78,7 @@ func findSession(key string) *session {
 	return ses
 }
 
-func dropSessions(id syncthingprotocol.DeviceID) {
+func dropSessions(id universalSyncprotocol.DeviceID) {
 	sessionMut.RLock()
 	for _, session := range activeSessions {
 		if session.HasParticipant(id) {
@@ -91,7 +91,7 @@ func dropSessions(id syncthingprotocol.DeviceID) {
 	sessionMut.RUnlock()
 }
 
-func hasSessions(id syncthingprotocol.DeviceID) bool {
+func hasSessions(id universalSyncprotocol.DeviceID) bool {
 	sessionMut.RLock()
 	has := false
 	for _, session := range activeSessions {
@@ -108,10 +108,10 @@ type session struct {
 	mut sync.Mutex
 
 	serverkey []byte
-	serverid  syncthingprotocol.DeviceID
+	serverid  universalSyncprotocol.DeviceID
 
 	clientkey []byte
-	clientid  syncthingprotocol.DeviceID
+	clientid  universalSyncprotocol.DeviceID
 
 	rateLimit func(bytes int)
 	limiter   *rate.Limiter
@@ -232,7 +232,7 @@ func (s *session) GetServerInvitationMessage() protocol.SessionInvitation {
 	}
 }
 
-func (s *session) HasParticipant(id syncthingprotocol.DeviceID) bool {
+func (s *session) HasParticipant(id universalSyncprotocol.DeviceID) bool {
 	return s.clientid == id || s.serverid == id
 }
 

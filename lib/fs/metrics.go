@@ -17,19 +17,19 @@ import (
 
 var (
 	metricTotalOperationSeconds = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "fs",
 		Name:      "operation_seconds_total",
 		Help:      "Total time spent in filesystem operations, per filesystem root and operation",
 	}, []string{"root", "operation"})
 	metricTotalOperationsCount = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "fs",
 		Name:      "operations_total",
 		Help:      "Total number of filesystem operations, per filesystem root and operation",
 	}, []string{"root", "operation"})
 	metricTotalBytesCount = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "fs",
 		Name:      "operation_bytes_total",
 		Help:      "Total number of filesystem bytes transferred, per filesystem root and operation",

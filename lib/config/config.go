@@ -4,7 +4,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-// Package config implements reading and writing of the syncthing configuration file.
+// Package config implements reading and writing of the universalsync configuration file.
 package config
 
 import (
@@ -48,20 +48,20 @@ var (
 	// config.
 	DefaultListenAddresses = []string{
 		netutil.AddressURL("tcp", net.JoinHostPort("0.0.0.0", strconv.Itoa(DefaultTCPPort))),
-		"dynamic+https://relays.syncthing.net/endpoint",
+		"dynamic+https://relays.universalsync.net/endpoint",
 		netutil.AddressURL("quic", net.JoinHostPort("0.0.0.0", strconv.Itoa(DefaultQUICPort))),
 	}
 	// DefaultDiscoveryServersV4 should be substituted when the configuration
 	// contains <globalAnnounceServer>default-v4</globalAnnounceServer>.
 	DefaultDiscoveryServersV4 = []string{
-		"https://discovery-lookup.syncthing.net/v2/?noannounce",
-		"https://discovery-announce-v4.syncthing.net/v2/?nolookup",
+		"https://discovery-lookup.universalsync.net/v2/?noannounce",
+		"https://discovery-announce-v4.universalsync.net/v2/?nolookup",
 	}
 	// DefaultDiscoveryServersV6 should be substituted when the configuration
 	// contains <globalAnnounceServer>default-v6</globalAnnounceServer>.
 	DefaultDiscoveryServersV6 = []string{
-		"https://discovery-lookup.syncthing.net/v2/?noannounce",
-		"https://discovery-announce-v6.syncthing.net/v2/?nolookup",
+		"https://discovery-lookup.universalsync.net/v2/?noannounce",
+		"https://discovery-announce-v6.universalsync.net/v2/?nolookup",
 	}
 	// DefaultDiscoveryServers should be substituted when the configuration
 	// contains <globalAnnounceServer>default</globalAnnounceServer>.
@@ -155,7 +155,7 @@ func (cfg *Configuration) ProbeFreePorts() error {
 	} else {
 		cfg.Options.RawListenAddresses = []string{
 			netutil.AddressURL("tcp", net.JoinHostPort("0.0.0.0", strconv.Itoa(port))),
-			"dynamic+https://relays.syncthing.net/endpoint",
+			"dynamic+https://relays.universalsync.net/endpoint",
 			netutil.AddressURL("quic", net.JoinHostPort("0.0.0.0", strconv.Itoa(port))),
 		}
 	}

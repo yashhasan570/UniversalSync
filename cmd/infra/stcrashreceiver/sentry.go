@@ -22,7 +22,7 @@ import (
 	"github.com/yashhasan570/UniversalSync/lib/build"
 )
 
-const reportServer = "https://crash.syncthing.net/report/"
+const reportServer = "https://crash.universalsync.net/report/"
 
 var loader = newGithubSourceCodeLoader()
 

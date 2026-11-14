@@ -512,7 +512,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Aviso, esta ruta e un directorio pai dun cartafol existente \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Aviso, esta ruta é un subdirectorio dun cartafol existente \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Aviso, esta ruta é un subdirectorio de un cartafol existente \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Aviso: se utiliza un vixiante externo como {{syncthingInotify}}, debería comprobar que está desactivado.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Aviso: se utiliza un vixiante externo como {{universalSyncInotify}}, debería comprobar que está desactivado.",
     "Watch for Changes": "Buscar cambios",
     "Watching for Changes": "Buscando cambios",
     "Watching for changes discovers most changes without periodic scanning.": "Ao buscar cambios atópanse a maioiría dos cambios sen escaneo periódico.",

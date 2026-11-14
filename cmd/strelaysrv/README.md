@@ -1,7 +1,7 @@
 strelaysrv
 ==========
 
-This is the relay server for the `syncthing` project.
+This is the relay server for the `universal sync` project.
 
 :exclamation:Warnings:exclamation: - Read or regret
 -----
@@ -10,7 +10,7 @@ By default, all relay servers will join to the default public relay pool, which 
 
 If you wish to disable this behaviour, please specify the `-pools=""` argument.
 
-Please note that `strelaysrv` is only usable by `syncthing` **version v0.12 and onwards**.
+Please note that `strelaysrv` is only usable by `universal sync` **version v0.12 and onwards**.
 
 To run `strelaysrv` you need to have port 22067 available to the internet, which means you might need to port forward it and/or allow it through your firewall.
 
@@ -45,7 +45,7 @@ At the point of writing the endpoint output looks as follows:
         "per-session-rate": 0,
         "ping-interval": 60,
         "pools": [
-            "https://relays.syncthing.net/endpoint"
+            "https://relays.universal sync.net/endpoint"
         ],
         "provided-by": ""
     },
@@ -63,7 +63,7 @@ Make sure you have a public IP with port 22067 open, or have forwarded port 2206
 Run the `strelaysrv` with no arguments (or `-debug` if you want more output), and that should be enough for the server to join the public relay pool.
 You should see a message saying:
 ```
-2015/09/21 22:45:46 pool.go:60: Joined https://relays.syncthing.net/endpoint rejoining in 48m0s
+2015/09/21 22:45:46 pool.go:60: Joined https://relays.universal sync.net/endpoint rejoining in 48m0s
 ```
 
 See `strelaysrv -help` for other options, such as rate limits, timeout intervals, etc.
@@ -90,7 +90,7 @@ If you do not care about certificate pinning (improved security) or do not care 
 relay://192.0.2.1:22067
 ```
 
-This URI can then be used in `syncthing` clients as one of the relay servers by adding the URI to the "Sync Protocol Listen Address" field, under Actions and Settings.
+This URI can then be used in `universal sync` clients as one of the relay servers by adding the URI to the "Sync Protocol Listen Address" field, under Actions and Settings.
 
 See `strelaysrv -help` for other options, such as rate limits, timeout intervals, etc.
 

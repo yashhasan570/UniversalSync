@@ -90,7 +90,7 @@
     </gui>
     <ldap></ldap>
     <options>
-        <listenAddress>dynamic+https://relays.syncthing.net/endpoint</listenAddress>
+        <listenAddress>dynamic+https://relays.universal sync.net/endpoint</listenAddress>
         <listenAddress>tcp://127.0.0.1:22003</listenAddress>
         <globalAnnounceServer>default</globalAnnounceServer>
         <globalAnnounceEnabled>false</globalAnnounceEnabled>
@@ -110,7 +110,7 @@
         <urAccepted>3</urAccepted>
         <urSeen>2</urSeen>
         <urUniqueID>UL4yowgK</urUniqueID>
-        <urURL>https://data.syncthing.net/newdata</urURL>
+        <urURL>https://data.universal sync.net/newdata</urURL>
         <urPostInsecurely>false</urPostInsecurely>
         <urInitialDelayS>1800</urInitialDelayS>
         <restartOnWakeup>true</restartOnWakeup>
@@ -120,14 +120,14 @@
         <progressUpdateIntervalS>5</progressUpdateIntervalS>
         <limitBandwidthInLan>false</limitBandwidthInLan>
         <minHomeDiskFree unit="%">1</minHomeDiskFree>
-        <releasesURL>https://upgrades.syncthing.net/meta.json</releasesURL>
+        <releasesURL>https://upgrades.universal sync.net/meta.json</releasesURL>
         <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
         <tempIndexMinBlocks>10</tempIndexMinBlocks>
         <trafficClass>0</trafficClass>
         <defaultFolderPath>~</defaultFolderPath>
         <setLowPriority>true</setLowPriority>
         <maxFolderConcurrency>0</maxFolderConcurrency>
-        <crashReportingURL>https://crash.syncthing.net/newcrash</crashReportingURL>
+        <crashReportingURL>https://crash.universal sync.net/newcrash</crashReportingURL>
         <crashReportingEnabled>true</crashReportingEnabled>
         <stunKeepaliveStartS>180</stunKeepaliveStartS>
         <stunKeepaliveMinS>20</stunKeepaliveMinS>

@@ -520,7 +520,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Upozorenje, ova je staza nadređeni direktorij postojeće mape „{{otherFolderLabel}}“ ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Upozorenje, ova je staza poddirektorij postojeće mape „{{otherFolder}}“.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Upozorenje, ova je staza poddirektorij postojeće mape „{{otherFolderLabel}}“ ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Upozorenje: Ako koristite eksterni alat za praćenje kao što je {{syncthingInotify}}, osigurajte da jei deaktiviran.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Upozorenje: Ako koristite eksterni alat za praćenje kao što je {{universalSyncInotify}}, osigurajte da jei deaktiviran.",
     "Watch for Changes": "Prati promjene",
     "Watching for Changes": "Praćenje promjena",
     "Watching for changes discovers most changes without periodic scanning.": "Praćenje promjena otkriva većinu promjena bez periodičnog skeniranja.",

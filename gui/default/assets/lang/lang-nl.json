@@ -513,7 +513,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Waarschuwing, dit pad is een bovenliggende map van een bestaande map \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Waarschuwing, dit ppad is een onderliggende map van een bestaande map \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Waarschuwing, dit pad is een onderliggende map van een bestaande map \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Waarschuwing: als je een externe opvolger gebruikt zoals {{syncthingInotify}}, moet je zeker weten dat die uitgeschakeld is.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Waarschuwing: als je een externe opvolger gebruikt zoals {{universalSyncInotify}}, moet je zeker weten dat die uitgeschakeld is.",
     "Watch for Changes": "Wijzigingen opvolgen",
     "Watching for Changes": "Wijzigingen opvolgen",
     "Watching for changes discovers most changes without periodic scanning.": "Opvolgen van wijzigingen ontdekt de meeste wijzigingen zonder regelmatig scannen.",

@@ -513,7 +513,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Babala, ang path na ito ay parent directory ng umiiral na folder na \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Babala, ang path na ito ay isang subdirectory ng umiiral na folder na \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Babala, ang path na ito ay isang subdirectory ng umiiral na folder na \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Babala: Kapag gumagamit ka ng panlabas na watcher tulad ng {{syncthingInotify}}, dapag siguraduhin mo na naka-deactivate iyan.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Babala: Kapag gumagamit ka ng panlabas na watcher tulad ng {{universalSyncInotify}}, dapag siguraduhin mo na naka-deactivate iyan.",
     "Watch for Changes": "Manood para sa Mga Pagbabago",
     "Watching for Changes": "Nanonood para sa Mga Pagbabago",
     "Watching for changes discovers most changes without periodic scanning.": "Ang panonood para sa mga pagbabago ay tumutuklas ng mga karamihang pagbabago nang walang periodic na pag-scan.",

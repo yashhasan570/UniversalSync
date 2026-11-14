@@ -522,7 +522,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Atención, esta ruta es una carpeta principal de una carpeta existente «{{otherFolderLabel}}» ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Atención, esta ruta es un subdirectorio de una carpeta ya existente llamada «{{otherFolder}}».",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Atención, esta ruta es un subdirectorio de una carpeta ya existente llamada «{{otherFolderLabel}}» ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Atención: si estás utilizando un observador externo como {{syncthingInotify}}, debes asegurarte de que está desactivado.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Atención: si estás utilizando un observador externo como {{universalSyncInotify}}, debes asegurarte de que está desactivado.",
     "Watch for Changes": "Detectar cambios",
     "Watching for Changes": "Detectando cambios",
     "Watching for changes discovers most changes without periodic scanning.": "La detección de cambios descubre la mayoría de cambios sin el escaneo periódico.",

@@ -513,7 +513,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "אזהרה, הנתיב הזה הוא תיקיית אב של תיקייה קיימת \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "אזהרה, הנתיב הזה הוא תיקיית משנה של תיקייה קיימת \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "אזהרה, הנתיב הזה הוא תיקיית משנה של תיקייה קיימת \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "אזהרה: אם אתה משתמש במשגיח חיצוני כמו {{syncthingInotify}}, עליך לוודא שהוא מושבת.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "אזהרה: אם אתה משתמש במשגיח חיצוני כמו {{universalSyncInotify}}, עליך לוודא שהוא מושבת.",
     "Watch for Changes": "עקוב אחר שינויים",
     "Watching for Changes": "מעקב אחר שינויים",
     "Watching for changes discovers most changes without periodic scanning.": "מעקב אחר שינויים מגלה את רוב השינויים ללא סריקה תקופתית.",

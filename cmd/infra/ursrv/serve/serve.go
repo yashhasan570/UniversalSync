@@ -56,29 +56,29 @@ var (
 		// Maps well known builders to the official distribution method that
 		// they represent
 
-		{regexp.MustCompile(`\steamcity@build\.syncthing\.net`), "GitHub"},
-		{regexp.MustCompile(`\sjenkins@build\.syncthing\.net`), "GitHub"},
-		{regexp.MustCompile(`\sbuilder@github\.syncthing\.net`), "GitHub"},
+		{regexp.MustCompile(`\steamcity@build\.universalsync\.net`), "GitHub"},
+		{regexp.MustCompile(`\sjenkins@build\.universalsync\.net`), "GitHub"},
+		{regexp.MustCompile(`\sbuilder@github\.universalsync\.net`), "GitHub"},
 
-		{regexp.MustCompile(`\sdeb@build\.syncthing\.net`), "APT"},
-		{regexp.MustCompile(`\sdebian@github\.syncthing\.net`), "APT"},
+		{regexp.MustCompile(`\sdeb@build\.universalsync\.net`), "APT"},
+		{regexp.MustCompile(`\sdebian@github\.universalsync\.net`), "APT"},
 
-		{regexp.MustCompile(`\sdocker@syncthing\.net`), "Docker Hub"},
-		{regexp.MustCompile(`\sdocker@build.syncthing\.net`), "Docker Hub"},
-		{regexp.MustCompile(`\sdocker@github.syncthing\.net`), "Docker Hub"},
+		{regexp.MustCompile(`\sdocker@universalsync\.net`), "Docker Hub"},
+		{regexp.MustCompile(`\sdocker@build.universalsync\.net`), "Docker Hub"},
+		{regexp.MustCompile(`\sdocker@github.universalsync\.net`), "Docker Hub"},
 
-		{regexp.MustCompile(`\sandroid-builder@github\.syncthing\.net`), "Google Play"},
-		{regexp.MustCompile(`\sandroid-.*teamcity@build\.syncthing\.net`), "Google Play"},
+		{regexp.MustCompile(`\sandroid-builder@github\.universalsync\.net`), "Google Play"},
+		{regexp.MustCompile(`\sandroid-.*teamcity@build\.universalsync\.net`), "Google Play"},
 
 		{regexp.MustCompile(`\sandroid-.*vagrant@basebox-stretch64`), "F-Droid"},
 		{regexp.MustCompile(`\svagrant@bullseye`), "F-Droid"},
 		{regexp.MustCompile(`\svagrant@bookworm`), "F-Droid"},
 
-		{regexp.MustCompile(`\sreproducible-build@Catfriend1-syncthing-android`), "Universal Sync-Fork Catfriend1 (3rd party)"},
-		{regexp.MustCompile(`\sreproducible-build@nel0x-syncthing-android-gplay`), "Universal Sync-Fork nel0x (3rd party)"},
+		{regexp.MustCompile(`\sreproducible-build@Catfriend1-universalsync-android`), "Universal Sync-Fork Catfriend1 (3rd party)"},
+		{regexp.MustCompile(`\sreproducible-build@nel0x-universalsync-android-gplay`), "Universal Sync-Fork nel0x (3rd party)"},
 
 		{regexp.MustCompile(`\sbuilduser@(archlinux|svetlemodry)`), "Arch (3rd party)"},
-		{regexp.MustCompile(`\ssyncthing@archlinux`), "Arch (3rd party)"},
+		{regexp.MustCompile(`\suniversalsync@archlinux`), "Arch (3rd party)"},
 		{regexp.MustCompile(`@debian`), "Debian (3rd party)"},
 		{regexp.MustCompile(`@fedora`), "Fedora (3rd party)"},
 		{regexp.MustCompile(`@openSUSE`), "openSUSE (3rd party)"},

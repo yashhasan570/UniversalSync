@@ -7,12 +7,12 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 -->
-<html lang="en" ng-app="syncthing" ng-controller="Universal SyncController">
+<html lang="en" ng-app="universalsync" ng-controller="Universal SyncController">
 <head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="shortcut icon" href="assets/img/favicon-default.png" ng-href="assets/img/favicon-{{syncthingStatus()}}.png" type="image/x-icon"/>
+  <link rel="shortcut icon" href="assets/img/favicon-default.png" ng-href="assets/img/favicon-{{universalsyncStatus()}}.png" type="image/x-icon"/>
   <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#0882c8"/>
 
   <title ng-bind="thisDeviceName() + ' | Universal Sync'"></title>
@@ -61,8 +61,8 @@
   </noscript>
 
   <div class="ng-cloak">
-    <script type="text/javascript" src="syncthing/development/logbar.js"></script>
-    <div ng-if="version.isBeta" ng-include="'syncthing/development/logbar.html'"></div>
+    <script type="text/javascript" src="universalsync/development/logbar.js"></script>
+    <div ng-if="version.isBeta" ng-include="'universalsync/development/logbar.html'"></div>
     <!-- Top bar -->
 
     <nav class="navbar navbar-top navbar-default" role="navigation">
@@ -95,12 +95,12 @@
             <ul class="dropdown-menu">
               <li><a class="navbar-link" href="{{docsURL('intro/gui')}}" target="_blank"><span class="fa fa-fw fa-info-circle"></span>&nbsp;<span translate>Introduction</span></a></li>
               <li class="divider" aria-hidden="true"></li>
-              <li><a class="navbar-link" href="https://syncthing.net/" target="_blank"><span class="fa fa-fw fa-home"></span>&nbsp;<span translate>Home page</span></a></li>
+              <li><a class="navbar-link" href="https://universalsync.net/" target="_blank"><span class="fa fa-fw fa-home"></span>&nbsp;<span translate>Home page</span></a></li>
               <li><a class="navbar-link" href="{{docsURL()}}" target="_blank"><span class="fa fa-fw fa-book"></span>&nbsp;<span translate>Documentation</span></a></li>
-              <li><a class="navbar-link" href="https://forum.syncthing.net" target="_blank"><span class="fa fa-fw fa-users"></span>&nbsp;<span translate>Support</span></a></li>
+              <li><a class="navbar-link" href="https://forum.universalsync.net" target="_blank"><span class="fa fa-fw fa-users"></span>&nbsp;<span translate>Support</span></a></li>
               <li class="divider" aria-hidden="true"></li>
               <li><a class="navbar-link" href="https://github.com/yashhasan570/UniversalSync/releases" target="_blank"><span class="fa fa-fw fa-file-text"></span>&nbsp;<span translate>Changelog</span></a></li>
-              <li><a class="navbar-link" href="https://data.syncthing.net/" target="_blank"><span class="fa fa-fw fa-bar-chart"></span>&nbsp;<span translate>Statistics</span></a></li>
+              <li><a class="navbar-link" href="https://data.universalsync.net/" target="_blank"><span class="fa fa-fw fa-bar-chart"></span>&nbsp;<span translate>Statistics</span></a></li>
               <li class="divider" aria-hidden="true"></li>
               <li><a class="navbar-link" href="https://github.com/yashhasan570/UniversalSync/issues" target="_blank"><span class="fa fa-fw fa-bug"></span>&nbsp;<span translate>Bugs</span></a></li>
               <li><a class="navbar-link" href="https://github.com/yashhasan570/UniversalSync" target="_blank"><span class="fa fa-fw fa-file-code-o"></span>&nbsp;<span translate>Source Code</span></a></li>
@@ -193,7 +193,7 @@
 
         <!-- Panel: Notifications -->
 
-        <div ng-if="config.options && config.options.unackedNotificationIDs" ng-include="'syncthing/core/notifications.html'"></div>
+        <div ng-if="config.options && config.options.unackedNotificationIDs" ng-include="'universalsync/core/notifications.html'"></div>
 
         <!-- Panel: New Device -->
 
@@ -325,7 +325,7 @@
             </div>
             <div class="panel-body">
               <p>
-                <span translate>For the following folders an error occurred while starting to watch for changes. It will be retried every minute, so the errors might go away soon. If they persist, try to fix the underlying issue and ask for help if you can't.</span>&emsp;<a href="https://forum.syncthing.net" target="_blank"><span class="fas fa-question-circle"></span>&nbsp;<span translate>Support</span></a>
+                <span translate>For the following folders an error occurred while starting to watch for changes. It will be retried every minute, so the errors might go away soon. If they persist, try to fix the underlying issue and ask for help if you can't.</span>&emsp;<a href="https://forum.universalsync.net" target="_blank"><span class="fas fa-question-circle"></span>&nbsp;<span translate>Support</span></a>
               </p>
               <table>
                 <tr ng-repeat="(id, err) in fsWatcherErrorMap()">
@@ -1019,36 +1019,36 @@
     </div> <!-- /container -->
   </div> <!-- /ng-cloak -->
 
-  <ng-include src="'syncthing/core/networkErrorDialogView.html'"></ng-include>
-  <ng-include src="'syncthing/core/httpErrorDialogView.html'"></ng-include>
-  <ng-include src="'syncthing/core/restartingDialogView.html'"></ng-include>
-  <ng-include src="'syncthing/core/upgradingDialogView.html'"></ng-include>
-  <ng-include src="'syncthing/core/shutdownDialogView.html'"></ng-include>
-  <ng-include src="'syncthing/core/savingChangesDialogView.html'"></ng-include>
-  <ng-include src="'syncthing/device/idqrModalView.html'"></ng-include>
-  <ng-include src="'syncthing/device/editDeviceModalView.html'"></ng-include>
-  <ng-include src="'syncthing/device/globalChangesModalView.html'"></ng-include>
-  <ng-include src="'syncthing/folder/editFolderModalView.html'"></ng-include>
-  <ng-include src="'syncthing/folder/restoreVersionsModalView.html'"></ng-include>
-  <ng-include src="'syncthing/folder/restoreVersionsConfirmation.html'"></ng-include>
-  <ng-include src="'syncthing/settings/settingsModalView.html'"></ng-include>
-  <ng-include src="'syncthing/settings/advancedSettingsModalView.html'"></ng-include>
-  <ng-include src="'syncthing/settings/discardChangesConfirmation.html'"></ng-include>
-  <ng-include src="'syncthing/usagereport/usageReportModalView.html'"></ng-include>
-  <ng-include src="'syncthing/usagereport/usageReportPreviewModalView.html'"></ng-include>
-  <ng-include src="'syncthing/transfer/neededFilesModalView.html'"></ng-include>
-  <ng-include src="'syncthing/transfer/failedFilesModalView.html'"></ng-include>
-  <ng-include src="'syncthing/transfer/remoteNeededFilesModalView.html'"></ng-include>
-  <ng-include src="'syncthing/transfer/localChangedFilesModalView.html'"></ng-include>
-  <ng-include src="'syncthing/core/upgradeModalView.html'"></ng-include>
-  <ng-include src="'syncthing/core/majorUpgradeModalView.html'"></ng-include>
-  <ng-include src="'syncthing/core/aboutModalView.html'"></ng-include>
-  <ng-include src="'syncthing/core/connectivityStatusModalView.html'"></ng-include>
-  <ng-include src="'syncthing/folder/removeFolderDialogView.html'"></ng-include>
-  <ng-include src="'syncthing/folder/revertOverrideView.html'"></ng-include>
-  <ng-include src="'syncthing/device/removeDeviceDialogView.html'"></ng-include>
-  <ng-include src="'syncthing/core/logViewerModalView.html'"></ng-include>
-  <ng-include src="'syncthing/device/shareDeviceIdDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/core/networkErrorDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/core/httpErrorDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/core/restartingDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/core/upgradingDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/core/shutdownDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/core/savingChangesDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/device/idqrModalView.html'"></ng-include>
+  <ng-include src="'universalsync/device/editDeviceModalView.html'"></ng-include>
+  <ng-include src="'universalsync/device/globalChangesModalView.html'"></ng-include>
+  <ng-include src="'universalsync/folder/editFolderModalView.html'"></ng-include>
+  <ng-include src="'universalsync/folder/restoreVersionsModalView.html'"></ng-include>
+  <ng-include src="'universalsync/folder/restoreVersionsConfirmation.html'"></ng-include>
+  <ng-include src="'universalsync/settings/settingsModalView.html'"></ng-include>
+  <ng-include src="'universalsync/settings/advancedSettingsModalView.html'"></ng-include>
+  <ng-include src="'universalsync/settings/discardChangesConfirmation.html'"></ng-include>
+  <ng-include src="'universalsync/usagereport/usageReportModalView.html'"></ng-include>
+  <ng-include src="'universalsync/usagereport/usageReportPreviewModalView.html'"></ng-include>
+  <ng-include src="'universalsync/transfer/neededFilesModalView.html'"></ng-include>
+  <ng-include src="'universalsync/transfer/failedFilesModalView.html'"></ng-include>
+  <ng-include src="'universalsync/transfer/remoteNeededFilesModalView.html'"></ng-include>
+  <ng-include src="'universalsync/transfer/localChangedFilesModalView.html'"></ng-include>
+  <ng-include src="'universalsync/core/upgradeModalView.html'"></ng-include>
+  <ng-include src="'universalsync/core/majorUpgradeModalView.html'"></ng-include>
+  <ng-include src="'universalsync/core/aboutModalView.html'"></ng-include>
+  <ng-include src="'universalsync/core/connectivityStatusModalView.html'"></ng-include>
+  <ng-include src="'universalsync/folder/removeFolderDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/folder/revertOverrideView.html'"></ng-include>
+  <ng-include src="'universalsync/device/removeDeviceDialogView.html'"></ng-include>
+  <ng-include src="'universalsync/core/logViewerModalView.html'"></ng-include>
+  <ng-include src="'universalsync/device/shareDeviceIdDialogView.html'"></ng-include>
 
   <!-- vendor scripts -->
   <script type="text/javascript" src="vendor/jquery/jquery-3.7.1.js"></script>
@@ -1065,32 +1065,32 @@
   <!-- / vendor scripts -->
 
   <!-- gui application code -->
-  <script type="text/javascript" src="syncthing/core/module.js"></script>
-  <script type="text/javascript" src="syncthing/core/alwaysNumberFilter.js"></script>
-  <script type="text/javascript" src="syncthing/core/basenameFilter.js"></script>
-  <script type="text/javascript" src="syncthing/core/binaryFilter.js"></script>
-  <script type="text/javascript" src="syncthing/core/localeNumberFilter.js"></script>
-  <script type="text/javascript" src="syncthing/core/percentFilter.js"></script>
-  <script type="text/javascript" src="syncthing/core/durationFilter.js"></script>
-  <script type="text/javascript" src="syncthing/core/eventService.js"></script>
-  <script type="text/javascript" src="syncthing/core/identiconDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/languageSelectDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/localeService.js"></script>
-  <script type="text/javascript" src="syncthing/core/modalDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/metricFilter.js"></script>
-  <script type="text/javascript" src="syncthing/core/notificationDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/pathIsSubDirDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/popoverDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/syncthingController.js"></script>
-  <script type="text/javascript" src="syncthing/core/tooltipDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/lazyCollapseDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/uncamelFilter.js"></script>
-  <script type="text/javascript" src="syncthing/core/uniqueFolderDirective.js"></script>
-  <script type="text/javascript" src="syncthing/core/validDeviceidDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/module.js"></script>
+  <script type="text/javascript" src="universalsync/core/alwaysNumberFilter.js"></script>
+  <script type="text/javascript" src="universalsync/core/basenameFilter.js"></script>
+  <script type="text/javascript" src="universalsync/core/binaryFilter.js"></script>
+  <script type="text/javascript" src="universalsync/core/localeNumberFilter.js"></script>
+  <script type="text/javascript" src="universalsync/core/percentFilter.js"></script>
+  <script type="text/javascript" src="universalsync/core/durationFilter.js"></script>
+  <script type="text/javascript" src="universalsync/core/eventService.js"></script>
+  <script type="text/javascript" src="universalsync/core/identiconDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/languageSelectDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/localeService.js"></script>
+  <script type="text/javascript" src="universalsync/core/modalDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/metricFilter.js"></script>
+  <script type="text/javascript" src="universalsync/core/notificationDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/pathIsSubDirDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/popoverDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/universalsyncController.js"></script>
+  <script type="text/javascript" src="universalsync/core/tooltipDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/lazyCollapseDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/uncamelFilter.js"></script>
+  <script type="text/javascript" src="universalsync/core/uniqueFolderDirective.js"></script>
+  <script type="text/javascript" src="universalsync/core/validDeviceidDirective.js"></script>
   <script type="text/javascript" src="assets/lang/valid-langs.js"></script>
   <script type="text/javascript" src="assets/lang/prettyprint.js"></script>
   <script type="text/javascript" src="meta.js"></script>
-  <script type="text/javascript" src="syncthing/app.js"></script>
+  <script type="text/javascript" src="universalsync/app.js"></script>
   <!-- / gui application code -->
 
 </body>

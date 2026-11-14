@@ -486,7 +486,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Warning, this path is a parent directory of an existing folder \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Warning, this path is a subdirectory of an existing folder \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Warning, this path is a subdirectory of an existing folder \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Warning: If you are using an external watcher like {{syncthingInotify}}, you should make sure it is deactivated.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Warning: If you are using an external watcher like {{universalSyncInotify}}, you should make sure it is deactivated.",
     "Watch for Changes": "Watch for Changes",
     "Watching for Changes": "Watching for Changes",
     "Watching for changes discovers most changes without periodic scanning.": "Watching for changes discovers most changes without periodic scanning.",

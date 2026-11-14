@@ -1,16 +1,16 @@
 This directory contains an example for running Universal Sync with a `rc.d` script in FreeBSD.
 
-* Install `syncthing` in `/usr/local/bin/syncthing`.
-* Copy the `syncthing` rc.d script in `/usr/local/etc/rc.d/syncthing`.
-* To automatically start `syncthing` at boot time, add the following line to `/etc/rc.conf`:
+* Install `universal sync` in `/usr/local/bin/universal sync`.
+* Copy the `universal sync` rc.d script in `/usr/local/etc/rc.d/universal sync`.
+* To automatically start `universal sync` at boot time, add the following line to `/etc/rc.conf`:
 ```
-syncthing_enable=YES
+universal sync_enable=YES
 ```
 * Optional configuration options are:
 ```
-syncthing_home=</path/to/syncthing/config/dir>
-syncthing_log_file=</path/to/syncthing/log/file>
-syncthing_user=<syncthing_user>
-syncthing_group=<syncthing_group>
+universal sync_home=</path/to/universal sync/config/dir>
+universal sync_log_file=</path/to/universal sync/log/file>
+universal sync_user=<universal sync_user>
+universal sync_group=<universal sync_group>
 ```
 See the rc.d script for more information.

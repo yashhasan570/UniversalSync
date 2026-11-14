@@ -20,7 +20,7 @@ import (
 )
 
 const (
-	urlPrefix       = "https://raw.githubusercontent.com/syncthing/syncthing/"
+	urlPrefix       = "https://raw.githubusercontent.com/universalsync/universalsync/"
 	httpTimeout     = 10 * time.Second
 	maxCacheEntries = 1000
 )

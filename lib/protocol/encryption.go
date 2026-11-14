@@ -35,7 +35,7 @@ const (
 	minPaddedSize         = 1024 // smallest block we'll allow
 	blockOverhead         = tagSize + nonceSize
 	maxPathComponent      = 200              // characters
-	encryptedDirExtension = ".syncthing-enc" // for top level dirs
+	encryptedDirExtension = ".universalsync-enc" // for top level dirs
 	miscreantAlgo         = "AES-SIV"
 	folderKeyCacheEntries = 1000
 	fileKeyCacheEntries   = 5000
@@ -536,7 +536,7 @@ func keysFromPasswords(keyGen *KeyGenerator, passwords map[string]string) map[st
 }
 
 func knownBytes(folderID string) []byte {
-	return []byte("syncthing" + folderID)
+	return []byte("universalsync" + folderID)
 }
 
 type KeyGenerator struct {
@@ -581,7 +581,7 @@ func (g *KeyGenerator) KeyFromPassword(folderID, password string) *[keySize]byte
 	return &key
 }
 
-var hkdfSalt = []byte("syncthing")
+var hkdfSalt = []byte("universalsync")
 
 type fileKeyCacheKey struct {
 	file string
@@ -610,7 +610,7 @@ func PasswordToken(keyGen *KeyGenerator, folderID, password string) []byte {
 }
 
 // slashify inserts slashes (and file extension) in the string to create an
-// appropriate tree. ABCDEFGH... => A.syncthing-enc/BC/DEFGH... We can use
+// appropriate tree. ABCDEFGH... => A.universalsync-enc/BC/DEFGH... We can use
 // forward slashes here because we're on the outside of native path formats,
 // the slash is the wire format.
 func slashify(s string) string {

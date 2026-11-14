@@ -90,7 +90,7 @@ func TestStopAfterBrokenConfig(t *testing.T) {
 		mdb.Close()
 	})
 	kdb := db.NewMiscDB(mdb)
-	srv := New(protocol.LocalDeviceID, w, "", "syncthing", nil, nil, nil, events.NoopLogger, nil, nil, nil, nil, nil, nil, false, kdb).(*service)
+	srv := New(protocol.LocalDeviceID, w, "", "universalsync", nil, nil, nil, events.NoopLogger, nil, nil, nil, nil, nil, nil, false, kdb).(*service)
 
 	srv.started = make(chan string)
 
@@ -753,7 +753,7 @@ func TestHTTPLogin(t *testing.T) {
 				GUI: gui,
 			}
 
-			tmpFile, err := os.CreateTemp("", "syncthing-testConfig-Password-*")
+			tmpFile, err := os.CreateTemp("", "universalsync-testConfig-Password-*")
 			if err != nil {
 				t.Fatal(err, "Failed to create tmpfile for test")
 			}
@@ -1136,7 +1136,7 @@ func startHTTPWithShutdownTimeout(t *testing.T, cfg config.Wrapper, shutdownTime
 		mdb.Close()
 	})
 	kdb := db.NewMiscDB(mdb)
-	svc := New(protocol.LocalDeviceID, cfg, assetDir, "syncthing", m, eventSub, diskEventSub, events.NoopLogger, discoverer, connections, urService, mockedSummary, errorLog, systemLog, false, kdb).(*service)
+	svc := New(protocol.LocalDeviceID, cfg, assetDir, "universalsync", m, eventSub, diskEventSub, events.NoopLogger, discoverer, connections, urService, mockedSummary, errorLog, systemLog, false, kdb).(*service)
 	svc.started = addrChan
 
 	if shutdownTimeout > 0 {
@@ -1654,7 +1654,7 @@ func TestEventMasks(t *testing.T) {
 		mdb.Close()
 	})
 	kdb := db.NewMiscDB(mdb)
-	svc := New(protocol.LocalDeviceID, cfg, "", "syncthing", nil, defSub, diskSub, events.NoopLogger, nil, nil, nil, nil, nil, nil, false, kdb).(*service)
+	svc := New(protocol.LocalDeviceID, cfg, "", "universalsync", nil, defSub, diskSub, events.NoopLogger, nil, nil, nil, nil, nil, nil, false, kdb).(*service)
 
 	if mask := svc.getEventMask(""); mask != DefaultEventMask {
 		t.Errorf("incorrect default mask %x != %x", int64(mask), int64(DefaultEventMask))
@@ -1790,7 +1790,7 @@ func TestConfigChanges(t *testing.T) {
 			APIKey:     testAPIKey,
 		},
 	}
-	tmpFile, err := os.CreateTemp("", "syncthing-testConfig-")
+	tmpFile, err := os.CreateTemp("", "universalsync-testConfig-")
 	if err != nil {
 		panic(err)
 	}

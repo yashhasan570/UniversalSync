@@ -13,14 +13,14 @@ import (
 
 var (
 	metricHashedBytes = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "scanner",
 		Name:      "hashed_bytes_total",
 		Help:      "Total amount of data hashed, per folder",
 	}, []string{"folder"})
 
 	metricScannedItems = promauto.NewCounterVec(prometheus.CounterOpts{
-		Namespace: "syncthing",
+		Namespace: "universalsync",
 		Subsystem: "scanner",
 		Name:      "scanned_items_total",
 		Help:      "Total number of items (files/directories) inspected, per folder",

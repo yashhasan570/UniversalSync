@@ -419,7 +419,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Kasu, bide hau dagoen partekatze baten karpeta ahaidea da (adibidez, \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Kasu, bide hau \"{{otherFolder}}\" partekatzearen azpi-karpeta da. Arazoak emaiten ahal ditu, fitxategi kentzeak edo doblatzeak, adibidez.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Kasu, bide hau \"{{otherFolderLabel}}\" ({{otherFolder}}) partekatzearen azpi-karpeta da. Arazoak emaiten ahal ditu, fitxategi kentzeak edo doblatzeak, adibidez.",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Oharra: {{syncthingInotify}} moduko kanpoko behatzaile bat erabiltzen ari bazara, desaktibatuta dagoela ziurtatu behar duzu.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Oharra: {{universalSyncInotify}} moduko kanpoko behatzaile bat erabiltzen ari bazara, desaktibatuta dagoela ziurtatu behar duzu.",
     "Watch for Changes": "Aldaketak zaindu",
     "Watching for Changes": "Aldaketak zaintzen",
     "Watching for changes discovers most changes without periodic scanning.": "Aldaketen gainbegiratzeak aldaketa gehienen berri izaten du, aldian behin berriro aztertu gabe.",

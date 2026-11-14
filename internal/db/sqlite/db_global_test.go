@@ -576,7 +576,7 @@ func TestDeletedAfterConflict(t *testing.T) {
 	// conflict and suddenly cause an old conflict version to become
 	// promoted.
 
-	// 	D:\syncthing-windows-amd64-v2.0.0-rc.22.dev.11.gff88430e>syncthing --home=c:\PortableApp\SyncTrayzorPortable-x64\data\syncthing debug database-file tnhbr-gxtuf TreeSizeFreeSetup.exe
+	// 	D:\universalsync-windows-amd64-v2.0.0-rc.22.dev.11.gff88430e>universalsync --home=c:\PortableApp\SyncTrayzorPortable-x64\data\universalsync debug database-file tnhbr-gxtuf TreeSizeFreeSetup.exe
 	// DEVICE   TYPE  NAME                   SEQUENCE  DELETED  MODIFIED                      SIZE      FLAGS    VERSION                                BLOCKLIST
 	// -local-  FILE  TreeSizeFreeSetup.exe  499       del      2025-07-04T11:52:36.2804841Z  0         -------  HZJYWFM:1751507473,OMKHRPB:1751629956  -nil-
 	// J5WNYJ6  FILE  TreeSizeFreeSetup.exe  500       del      2025-07-04T11:52:36.2804841Z  0         -------  HZJYWFM:1751507473,OMKHRPB:1751629956  -nil-

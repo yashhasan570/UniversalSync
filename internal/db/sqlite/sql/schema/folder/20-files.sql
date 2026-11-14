@@ -1,4 +1,4 @@
--- Copyright (C) 2025 The Syncthing Authors.
+-- Copyright (C) 2025 The Universal Sync Authors.
 --
 -- This Source Code Form is subject to the terms of the Mozilla Public
 -- License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -68,10 +68,10 @@ CREATE INDEX IF NOT EXISTS files_blocklist_hash_only ON files (blocklist_hash, d
 ;
 -- We need to look by name_idx or version_idx for garbage collection.
 -- This will fail pre-migration for v4 schemas, which is fine.
--- syncthing:ignore-failure
+-- universal sync:ignore-failure
 CREATE INDEX IF NOT EXISTS files_name_idx_only ON files (name_idx)
 ;
 -- This will fail pre-migration for v4 schemas, which is fine.
--- syncthing:ignore-failure
+-- universal sync:ignore-failure
 CREATE INDEX IF NOT EXISTS files_version_idx_only ON files (version_idx)
 ;

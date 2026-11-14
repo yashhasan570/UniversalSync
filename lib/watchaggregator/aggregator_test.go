@@ -40,7 +40,7 @@ const (
 )
 
 var (
-	folderRoot       = filepath.Clean("/home/someuser/syncthing")
+	folderRoot       = filepath.Clean("/home/someuser/universalsync")
 	defaultFolderCfg = config.FolderConfiguration{
 		FilesystemType:  config.FilesystemTypeBasic,
 		Path:            folderRoot,

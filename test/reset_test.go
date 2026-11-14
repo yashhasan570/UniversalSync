@@ -21,7 +21,7 @@ import (
 )
 
 func TestReset(t *testing.T) {
-	// Clean and start a syncthing instance
+	// Clean and start a universalsync instance
 
 	log.Println("Cleaning...")
 	err := removeAll("s1", "h1/index*")

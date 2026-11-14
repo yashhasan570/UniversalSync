@@ -454,7 +454,7 @@ func (m *model) warnAboutOverwritingProtectedFiles(cfg config.FolderConfiguratio
 	}
 
 	if len(filesAtRisk) > 0 {
-		slog.Warn("Some protected files may be overwritten and cause issues; see https://docs.syncthing.net/users/config.html#syncing-configuration-files for more information", slog.Any("filesAtRisk", filesAtRisk))
+		slog.Warn("Some protected files may be overwritten and cause issues; see https://docs.universalsync.net/users/config.html#syncing-configuration-files for more information", slog.Any("filesAtRisk", filesAtRisk))
 	}
 }
 
@@ -711,7 +711,7 @@ func (m *model) ConnectionStats() map[string]any {
 		}
 		hello := m.helloMessages[device]
 		versionString := hello.ClientVersion
-		if hello.ClientName != "syncthing" {
+		if hello.ClientName != "universalsync" {
 			versionString = hello.ClientName + " " + hello.ClientVersion
 		}
 		connIDs, ok := m.deviceConnIDs[device]
@@ -1253,7 +1253,7 @@ func (m *model) ClusterConfig(conn protocol.Connection, cm *protocol.ClusterConf
 
 	for _, info := range ccDeviceInfos {
 		if deviceCfg.Introducer && info.local.Introducer {
-			slog.Error("Remote is an introducer to us, and we are to them - only one should be introducer to the other, see https://docs.syncthing.net/users/introducer.html", deviceCfg.DeviceID.LogAttr())
+			slog.Error("Remote is an introducer to us, and we are to them - only one should be introducer to the other, see https://docs.universalsync.net/users/introducer.html", deviceCfg.DeviceID.LogAttr())
 		}
 		break
 	}

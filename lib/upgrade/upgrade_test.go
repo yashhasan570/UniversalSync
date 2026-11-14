@@ -127,8 +127,8 @@ func TestSelectedReleaseMacOS(t *testing.T) {
 
 	// The alternatives that we expect should work
 	assetNames := []string{
-		fmt.Sprintf("syncthing-macos-%s-v0.14.47.tar.gz", runtime.GOARCH),
-		fmt.Sprintf("syncthing-macosx-%s-v0.14.47.tar.gz", runtime.GOARCH),
+		fmt.Sprintf("universalsync-macos-%s-v0.14.47.tar.gz", runtime.GOARCH),
+		fmt.Sprintf("universalsync-macosx-%s-v0.14.47.tar.gz", runtime.GOARCH),
 	}
 
 	for _, assetName := range assetNames {

@@ -486,7 +486,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Perill! Esta ruta és un directori pare d'una carpeta existent \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Perill! Esta ruta és un subdirectori d'una carpeta que ja existeix nomenada \"{{otherFolder}}\".",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Perill! Esta ruta és un subdirectori de una carpeta existent \"{{otherFolderLabel}}\" ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "AVÍS: Si estàs utilitzant un observador extern com {{syncthingInotify}}, deus assegurar-te de que està desactivat.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "AVÍS: Si estàs utilitzant un observador extern com {{universalSyncInotify}}, deus assegurar-te de que està desactivat.",
     "Watch for Changes": "Vigilar els Canvis",
     "Watching for Changes": "Vigilant els Canvis",
     "Watching for changes discovers most changes without periodic scanning.": "Vigil·lar els canvis detecta més canvis sense escanetjar periòdicament.",

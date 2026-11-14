@@ -75,15 +75,15 @@ func TestDefaultValues(t *testing.T) {
 			ProgressUpdateIntervalS:   5,
 			LimitBandwidthInLan:       false,
 			MinHomeDiskFree:           Size{1, "%"},
-			URURL:                     "https://data.syncthing.net/newdata",
+			URURL:                     "https://data.universalsync.app/newdata",
 			URInitialDelayS:           1800,
-			ReleasesURL:               "https://upgrades.syncthing.net/meta.json",
+			ReleasesURL:               "https://upgrades.universalsync.net/meta.json",
 			AlwaysLocalNets:           []string{},
 			OverwriteRemoteDevNames:   false,
 			TempIndexMinBlocks:        10,
 			UnackedNotificationIDs:    []string{"authenticationUserAndPassword"},
 			SetLowPriority:            true,
-			CRURL:                     "https://crash.syncthing.net/newcrash",
+			CRURL:                     "https://crash.universalsync.net/newcrash",
 			CREnabled:                 true,
 			StunKeepaliveStartS:       180,
 			StunKeepaliveMinS:         20,
@@ -259,7 +259,7 @@ func TestNoListenAddresses(t *testing.T) {
 func TestOverriddenValues(t *testing.T) {
 	expected := OptionsConfiguration{
 		RawListenAddresses:        []string{"tcp://:23000"},
-		RawGlobalAnnServers:       []string{"udp4://syncthing.nym.se:22026"},
+		RawGlobalAnnServers:       []string{"udp4://universalsync.nym.se:22026"},
 		GlobalAnnEnabled:          false,
 		LocalAnnEnabled:           false,
 		LocalAnnPort:              42123,
@@ -303,7 +303,7 @@ func TestOverriddenValues(t *testing.T) {
 		ConnectionPriorityQUICWAN: 55,
 		ConnectionPriorityRelay:   9000,
 	}
-	expectedPath := "/media/syncthing"
+	expectedPath := "/media/universalsync"
 
 	os.Unsetenv("STNOUPGRADE")
 	cfg, cfgCancel, err := copyAndLoad(testFs, "overridenvalues.xml", device1)
@@ -516,12 +516,12 @@ func TestIssue1750(t *testing.T) {
 		t.Errorf("%q != %q", cfg.Options().RawListenAddresses[1], "tcp://:23001")
 	}
 
-	if cfg.Options().RawGlobalAnnServers[0] != "udp4://syncthing.nym.se:22026" {
-		t.Errorf("%q != %q", cfg.Options().RawGlobalAnnServers[0], "udp4://syncthing.nym.se:22026")
+	if cfg.Options().RawGlobalAnnServers[0] != "udp4://universalsync.nym.se:22026" {
+		t.Errorf("%q != %q", cfg.Options().RawGlobalAnnServers[0], "udp4://universalsync.nym.se:22026")
 	}
 
-	if cfg.Options().RawGlobalAnnServers[1] != "udp4://syncthing.nym.se:22027" {
-		t.Errorf("%q != %q", cfg.Options().RawGlobalAnnServers[1], "udp4://syncthing.nym.se:22027")
+	if cfg.Options().RawGlobalAnnServers[1] != "udp4://universalsync.nym.se:22027" {
+		t.Errorf("%q != %q", cfg.Options().RawGlobalAnnServers[1], "udp4://universalsync.nym.se:22027")
 	}
 }
 
@@ -888,7 +888,7 @@ func TestV14ListenAddressesMigration(t *testing.T) {
 		// Default listen plus default relays is now "default"
 		{
 			{"tcp://0.0.0.0:22000"},
-			{"dynamic+https://relays.syncthing.net/endpoint"},
+			{"dynamic+https://relays.universalsync.net/endpoint"},
 			{"default"},
 		},
 		// Default listen address without any relay addresses gets converted
@@ -909,13 +909,13 @@ func TestV14ListenAddressesMigration(t *testing.T) {
 		// Non-default listen plus default relays gets copied verbatim
 		{
 			{"tcp://1.2.3.4:22000"},
-			{"dynamic+https://relays.syncthing.net/endpoint"},
-			{"tcp://1.2.3.4:22000", "dynamic+https://relays.syncthing.net/endpoint"},
+			{"dynamic+https://relays.universalsync.net/endpoint"},
+			{"tcp://1.2.3.4:22000", "dynamic+https://relays.universalsync.net/endpoint"},
 		},
 		// Default stuff gets sucked into "default", the rest gets copied
 		{
 			{"tcp://0.0.0.0:22000", "tcp://1.2.3.4:22000"},
-			{"dynamic+https://relays.syncthing.net/endpoint", "relay://other.example.com"},
+			{"dynamic+https://relays.universalsync.net/endpoint", "relay://other.example.com"},
 			{"default", "tcp://1.2.3.4:22000", "relay://other.example.com"},
 		},
 	}
@@ -1349,7 +1349,7 @@ func copyToTmp(fs fs.Filesystem, path string) (string, error) {
 		return "", err
 	}
 	defer orig.Close()
-	temp, err := fs.Create("syncthing-configTest-" + rand.String(6))
+	temp, err := fs.Create("universalsync-configTest-" + rand.String(6))
 	if err != nil {
 		return "", err
 	}

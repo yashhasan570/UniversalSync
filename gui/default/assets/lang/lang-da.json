@@ -508,7 +508,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Advarsel: Denne sti er en forældermappe til den eksisterende mappe “{{otherFolderLabel}}” ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Advarsel: Denne sti er en undermappe til den eksisterende mappe “{{otherFolder}}”.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Advarsel: Denne sti er en undermappe til den eksisterende mappe “{{otherFolderLabel}}” ({{otherFolder}}).",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Advarsel: Hvis du bruger en ekstern overvågning såsom {{syncthingInotify}}, bør du være sikker på, at den er deaktiveret.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Advarsel: Hvis du bruger en ekstern overvågning såsom {{universalSyncInotify}}, bør du være sikker på, at den er deaktiveret.",
     "Watch for Changes": "Overvåg ændringer",
     "Watching for Changes": "Overvågning af ændringer",
     "Watching for changes discovers most changes without periodic scanning.": "Overvågning af ændringer finder ændringer uden at skanne fra tid til anden.",

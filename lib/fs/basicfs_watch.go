@@ -16,7 +16,7 @@ import (
 	"errors"
 	"unicode/utf8"
 
-	"github.com/syncthing/notify"
+	"github.com/universalsync/notify"
 )
 
 // Notify does not block on sending to channel, so the channel must be buffered.
@@ -53,7 +53,7 @@ func (f *BasicFilesystem) Watch(name string, ignore Matcher, ctx context.Context
 	if err != nil {
 		notify.Stop(backendChan)
 		if reachedMaxUserWatches(err) {
-			err = errors.New("failed to set up inotify handler. Please increase inotify limits, see https://docs.syncthing.net/users/faq.html#inotify-limits")
+			err = errors.New("failed to set up inotify handler. Please increase inotify limits, see https://docs.universalsync.net/users/faq.html#inotify-limits")
 		}
 		return nil, nil, err
 	}

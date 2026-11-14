@@ -35,7 +35,7 @@ import (
 type cli struct {
 	Listen           string        `default:":8080" help:"Listen address"`
 	MetricsListen    string        `default:":8082" help:"Listen address for metrics"`
-	URL              string        `short:"u" default:"https://api.github.com/repos/syncthing/syncthing/releases?per_page=25" help:"GitHub releases url"`
+	URL              string        `short:"u" default:"https://api.github.com/repos/yashhasan570/UniversalSync/releases?per_page=25" help:"GitHub releases url"`
 	Forward          []string      `short:"f" help:"Forwarded pages, format: /path->https://example/com/url"`
 	CacheTime        time.Duration `default:"15m" help:"Cache time"`
 	AssetURLTemplate string        `help:"Template for asset URLs, blank to use GitHub default" env:"ASSET_URL_TEMPLATE"`

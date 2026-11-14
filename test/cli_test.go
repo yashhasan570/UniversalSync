@@ -31,7 +31,7 @@ func TestCLIReset(t *testing.T) {
 
 	// Run reset to clean up
 
-	cmd := exec.Command("../bin/syncthing", "--no-browser", "--home", "h1", "--reset-database")
+	cmd := exec.Command("../bin/universalsync", "--no-browser", "--home", "h1", "--reset-database")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stdout
 	err := cmd.Run()
@@ -50,7 +50,7 @@ func TestCLIReset(t *testing.T) {
 
 	// Clean up
 
-	dirs, err = filepath.Glob("*.syncthing-reset-*")
+	dirs, err = filepath.Glob("*.universalsync-reset-*")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -65,7 +65,7 @@ func TestCLIGenerate(t *testing.T) {
 
 	// --generate should create a bunch of stuff
 
-	cmd := exec.Command("../bin/syncthing", "--no-browser", "--generate", "home.out")
+	cmd := exec.Command("../bin/universalsync", "--no-browser", "--generate", "home.out")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stdout
 	err = cmd.Run()
@@ -91,7 +91,7 @@ func TestCLIFirstStartup(t *testing.T) {
 
 	// First startup should create config, BEP certificate, and HTTP certificate.
 
-	cmd := exec.Command("../bin/syncthing", "--no-browser", "--home", "home.out")
+	cmd := exec.Command("../bin/universalsync", "--no-browser", "--home", "home.out")
 	cmd.Env = append(os.Environ(), "STNORESTART=1")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stdout

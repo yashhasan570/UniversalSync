@@ -21,7 +21,7 @@ func TestVersion14Hello(t *testing.T) {
 
 	expected := Hello{
 		DeviceName:    "test device",
-		ClientName:    "syncthing",
+		ClientName:    "universalsync",
 		ClientVersion: "v0.14.5",
 	}
 	msgBuf, err := proto.Marshal(expected.toWire())

@@ -508,7 +508,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "चेतावनी, यह पथ मौजूदा फोल्डर \"{{otherFolderLabel}}\" ({{otherFolder}}) की मूल निर्देशिका है।",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "चेतावनी, यह पथ मौजूदा फोल्डर \"{{otherFolder}}\" की एक उपनिर्देशिका है।",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "चेतावनी, यह पथ मौजूदा फोल्डर \"{{otherFolderLabel}}\" ({{otherFolder}}) की एक उपनिर्देशिका है।",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "चेतावनी: यदि आप {{syncthingInotify}} जैसे बाहरी वॉचर का उपयोग कर रहे हैं, तो आपको यह सुनिश्चित करना चाहिए कि यह निष्क्रिय है।",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "चेतावनी: यदि आप {{universalSyncInotify}} जैसे बाहरी वॉचर का उपयोग कर रहे हैं, तो आपको यह सुनिश्चित करना चाहिए कि यह निष्क्रिय है।",
     "Watch for Changes": "परिवर्तनों पर नजर रखें",
     "Watching for Changes": "परिवर्तनों पर नजर रख रहे हैं",
     "Watching for changes discovers most changes without periodic scanning.": "परिवर्तनों पर नज़र रखने से समय-समय पर स्कैनिंग के बिना अधिकांश परिवर्तनों का पता चलता है।",

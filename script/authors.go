@@ -25,7 +25,7 @@ import (
 	"strings"
 )
 
-const htmlFile = "gui/default/syncthing/core/aboutModalView.html"
+const htmlFile = "gui/default/universalsync/core/aboutModalView.html"
 
 var (
 	nicknameRe        = regexp.MustCompile(`\(([^\s]*)\)`)

@@ -470,7 +470,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Įspėjimas, šis kelias yra esamo aplanko \"{{otherFolderLabel}}\" ({{otherFolder}}) virškatalogis.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Įspėjimas, šis kelias yra esamo aplanko \"{{otherFolder}}\" pakatalogis.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Įspėjimas, šis kelias yra esamo aplanko \"{{otherFolderLabel}}\" ({{otherFolder}}) pakatalogis.",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Įspėjimas: Jeigu naudojate išorinį stebėtoją, tokį kaip {{syncthingInotify}}, tuomet turite įsitikinti, kad jis yra išjungtas.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Įspėjimas: Jeigu naudojate išorinį stebėtoją, tokį kaip {{universalSyncInotify}}, tuomet turite įsitikinti, kad jis yra išjungtas.",
     "Watch for Changes": "Stebėti pakeitimus",
     "Watching for Changes": "Stebimi pakeitimai",
     "Watching for changes discovers most changes without periodic scanning.": "Pakeitimų stebėjimas aptinka daugumą pakeitimų be periodinio nuskaitymo.",

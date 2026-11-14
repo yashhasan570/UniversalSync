@@ -521,7 +521,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "경고: 이 경로는 기존 \"{{otherFolderLabel}}\" ({{otherFolder}}) 폴더의 상위 폴더입니다.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "경고: 이 경로는 기존 \"{{otherFolder}}\" 폴더의 하위 폴더입니다.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "경고: 이 경로는 기존 \"{{otherFolderLabel}}\" ({{otherFolder}}) 폴더의 하위 폴더입니다.",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "경고: {{syncthingInotify}} 등 외부 감시 도구를 사용할 경우에는 이 설정을 반드시 비활성화해야 합니다.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "경고: {{universalSyncInotify}} 등 외부 감시 도구를 사용할 경우에는 이 설정을 반드시 비활성화해야 합니다.",
     "Watch for Changes": "변경 항목 감시",
     "Watching for Changes": "변경 항목 감시",
     "Watching for changes discovers most changes without periodic scanning.": "변경 항목 감시는 주기적으로 탐색하지 않아도 대부분의 변경 항목을 탐지합니다.",

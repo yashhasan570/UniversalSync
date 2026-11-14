@@ -388,7 +388,7 @@
     "Warning, this path is a parent directory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Varoitus: Tämä kansio on jo olemassa olevan kansion yläkansio \"{{otherFolderLabel}}\" ({{otherFolder}}).",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolder%}\".": "Varoitus: tämä polku on olemassa olevan kansion \"{{otherFolder}}\" alikansio.",
     "Warning, this path is a subdirectory of an existing folder \"{%otherFolderLabel%}\" ({%otherFolder%}).": "Varoitus: tämä kansio on jo olemassaolevan kansion \"{{otherFolderLabel}}\" ({{otherFolder}}) alikansio.",
-    "Warning: If you are using an external watcher like {%syncthingInotify%}, you should make sure it is deactivated.": "Varoitus: jos käytät ulkopuolista tiedostojärjestelmän muutosten valvojaa, kuten {{syncthingInotify}} varmista, että se ei ole aktiivinen.",
+    "Warning: If you are using an external watcher like {%universalSyncInotify%}, you should make sure it is deactivated.": "Varoitus: jos käytät ulkopuolista tiedostojärjestelmän muutosten valvojaa, kuten {{universalSyncInotify}} varmista, että se ei ole aktiivinen.",
     "Watch for Changes": "Seuraa muutoksia",
     "Watching for Changes": "Seuraa muutoksia",
     "Watching for changes discovers most changes without periodic scanning.": "Muutosten tarkkailu löytää useimmat muutokset ilman säännöllistä tarkistusta.",

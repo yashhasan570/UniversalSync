@@ -109,8 +109,8 @@ func TestKeyDerivation(t *testing.T) {
 func TestDecryptNameInvalid(t *testing.T) {
 	key := new([32]byte)
 	for _, c := range []string{
-		"T.syncthing-enc/OD",
-		"T.syncthing-enc/OD/",
+		"T.universalsync-enc/OD",
+		"T.universalsync-enc/OD/",
 		"T.wrong-extension/OD/PHVDD67S7FI2K5QQMPSOFSK",
 		"OD/PHVDD67S7FI2K5QQMPSOFSK",
 	} {

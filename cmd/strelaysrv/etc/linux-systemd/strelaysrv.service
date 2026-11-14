@@ -4,15 +4,15 @@ After=network.target
 Documentation=man:strelaysrv(1)
 
 [Service]
-WorkingDirectory=/var/lib/syncthing-relaysrv
-EnvironmentFile=/etc/default/syncthing-relaysrv
+WorkingDirectory=/var/lib/universal sync-relaysrv
+EnvironmentFile=/etc/default/universal sync-relaysrv
 ExecStart=/usr/bin/strelaysrv -nat=${NAT} $RELAYSRV_OPTS
 
 # Hardening
-User=syncthing-relaysrv
-Group=syncthing
+User=universal sync-relaysrv
+Group=universal sync
 ProtectSystem=strict
-ReadWritePaths=/var/lib/syncthing-relaysrv
+ReadWritePaths=/var/lib/universal sync-relaysrv
 NoNewPrivileges=true
 PrivateTmp=true
 PrivateDevices=true
@@ -22,4 +22,4 @@ MemoryDenyWriteExecute=true
 
 [Install]
 WantedBy=multi-user.target
-Alias=syncthing-relaysrv.service
+Alias=universal sync-relaysrv.service
