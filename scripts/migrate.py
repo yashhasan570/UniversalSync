@@ -34,7 +34,7 @@ def main():
     TEXT_EXTS = {'.go', '.py', '.sh', '.mod', '.sum', '.ts', '.mjs', '.html', '.js',
                  '.css', '.handlebars', '.tmpl', '.md', '.txt', '.desktop', '.service',
                  '.xml', '.yml', '.yaml', '.json', '.list', '.conf', '.in', '.spec', '.7'}
-    SKIP = {'.git', 'lib/protocol', 'scripts', 'vendor', 'node_modules'}
+    SKIP = {'.github', '.git', 'lib/protocol', 'scripts', 'vendor', 'node_modules'}
     changed = 0
     for dirpath, dirnames, filenames in os.walk(ROOT):
         rel = os.path.relpath(dirpath, ROOT).replace(os.sep, '/')
