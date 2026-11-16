@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -400,7 +400,7 @@ func (s *service) Serve(ctx context.Context) error {
 
 	srv := http.Server{
 		Handler: handler,
-		// ReadTimeout must be longer than Universal SyncController $scope.refresh
+		// ReadTimeout must be longer than UniversalSyncController $scope.refresh
 		// interval to avoid HTTP keepalive/GUI refresh race.
 		ReadTimeout: 15 * time.Second,
 		// Prevent the HTTP server from logging stuff on its own. The things we
@@ -572,7 +572,7 @@ func corsMiddleware(next http.Handler, allowFrameLoading bool) http.Handler {
 			// We don't want to be rendered in an <iframe>,
 			// <frame> or <object>. (Unless we do it ourselves.
 			// This is also an escape hatch for people who serve
-			// Universal Sync GUI as part of their own website
+			// UniversalSync GUI as part of their own website
 			// through a proxy, so they don't need to set the
 			// allowFrameLoading bool.)
 			w.Header().Set("X-Frame-Options", "SAMEORIGIN")
@@ -615,8 +615,8 @@ func noCacheMiddleware(h http.Handler) http.Handler {
 
 func withDetailsMiddleware(id protocol.DeviceID, h http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("X-Universal Sync-Version", build.Version)
-		w.Header().Set("X-Universal Sync-ID", id.String())
+		w.Header().Set("X-UniversalSync-Version", build.Version)
+		w.Header().Set("X-UniversalSync-ID", id.String())
 		h.ServeHTTP(w, r)
 	})
 }

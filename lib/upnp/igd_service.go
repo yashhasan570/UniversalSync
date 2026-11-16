@@ -1,4 +1,4 @@
-// Copyright (C) 2016 The Universal Sync Authors.
+// Copyright (C) 2016 The UniversalSync Authors.
 //
 // Adapted from https://github.com/jackpal/Taipei-Torrent/blob/dd88a8bfac6431c01d959ce3c745e74b8a911793/IGD.go
 // Copyright (c) 2010 Jack Palevich (https://github.com/jackpal/Taipei-Torrent/blob/dd88a8bfac6431c01d959ce3c745e74b8a911793/LICENSE)

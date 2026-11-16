@@ -1,4 +1,4 @@
-// Copyright (C) 2016 The Universal Sync Authors.
+// Copyright (C) 2016 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -13,8 +13,8 @@ import (
 	"net"
 	"testing"
 
-	"github.com/yashhasan570/UniversalSync/lib/dialer"
-	"github.com/yashhasan570/UniversalSync/lib/testutil"
+	"github.com/syncthing/syncthing/lib/dialer"
+	"github.com/syncthing/syncthing/lib/testutil"
 )
 
 func BenchmarkRequestsRawTCP(b *testing.B) {

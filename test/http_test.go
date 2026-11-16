@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -173,7 +173,7 @@ func TestHTTPPOSTWithoutCSRF(t *testing.T) {
 	}
 	res.Body.Close()
 	hdr := res.Header.Get("Set-Cookie")
-	id := res.Header.Get("X-Universal Sync-ID")[:protocol.ShortIDStringLength]
+	id := res.Header.Get("X-UniversalSync-ID")[:protocol.ShortIDStringLength]
 	if !strings.Contains(hdr, "CSRF-Token") {
 		t.Error("Missing CSRF-Token in", hdr)
 	}

@@ -27,9 +27,9 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "STRELAYSRV" "1" "Oct 21, 2026" "v2.1.0" "Universal Sync"
+.TH "STRELAYSRV" "1" "Oct 21, 2026" "v2.1.0" "Syncthing"
 .SH NAME
-strelaysrv \- Universal Sync Relay Server
+strelaysrv \- Syncthing Relay Server
 .SH SYNOPSIS
 .INDENT 0.0
 .INDENT 3.5
@@ -45,10 +45,10 @@ strelaysrv [\-debug] [\-ext\-address=<address>] [\-global\-rate=<bytes/s>] [\-ke
 .UNINDENT
 .SH DESCRIPTION
 .sp
-Universal Sync relies on a network of community\-contributed relay servers. Anyone
+Syncthing relies on a network of community\-contributed relay servers. Anyone
 can run a relay server, and it will automatically join the relay pool and be
-available to Universal Sync users. The current list of relays can be found at
-\X'tty: link https://relays.universal sync.net/'\fI\%https://relays.universal sync.net/\fP\X'tty: link'\&.
+available to Syncthing users. The current list of relays can be found at
+\X'tty: link https://relays.syncthing.net/'\fI\%https://relays.syncthing.net/\fP\X'tty: link'\&.
 .SH OPTIONS
 .INDENT 0.0
 .TP
@@ -125,7 +125,7 @@ How often pings are sent (default 1m0s).
 .TP
 .B \-pools=<pool addresses>
 Comma separated list of relay pool addresses to join (default
-“\X'tty: link https://relays.universal sync.net/endpoint'\fI\%https://relays.universal sync.net/endpoint\fP\X'tty: link'”). Blank to disable announcement to
+“\X'tty: link https://relays.syncthing.net/endpoint'\fI\%https://relays.syncthing.net/endpoint\fP\X'tty: link'”). Blank to disable announcement to
 a pool, thereby remaining a private relay.
 .UNINDENT
 .INDENT 0.0
@@ -161,7 +161,7 @@ Show version
 .UNINDENT
 .SS Installing
 .sp
-Go to \X'tty: link https://github.com/universal sync/relaysrv/releases'\fI\%releases\fP <\fBhttps://github.com/universal sync/relaysrv/releases\fP>\X'tty: link' and
+Go to \X'tty: link https://github.com/syncthing/relaysrv/releases'\fI\%releases\fP <\fBhttps://github.com/syncthing/relaysrv/releases\fP>\X'tty: link' and
 download the file appropriate for your operating system. Unpacking it will
 yield a binary called \fBstrelaysrv\fP (or \fBstrelaysrv.exe\fP on Windows).
 Start this in whatever way you are most comfortable with; double clicking
@@ -172,9 +172,9 @@ which means that it is publicly visible and any client can connect to it.
 The startup message prints instructions on how to change this.
 .sp
 The relay server can also be obtained through apt, the Debian/Ubuntu package
-manager. Recent releases can be found at universal sync’s
-\X'tty: link https://apt.universal sync.net/'\fI\%apt repository\fP <\fBhttps://apt.universal sync.net/\fP>\X'tty: link'\&. The name of the package is
-universal sync\-relaysrv.
+manager. Recent releases can be found at syncthing’s
+\X'tty: link https://apt.syncthing.net/'\fI\%apt repository\fP <\fBhttps://apt.syncthing.net/\fP>\X'tty: link'\&. The name of the package is
+syncthing\-relaysrv.
 .SH SETTING UP
 .sp
 Primarily, you need to decide on a directory to store the TLS key and
@@ -204,7 +204,7 @@ To make the relay server start automatically at boot, use the recommended
 procedure for your operating system.
 .SS Client configuration
 .sp
-Universal Sync can be configured to use specific relay servers (exclusively of the public pool) by adding the required servers to the Sync Protocol Listen Address field, under Actions and Settings. The format is as follows:
+Syncthing can be configured to use specific relay servers (exclusively of the public pool) by adding the required servers to the Sync Protocol Listen Address field, under Actions and Settings. The format is as follows:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -270,7 +270,7 @@ although your mileage may vary.
 .SH FIREWALL CONSIDERATIONS
 .sp
 The relay server listens on two ports by default.  One for data connections and the other
-for providing public statistics at \X'tty: link https://relays.universal sync.net/'\fI\%https://relays.universal sync.net/\fP\X'tty: link'\&.  The firewall, such as
+for providing public statistics at \X'tty: link https://relays.syncthing.net/'\fI\%https://relays.syncthing.net/\fP\X'tty: link'\&.  The firewall, such as
 \fBiptables\fP, must permit incoming TCP connections to the following ports:
 .INDENT 0.0
 .IP \(bu 2
@@ -301,7 +301,7 @@ To configure this use the \fB\-token\fP option:
 .sp
 $ strelaysrv \-token=mySecretToken
 .sp
-Then configure your Universal Sync devices to send the token when joining the relay:
+Then configure your Syncthing devices to send the token when joining the relay:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -312,11 +312,11 @@ relay://<host name|IP>[:port]/?id=<relay device ID>&token=mySecretToken
 .UNINDENT
 .SH SEE ALSO
 .sp
-\fBuniversal sync\-relay(7)\fP, \fBuniversal sync\-faq(7)\fP,
-\fBuniversal sync\-networking(7)\fP
+\fBsyncthing\-relay(7)\fP, \fBsyncthing\-faq(7)\fP,
+\fBsyncthing\-networking(7)\fP
 .SH AUTHOR
-The Universal Sync Authors
+The Syncthing Authors
 .SH COPYRIGHT
-2014-2026, The Universal Sync Authors
+2014-2026, The Syncthing Authors
 .\" Generated by docutils manpage writer.
 .

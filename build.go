@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -135,7 +135,7 @@ var targets = map[string]target{
 		debname:     "universalsync-discosrv",
 		debdeps:     []string{"libc6"},
 		debpre:      "cmd/stdiscosrv/scripts/preinst",
-		description: "Universal Sync Discovery Server",
+		description: "UniversalSync Discovery Server",
 		buildPkgs:   []string{"github.com/yashhasan570/UniversalSync/cmd/stdiscosrv"},
 		binaryName:  "stdiscosrv", // .exe will be added automatically for Windows builds
 		archiveFiles: []archiveFile{
@@ -161,7 +161,7 @@ var targets = map[string]target{
 		debname:     "universalsync-relaysrv",
 		debdeps:     []string{"libc6"},
 		debpre:      "cmd/strelaysrv/scripts/preinst",
-		description: "Universal Sync Relay Server",
+		description: "UniversalSync Relay Server",
 		buildPkgs:   []string{"github.com/yashhasan570/UniversalSync/cmd/strelaysrv"},
 		binaryName:  "strelaysrv", // .exe will be added automatically for Windows builds
 		archiveFiles: []archiveFile{
@@ -186,25 +186,25 @@ var targets = map[string]target{
 	},
 	"strelaypoolsrv": {
 		name:        "strelaypoolsrv",
-		description: "Universal Sync Relay Pool Server",
+		description: "UniversalSync Relay Pool Server",
 		buildPkgs:   []string{"github.com/yashhasan570/UniversalSync/cmd/infra/strelaypoolsrv"},
 		binaryName:  "strelaypoolsrv",
 	},
 	"stupgrades": {
 		name:        "stupgrades",
-		description: "Universal Sync Upgrade Check Server",
+		description: "UniversalSync Upgrade Check Server",
 		buildPkgs:   []string{"github.com/yashhasan570/UniversalSync/cmd/infra/stupgrades"},
 		binaryName:  "stupgrades",
 	},
 	"stcrashreceiver": {
 		name:        "stcrashreceiver",
-		description: "Universal Sync Crash Server",
+		description: "UniversalSync Crash Server",
 		buildPkgs:   []string{"github.com/yashhasan570/UniversalSync/cmd/infra/stcrashreceiver"},
 		binaryName:  "stcrashreceiver",
 	},
 	"ursrv": {
 		name:        "ursrv",
-		description: "Universal Sync Usage Reporting Server",
+		description: "UniversalSync Usage Reporting Server",
 		buildPkgs:   []string{"github.com/yashhasan570/UniversalSync/cmd/infra/ursrv"},
 		binaryName:  "ursrv",
 	},
@@ -619,7 +619,7 @@ func buildDeb(target target, tags []string) {
 		}
 	}
 
-	maintainer := "Universal Sync Release Management <release@universalsync.net>"
+	maintainer := "UniversalSync Release Management <release@universalsync.net>"
 	debver := version
 	if strings.HasPrefix(debver, "v") {
 		debver = debver[1:]
@@ -702,13 +702,13 @@ func shouldBuildSyso(dir string) (string, error) {
 			},
 		},
 		"StringFileInfo": M{
-			"CompanyName":      "The Universal Sync Authors",
-			"FileDescription":  "Universal Sync - Open Source Continuous File Synchronization",
+			"CompanyName":      "The UniversalSync Authors",
+			"FileDescription":  "UniversalSync - Open Source Continuous File Synchronization",
 			"FileVersion":      version,
 			"InternalName":     "universalsync",
-			"LegalCopyright":   "The Universal Sync Authors",
+			"LegalCopyright":   "The UniversalSync Authors",
 			"OriginalFilename": "universalsync",
-			"ProductName":      "Universal Sync",
+			"ProductName":      "UniversalSync",
 			"ProductVersion":   version,
 		},
 		"IconPath": "assets/logo.ico",

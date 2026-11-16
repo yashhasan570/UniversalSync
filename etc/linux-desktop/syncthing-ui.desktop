@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=UniversalSync Web UI
+GenericName=File synchronization UI
+Comment=Opens UniversalSync's Web UI in the default browser (UniversalSync must already be started).
+Exec=universalsync browser
+Icon=universalsync
+Terminal=false
+Type=Application
+Keywords=synchronization;interface;
+Categories=Network;FileTransfer;P2P

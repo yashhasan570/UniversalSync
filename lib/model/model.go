@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -195,7 +195,7 @@ var (
 	ErrFolderMissing    = errors.New("no such folder")
 	errNoVersioner      = errors.New("folder has no versioner")
 	// errors about why a connection is closed
-	errStopped                            = errors.New("Universal Sync is being stopped") //nolint:staticcheck
+	errStopped                            = errors.New("UniversalSync is being stopped") //nolint:staticcheck
 	errEncryptionInvConfigLocal           = errors.New("can't encrypt outgoing data because local data is encrypted (folder-type receive-encrypted)")
 	errEncryptionInvConfigRemote          = errors.New("remote has encrypted data and encrypts that data for us - this is impossible")
 	errEncryptionNotEncryptedLocal        = errors.New("remote expects to exchange encrypted data, but is configured for plain data")
@@ -478,7 +478,7 @@ func (m *model) removeFolder(cfg config.FolderConfiguration) {
 	}
 	if isPathUnique {
 		// Remove (if empty and removable) or move away (if non-empty or
-		// otherwise not removable) Universal Sync-specific marker files.
+		// otherwise not removable) UniversalSync-specific marker files.
 		if err := cfg.RemoveMarker(); err != nil && !errors.Is(err, os.ErrNotExist) {
 			moved := config.DefaultMarkerName + time.Now().Format(".removed-20060102-150405")
 			fs := cfg.Filesystem()

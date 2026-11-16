@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -75,7 +75,7 @@ var (
 	errNotAvailable           = errors.New("no connected device has the required version of this file")
 	errModified               = errors.New("file modified but not rescanned; will try again later")
 	errUnexpectedDirOnFileDel = errors.New("encountered directory when trying to remove file/symlink")
-	errIncompatibleSymlink    = errors.New("incompatible symlink entry; rescan with newer Universal Sync on source")
+	errIncompatibleSymlink    = errors.New("incompatible symlink entry; rescan with newer UniversalSync on source")
 	contextRemovingOldItem    = "removing item to be replaced"
 )
 
@@ -780,7 +780,7 @@ func (f *sendReceiveFolder) handleSymlink(file protocol.FileInfo, dbUpdateChan c
 	})))
 
 	if len(file.SymlinkTarget) == 0 {
-		// Index entry from a Universal Sync predating the support for including
+		// Index entry from a UniversalSync predating the support for including
 		// the link target in the index entry. We log this as an error.
 		f.newPullError(file.Name, errIncompatibleSymlink)
 		return

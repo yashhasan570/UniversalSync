@@ -1,17 +1,17 @@
-# Docker Container for Universal Sync
+# Docker Container for UniversalSync
 
-Use the Dockerfile in this repo, or pull the `universal sync/universal sync` image
+Use the Dockerfile in this repo, or pull the `universalsync/universalsync` image
 from Docker Hub.
 
-Use the `/var/universal sync` volume to have the synchronized files available on the
+Use the `/var/universalsync` volume to have the synchronized files available on the
 host. You can add more folders and map them as you prefer.
 
-Note that Universal Sync runs as UID 1000 and GID 1000 by default. These may be
+Note that UniversalSync runs as UID 1000 and GID 1000 by default. These may be
 altered with the `PUID` and `PGID` environment variables. In addition
-the name of the Universal Sync instance can be optionally defined by using
-`--hostname=universal sync` parameter.
+the name of the UniversalSync instance can be optionally defined by using
+`--hostname=universalsync` parameter.
 
-To grant Universal Sync additional capabilities without running as root, use the
+To grant UniversalSync additional capabilities without running as root, use the
 `PCAP` environment variable with the same syntax as that for `setcap(8)`.
 For example, `PCAP=cap_chown,cap_fowner+ep`.
 
@@ -22,10 +22,10 @@ example `UMASK=002`.
 
 **Docker cli**
 ```
-$ docker pull universal sync/universal sync
+$ docker pull universalsync/universalsync
 $ docker run --network=host  -e STGUIADDRESS= \
-    -v /wherever/st-sync:/var/universal sync \
-    universal sync/universal sync:latest
+    -v /wherever/st-sync:/var/universalsync \
+    universalsync/universalsync:latest
 ```
 
 **Docker compose**
@@ -33,16 +33,16 @@ $ docker run --network=host  -e STGUIADDRESS= \
 ---
 version: "3"
 services:
-  universal sync:
-    image: universal sync/universal sync
-    container_name: universal sync
-    hostname: my-universal sync
+  universalsync:
+    image: universalsync/universalsync
+    container_name: universalsync
+    hostname: my-universalsync
     environment:
       - PUID=1000
       - PGID=1000
       - STGUIADDRESS=
     volumes:
-      - /wherever/st-sync:/var/universal sync
+      - /wherever/st-sync:/var/universalsync
     network_mode: host
     restart: unless-stopped
     healthcheck:
@@ -55,7 +55,7 @@ services:
 ## Discovery
 
 Please note that Docker's default network mode prevents local IP addresses
-from being discovered, as Universal Sync can only see the internal IP address of
+from being discovered, as UniversalSync can only see the internal IP address of
 the container on the `172.17.0.0/16` subnet. This would likely break the ability
 for nodes to establish LAN connections properly, resulting in poor transfer
 rates unless local device addresses are configured manually.
@@ -63,15 +63,15 @@ rates unless local device addresses are configured manually.
 It is therefore strongly recommended to stick to the [host network mode](https://docs.docker.com/network/host/),
 as shown above.
 
-Be aware that universal sync alone is now in control of what interfaces and ports it
-listens on. You can edit the universal sync configuration to change the defaults if
+Be aware that universalsync alone is now in control of what interfaces and ports it
+listens on. You can edit the universalsync configuration to change the defaults if
 there are conflicts.
 
 ## GUI Security
 
-By default Universal Sync inside the Docker image listens on `0.0.0.0:8384`. This
+By default UniversalSync inside the Docker image listens on `0.0.0.0:8384`. This
 allows GUI connections when running without host network mode. The example
-above unsets the `STGUIADDRESS` environment variable to have Universal Sync fall
+above unsets the `STGUIADDRESS` environment variable to have UniversalSync fall
 back to listening on what has been configured in the configuration file or the
 GUI settings dialog. By default this is the localhost IP address `127.0.0.1`.
 If you configure your GUI to be externally reachable, make sure you set up

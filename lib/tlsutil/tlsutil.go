@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -140,7 +140,7 @@ func generateCertificate(commonName string, lifetimeDays int, compatible bool) (
 		SerialNumber: new(big.Int).SetUint64(rand.Uint64()),
 		Subject: pkix.Name{
 			CommonName:         commonName,
-			Organization:       []string{"Universal Sync"},
+			Organization:       []string{"UniversalSync"},
 			OrganizationalUnit: []string{"Automatically Generated"},
 		},
 		DNSNames:              []string{commonName},

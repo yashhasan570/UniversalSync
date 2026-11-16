@@ -1,4 +1,4 @@
-// Copyright (C) 2016 The Universal Sync Authors.
+// Copyright (C) 2016 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -21,7 +21,7 @@ func TestVersion14Hello(t *testing.T) {
 
 	expected := Hello{
 		DeviceName:    "test device",
-		ClientName:    "universalsync",
+		ClientName:    "syncthing",
 		ClientVersion: "v0.14.5",
 	}
 	msgBuf, err := proto.Marshal(expected.toWire())

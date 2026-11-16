@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -39,7 +39,7 @@ var noStringRe = regexp.MustCompile(
 	`^((\W*\{\{.*?\}\} ?.?\/?.?(bps)?\W*)+(\.stignore)?|[^a-zA-Z]+.?[^a-zA-Z]*|[kMGT]?B|Twitter|JS\W?|DEV|https?://\S+|TechUi)$`)
 
 // exceptions to the untranslated text warning specific to aboutModalView.html
-var aboutRe = regexp.MustCompile(`^([^/]+/[^/]+|(The Go Pro|Font Awesome ).+|Build \{\{.+\}\}|Copyright .+ the Universal Sync Authors\.)$`)
+var aboutRe = regexp.MustCompile(`^([^/]+/[^/]+|(The Go Pro|Font Awesome ).+|Build \{\{.+\}\}|Copyright .+ the UniversalSync Authors\.)$`)
 
 func generalNode(n *html.Node, filename string) {
 	translate := false

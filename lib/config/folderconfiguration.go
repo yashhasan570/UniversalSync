@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -203,7 +203,7 @@ func (f *FolderConfiguration) markerFilename() string {
 
 func (f *FolderConfiguration) markerContents() []byte {
 	var buf bytes.Buffer
-	buf.WriteString("# This directory is a Universal Sync folder marker.\n# Do not delete.\n\n")
+	buf.WriteString("# This directory is a UniversalSync folder marker.\n# Do not delete.\n\n")
 	fmt.Fprintf(&buf, "folderID: %s\n", f.ID)
 	fmt.Fprintf(&buf, "created: %s\n", time.Now().Format(time.RFC3339))
 	return buf.Bytes()

@@ -1,18 +1,18 @@
 [Unit]
-Description=Universal Sync Discovery Server
+Description=UniversalSync Discovery Server
 After=network.target
 Documentation=man:stdiscosrv(1)
 
 [Service]
-WorkingDirectory=/var/lib/universal sync-discosrv
-EnvironmentFile=/etc/default/universal sync-discosrv
+WorkingDirectory=/var/lib/universalsync-discosrv
+EnvironmentFile=/etc/default/universalsync-discosrv
 ExecStart=/usr/bin/stdiscosrv $DISCOSRV_OPTS
 
 # Hardening
-User=universal sync-discosrv
-Group=universal sync
+User=universalsync-discosrv
+Group=universalsync
 ProtectSystem=strict
-ReadWritePaths=/var/lib/universal sync-discosrv
+ReadWritePaths=/var/lib/universalsync-discosrv
 NoNewPrivileges=true
 PrivateTmp=true
 PrivateDevices=true
@@ -22,4 +22,4 @@ MemoryDenyWriteExecute=true
 
 [Install]
 WantedBy=multi-user.target
-Alias=universal sync-discosrv.service
+Alias=universalsync-discosrv.service

@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -6,7 +6,7 @@
 
 package protocol
 
-import "github.com/yashhasan570/UniversalSync/internal/gen/bep"
+import "github.com/syncthing/syncthing/internal/gen/bep"
 
 type Index struct {
 	Folder       string

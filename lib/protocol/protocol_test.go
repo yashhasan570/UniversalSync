@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -21,9 +21,9 @@ import (
 	lz4 "github.com/pierrec/lz4/v4"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/yashhasan570/UniversalSync/internal/gen/bep"
-	"github.com/yashhasan570/UniversalSync/lib/rand"
-	"github.com/yashhasan570/UniversalSync/lib/testutil"
+	"github.com/syncthing/syncthing/internal/gen/bep"
+	"github.com/syncthing/syncthing/lib/rand"
+	"github.com/syncthing/syncthing/lib/testutil"
 )
 
 var (
@@ -95,7 +95,7 @@ func TestClose(t *testing.T) {
 
 // TestCloseOnBlockingSend checks that the connection does not deadlock when
 // Close is called while the underlying connection is broken (send blocks).
-// https://github.com/yashhasan570/UniversalSync/pull/5442
+// https://github.com/syncthing/syncthing/pull/5442
 func TestCloseOnBlockingSend(t *testing.T) {
 	oldCloseTimeout := CloseTimeout
 	CloseTimeout = 100 * time.Millisecond
@@ -343,7 +343,7 @@ func TestLZ4Compression(t *testing.T) {
 func TestLZ4CompressionUpdate(t *testing.T) {
 	uncompressed := []byte("this is some arbitrary yet fairly compressible data")
 
-	// Compressed, as created by the LZ4 implementation in Universal Sync 1.18.6 and earlier.
+	// Compressed, as created by the LZ4 implementation in Syncthing 1.18.6 and earlier.
 	oldCompressed, _ := hex.DecodeString("00000033f0247468697320697320736f6d65206172626974726172792079657420666169726c7920636f6d707265737369626c652064617461")
 
 	// Verify that we can decompress
@@ -651,7 +651,7 @@ func TestRequestMaxSize(t *testing.T) {
 
 func TestRequestZeroSize(t *testing.T) {
 	// A zero-sized request should be accepted, since current versions of
-	// Universal Sync send these. See https://github.com/yashhasan570/UniversalSync/issues/10709.
+	// Syncthing send these. See https://github.com/syncthing/syncthing/issues/10709.
 	m := newTestModel()
 	rw := testutil.NewBlockingRW()
 	c := getRawConnection(NewConnection(c0ID, rw, &testutil.NoopRW{}, testutil.NoopCloser{}, m, new(mockedConnectionInfo), CompressionAlways, testKeyGen))

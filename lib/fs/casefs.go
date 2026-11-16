@@ -1,4 +1,4 @@
-// Copyright (C) 2020 The Universal Sync Authors.
+// Copyright (C) 2020 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -333,7 +333,7 @@ func (f *caseFilesystem) CreateSymlink(target, name string) error {
 }
 
 func (f *caseFilesystem) Walk(root string, walkFn WalkFunc) error {
-	// Walking the filesystem is likely (in Universal Sync's case certainly) done
+	// Walking the filesystem is likely (in UniversalSync's case certainly) done
 	// to pick up external changes, for which caching is undesirable.
 	f.dropCache()
 	if _, err := f.checkCase(root); err != nil {

@@ -1,4 +1,4 @@
-// Copyright (C) 2019 The Universal Sync Authors.
+// Copyright (C) 2019 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -80,7 +80,7 @@ func TestCrashReportFingerprint(t *testing.T) {
 			ldb:     true,
 		},
 		{
-			message: `panic: filling Blocks: read C:\Users\Serv-Resp-Tizayuca\AppData\Local\Universal Sync\index-v0.14.0.db\006561.ldb: Error de datos (comprobación de redundancia cíclica).`,
+			message: `panic: filling Blocks: read C:\Users\Serv-Resp-Tizayuca\AppData\Local\UniversalSync\index-v0.14.0.db\006561.ldb: Error de datos (comprobación de redundancia cíclica).`,
 			exp:     `panic: filling Blocks: read x: Error de datos (comprobación de redundancia cíclica).`,
 			ldb:     true,
 		},

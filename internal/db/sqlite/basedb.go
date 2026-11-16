@@ -1,4 +1,4 @@
-// Copyright (C) 2025 The Universal Sync Authors.
+// Copyright (C) 2025 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -28,8 +28,8 @@ import (
 
 const (
 	currentSchemaVersion = 6
-	applicationIDMain    = 0x53546d6e // "STmn", Universal Sync main database
-	applicationIDFolder  = 0x53546664 // "STfd", Universal Sync folder database
+	applicationIDMain    = 0x53546d6e // "STmn", UniversalSync main database
+	applicationIDFolder  = 0x53546664 // "STfd", UniversalSync folder database
 )
 
 //go:embed sql/**
@@ -85,7 +85,7 @@ func openBase(path string, maxOpenConns, maxIdleConns int, pragmas, schemaScript
 			"FlagLocalNeeded":        protocol.FlagLocalNeeded,
 			"FlagLocalRemoteInvalid": protocol.FlagLocalRemoteInvalid,
 			"LocalInvalidFlags":      protocol.LocalInvalidFlags,
-			"Universal SyncVersion":       build.LongVersion,
+			"UniversalSyncVersion":       build.LongVersion,
 		},
 	}
 
@@ -331,7 +331,7 @@ nextScript:
 type schemaVersion struct {
 	SchemaVersion    int
 	AppliedAt        int64
-	Universal SyncVersion string
+	UniversalSyncVersion string
 }
 
 func (s *schemaVersion) AppliedTime() time.Time {

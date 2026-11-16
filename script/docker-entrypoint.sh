@@ -7,12 +7,12 @@ set -eu
 if [ "$(id -u)" = '0' ]; then
   binary="$1"
   if [ -z "${PCAP:-}" ]; then
-    # If Universal Sync should have no extra capabilities, make sure to remove them
+    # If UniversalSync should have no extra capabilities, make sure to remove them
     # from the binary. This will fail with an error if there are no
     # capabilities to remove, hence the || true etc.
     setcap -r "$binary" 2>/dev/null || true
   else
-    # Set capabilities on the Universal Sync binary before launching it.
+    # Set capabilities on the UniversalSync binary before launching it.
     setcap "$PCAP" "$binary"
   fi
 

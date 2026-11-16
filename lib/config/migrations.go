@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -119,7 +119,7 @@ func migrateToConfigV51(cfg *Configuration) {
 }
 
 func migrateToConfigV50(cfg *Configuration) {
-	// v50 is Universal Sync 2.0
+	// v50 is UniversalSync 2.0
 }
 
 func migrateToConfigV37(cfg *Configuration) {

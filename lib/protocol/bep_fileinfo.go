@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -16,8 +16,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yashhasan570/UniversalSync/internal/gen/bep"
-	"github.com/yashhasan570/UniversalSync/lib/build"
+	"github.com/syncthing/syncthing/internal/gen/bep"
+	"github.com/syncthing/syncthing/lib/build"
 )
 
 type FlagLocal uint32

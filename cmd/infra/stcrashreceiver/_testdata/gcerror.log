@@ -1,6 +1,6 @@
-2026-05-21 10:03:01 INF universal sync v2.1.1-dev.9.gb3b7d228.dirty-morecrashrep "Hafnium Hornet" (go1.26.3 darwin-arm64) jb@jbo-m3wl72rv 2026-05-21 07:58:11 UTC [stnoupgrade] (log.pkg=main)
+2026-05-21 10:03:01 INF syncthing v2.1.1-dev.9.gb3b7d228.dirty-morecrashrep "Hafnium Hornet" (go1.26.3 darwin-arm64) jb@jbo-m3wl72rv 2026-05-21 07:58:11 UTC [stnoupgrade] (log.pkg=main)
 2026-05-21 10:03:01 INF No automatic upgrades; STNOUPGRADE environment variable defined (log.pkg=main)
-2026-05-21 10:03:01 INF Calculated our device ID (device=I6KAH76-66SLLLB-5PFXSOA-UFJCDZC-YAOMLEK-CP2GB32-BV5RQST-3PSROAU log.pkg=universal sync)
+2026-05-21 10:03:01 INF Calculated our device ID (device=I6KAH76-66SLLLB-5PFXSOA-UFJCDZC-YAOMLEK-CP2GB32-BV5RQST-3PSROAU log.pkg=syncthing)
 2026-05-21 10:03:01 INF Overall rate limit in use (send="is unlimited" recv="is unlimited" log.pkg=connections)
 2026-05-21 10:03:01 INF Using discovery mechanism (identity="IPv4 local broadcast discovery on port 21027" log.pkg=discover)
 2026-05-21 10:03:01 INF Using discovery mechanism (identity="IPv6 local multicast discovery on address [ff12::8384]:21027" log.pkg=discover)
@@ -10,11 +10,11 @@
 2026-05-21 10:03:01 INF GUI and API listening (address=127.0.0.1:8081 log.pkg=api)
 ...
 2026-05-21 10:03:01 INF Access the GUI via the following URL: http://127.0.0.1:8081/ (log.pkg=api)
-2026-05-21 10:03:01 INF Loaded configuration (name=s1 log.pkg=universal sync)
-2026-05-21 10:03:01 INF Loaded peer device configuration (device=MRIW7OK name=s2 address="[tcp://127.0.0.1:22002 quic://127.0.0.1:22002]" log.pkg=universal sync)
+2026-05-21 10:03:01 INF Loaded configuration (name=s1 log.pkg=syncthing)
+2026-05-21 10:03:01 INF Loaded peer device configuration (device=MRIW7OK name=s2 address="[tcp://127.0.0.1:22002 quic://127.0.0.1:22002]" log.pkg=syncthing)
 2026-05-21 10:03:01 INF Completed initial scan (folder.id=default folder.type=sendreceive log.pkg=model)
 0xee9de1fe260
-2026-05-21 10:03:02 INF Measured hashing performance (perf="2789.71 MB/s" log.pkg=universal sync)
+2026-05-21 10:03:02 INF Measured hashing performance (perf="2789.71 MB/s" log.pkg=syncthing)
 Panic at 2026-05-21T10:03:02+02:00
 runtime: marked free object in span 0x108b34d20, elemsize=8 freeindex=34 (bad use of unsafe.Pointer or having race conditions? try -d=checkptr or -race)
 0xee9de1fe000 alloc marked

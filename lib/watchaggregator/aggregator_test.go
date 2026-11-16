@@ -1,4 +1,4 @@
-// Copyright (C) 2016 The Universal Sync Authors.
+// Copyright (C) 2016 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -149,7 +149,7 @@ func TestAggregate(t *testing.T) {
 	compareBatchToExpectedDirect(t, getEventPaths(a.root, ".", a), []string{"."})
 }
 
-// TestInProgress checks that ignoring files currently edited by Universal Sync works
+// TestInProgress checks that ignoring files currently edited by UniversalSync works
 func TestInProgress(t *testing.T) {
 	evLogger := events.NewLogger()
 	ctx, cancel := context.WithCancel(context.Background())

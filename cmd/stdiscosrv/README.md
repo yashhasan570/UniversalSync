@@ -1,10 +1,10 @@
 stdiscosrv
 ==========
 
-This is the global discovery server for the `universal sync` project.
+This is the global discovery server for the `universalsync` project.
 
 Usage
 -----
 
-https://docs.universal sync.net/users/stdiscosrv.html
+https://docs.universalsync.net/users/stdiscosrv.html
 

@@ -1,4 +1,4 @@
-// Copyright (C) 2019 The Universal Sync Authors.
+// Copyright (C) 2019 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/yashhasan570/UniversalSync/lib/rand"
+	"github.com/syncthing/syncthing/lib/rand"
 )
 
 func TestGetBucketNumbers(t *testing.T) {

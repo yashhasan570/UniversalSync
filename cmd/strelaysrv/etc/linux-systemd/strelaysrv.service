@@ -1,18 +1,18 @@
 [Unit]
-Description=Universal Sync Relay Server
+Description=UniversalSync Relay Server
 After=network.target
 Documentation=man:strelaysrv(1)
 
 [Service]
-WorkingDirectory=/var/lib/universal sync-relaysrv
-EnvironmentFile=/etc/default/universal sync-relaysrv
+WorkingDirectory=/var/lib/universalsync-relaysrv
+EnvironmentFile=/etc/default/universalsync-relaysrv
 ExecStart=/usr/bin/strelaysrv -nat=${NAT} $RELAYSRV_OPTS
 
 # Hardening
-User=universal sync-relaysrv
-Group=universal sync
+User=universalsync-relaysrv
+Group=universalsync
 ProtectSystem=strict
-ReadWritePaths=/var/lib/universal sync-relaysrv
+ReadWritePaths=/var/lib/universalsync-relaysrv
 NoNewPrivileges=true
 PrivateTmp=true
 PrivateDevices=true
@@ -22,4 +22,4 @@ MemoryDenyWriteExecute=true
 
 [Install]
 WantedBy=multi-user.target
-Alias=universal sync-relaysrv.service
+Alias=universalsync-relaysrv.service

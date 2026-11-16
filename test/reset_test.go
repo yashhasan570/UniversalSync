@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -36,7 +36,7 @@ func TestReset(t *testing.T) {
 	size := createFiles(t)
 
 	p := startInstance(t, 1)
-	defer p.Stop() // Not checkedStop, because Universal Sync will exit on its own
+	defer p.Stop() // Not checkedStop, because UniversalSync will exit on its own
 
 	m, err := p.Model("default")
 	if err != nil {
@@ -76,15 +76,15 @@ func TestReset(t *testing.T) {
 		t.Fatalf("Failed to reset indexes (default): %v (%s)", err, bytes.TrimSpace(bs))
 	}
 
-	// ---- Universal Sync exits here ----
+	// ---- UniversalSync exits here ----
 	select {
 	case <-p.Stopped():
 	case <-time.After(20 * time.Second):
-		t.Fatal("timed out before Universal Sync stopped")
+		t.Fatal("timed out before UniversalSync stopped")
 	}
 
 	p = startInstance(t, 1)
-	defer p.Stop() // Not checkedStop, because Universal Sync will exit on its own
+	defer p.Stop() // Not checkedStop, because UniversalSync will exit on its own
 
 	m, err = p.Model("default")
 	if err != nil {
@@ -120,11 +120,11 @@ func TestReset(t *testing.T) {
 		t.Fatalf("Failed to reset indexes (all): %v (%s)", err, bytes.TrimSpace(bs))
 	}
 
-	// ---- Universal Sync exits here ----
+	// ---- UniversalSync exits here ----
 	select {
 	case <-p.Stopped():
 	case <-time.After(20 * time.Second):
-		t.Fatal("timed out before Universal Sync stopped")
+		t.Fatal("timed out before UniversalSync stopped")
 	}
 
 	p = startInstance(t, 1)

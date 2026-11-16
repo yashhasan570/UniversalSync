@@ -1,4 +1,4 @@
-// Copyright (C) 2015 The Universal Sync Authors.
+// Copyright (C) 2015 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yashhasan570/UniversalSync/internal/gen/bep"
+	"github.com/syncthing/syncthing/internal/gen/bep"
 )
 
 // The Vector type represents a version vector. The zero value is a usable

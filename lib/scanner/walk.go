@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -643,7 +643,7 @@ func (w *walker) applyNormalization(path, normPath string, info fs.FileInfo) (st
 		// In this case, a call to Rename won't do anything, so we have to rename via a temp file.
 
 		// We don't want to use the standard universalsync prefix here, as that will result in the file being ignored
-		// and eventually deleted by Universal Sync if the rename back fails.
+		// and eventually deleted by UniversalSync if the rename back fails.
 
 		tempPath := fs.TempNameWithPrefix(normPath, "")
 		if err = w.Filesystem.Rename(path, tempPath); err != nil {

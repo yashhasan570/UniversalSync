@@ -1,4 +1,4 @@
-// Copyright (C) 2019 The Universal Sync Authors.
+// Copyright (C) 2019 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -205,13 +205,13 @@ func defaultDataDir(userHome, configDir string) string {
 
 func windowsConfigDataDir() string {
 	if p := os.Getenv("LocalAppData"); p != "" {
-		return filepath.Join(p, "Universal Sync")
+		return filepath.Join(p, "UniversalSync")
 	}
-	return filepath.Join(os.Getenv("AppData"), "Universal Sync")
+	return filepath.Join(os.Getenv("AppData"), "UniversalSync")
 }
 
 func darwinConfigDataDir(userHome string) string {
-	return filepath.Join(userHome, "Library/Application Support/Universal Sync")
+	return filepath.Join(userHome, "Library/Application Support/UniversalSync")
 }
 
 func unixConfigDir(userHome, xdgConfigHome, xdgStateHome string, fileExists func(string) bool) string {

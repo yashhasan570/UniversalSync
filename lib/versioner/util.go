@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -194,7 +194,7 @@ func archiveFile(method fs.CopyRangeMethod, srcFs, dstFs fs.Filesystem, filePath
 
 // dupDirTree ensures folderPath exists in dstFs, copying permissions mostly
 // from srcFs. Permissions are altered to have the user read, write, and
-// execute bits set so that Universal Sync file operations are possible within
+// execute bits set so that UniversalSync file operations are possible within
 // the destination directory.
 //
 // We want to retain the source group and other bits so that we do not

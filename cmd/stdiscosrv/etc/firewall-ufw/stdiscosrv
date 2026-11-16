@@ -1,4 +1,4 @@
 [stdiscosrv]
-title=Universal Sync discovery server
-description=Lets universal sync clients discover each other
+title=Syncthing discovery server
+description=Lets syncthing clients discover each other
 ports=8443/tcp

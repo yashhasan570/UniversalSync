@@ -1,4 +1,4 @@
-// Copyright (C) 2018 The Universal Sync Authors.
+// Copyright (C) 2018 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -809,7 +809,7 @@ func (f *fakeFile) readShortAt(p []byte, offs int64) (int, error) {
 	// better performance for sequential reads, but worse for random reads
 	// as we often need to generate and throw away a lot of data at the
 	// start of the block to serve a given read. 128 KiB blocks fit
-	// reasonably well with the type of IO Universal Sync tends to do.
+	// reasonably well with the type of IO UniversalSync tends to do.
 
 	if f.entryType == fakeEntryTypeDir {
 		return 0, errors.New("is a directory")

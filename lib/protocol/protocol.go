@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -29,8 +29,8 @@ import (
 	lz4 "github.com/pierrec/lz4/v4"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/yashhasan570/UniversalSync/internal/gen/bep"
-	"github.com/yashhasan570/UniversalSync/internal/protoutil"
+	"github.com/syncthing/syncthing/internal/gen/bep"
+	"github.com/syncthing/syncthing/internal/protoutil"
 )
 
 const (
@@ -493,7 +493,7 @@ func (c *rawConnection) dispatcherLoop() (err error) {
 				return newProtocolError(fmt.Errorf("request size %d exceeds maximum allowed", msg.Size), msgContext)
 			}
 			if len(msg.Hash) == 0 {
-				// Universal Sync versions older than v1.28.1 omit the hash in
+				// Syncthing versions older than v1.28.1 omit the hash in
 				// encrypted requests from trusted devices (a rare config)
 				// and will run into this.
 				return newProtocolError(errors.New("request missing block hash"), msgContext)

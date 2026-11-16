@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -126,7 +126,7 @@ func TestSyncCluster(t *testing.T) {
 
 	// Start the syncers
 
-	log.Println("Starting Universal Sync...")
+	log.Println("Starting UniversalSync...")
 
 	p0 := startInstance(t, 1)
 	defer checkedStop(t, p0)
@@ -175,7 +175,7 @@ func TestSyncCluster(t *testing.T) {
 
 		// Sleep for a little over a second to ensure that this round of
 		// alterations ends up in a different second than the previous one,
-		// even if the sync was quick. This is to give Universal Sync a visible
+		// even if the sync was quick. This is to give UniversalSync a visible
 		// mtime change even on filesystem with whole second resolution.
 		time.Sleep(1100 * time.Millisecond)
 

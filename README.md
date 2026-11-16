@@ -1,21 +1,110 @@
-# Universal Sync
+[![UniversalSync][14]][15]
 
-A free, open, continuous file synchronization: keep your folders in sync across your own devices, peer to peer, with nothing in the cloud.
+---
 
-## Contact
+[![MPLv2 License](https://img.shields.io/badge/license-MPLv2-blue.svg?style=flat-square)](https://www.mozilla.org/MPL/2.0/)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/88/badge)](https://bestpractices.coreinfrastructure.org/projects/88)
+[![Go Report Card](https://goreportcard.com/badge/github.com/yashhasan570/UniversalSync)](https://goreportcard.com/report/github.com/yashhasan570/UniversalSync)
 
-Questions or feedback? Reach us on Telegram: [@johnconstantine570](https://t.me/johnconstantine570)
+## Goals
+
+UniversalSync is a **continuous file synchronization program**. It synchronizes
+files between two or more computers. We strive to fulfill the goals below.
+The goals are listed in order of importance, the most important ones first.
+This is the summary version of the goal list - for more
+commentary, see the full [Goals document][13].
+
+UniversalSync should be:
+
+1. **Safe From Data Loss**
+
+   Protecting the user's data is paramount. We take every reasonable
+   precaution to avoid corrupting the user's files.
+
+2. **Secure Against Attackers**
+
+   Again, protecting the user's data is paramount. Regardless of our other
+   goals, we must never allow the user's data to be susceptible to
+   eavesdropping or modification by unauthorized parties.
+
+3. **Easy to Use**
+
+   UniversalSync should be approachable, understandable, and inclusive.
+
+4. **Automatic**
+
+   User interaction should be required only when absolutely necessary.
+
+5. **Universally Available**
+
+   UniversalSync should run on every common computer. We are mindful that the
+   latest technology is not always available to every individual.
+
+6. **For Individuals**
+
+   UniversalSync is primarily about empowering the individual user with safe,
+   secure, and easy to use file synchronization.
+
+7. **Everything Else**
+
+   There are many things we care about that don't make it on to the list. It
+   is fine to optimize for these values, as long as they are not in conflict
+   with the stated goals above.
+
+## Getting Started
+
+Take a look at the [getting started guide][2].
+
+There are a few examples for keeping UniversalSync running in the background
+on your system in [the etc directory][3]. There are also several [GUI
+implementations][11] for Windows, Mac, and Linux.
+
+## Docker
+
+To run UniversalSync in Docker, see [the Docker README][16].
+
+## Getting in Touch
+
+The first and best point of contact is the [Forum][8].
+If you've found something that is clearly a
+bug, feel free to report it in the [GitHub issue tracker][10].
+
+If you believe that you’ve found a UniversalSync-related security vulnerability,
+please report it by emailing security@universalsync.net. Do not report it in the
+Forum or issue tracker.
 
 ## Building
 
-Requires Go (see `go.mod`):
+Building UniversalSync from source is easy. After extracting the source bundle from
+a release or checking out git, you just need to run `go run build.go` and the
+binaries are created in `./bin`. There's [a guide][5] with more details on the
+build process.
 
-```
-go run build.go
-```
+## Signed Releases
 
-The web GUI lives in the separate universal sync gui project and is fetched at build time.
+Release binaries are GPG signed with the key available from
+https://universalsync.net/security/. There is also a built-in automatic
+upgrade mechanism (disabled in some distribution channels) which uses a
+compiled in ECDSA signature. macOS and Windows binaries are also
+code-signed.
 
-## Sync
+## Documentation
 
-`.github/workflows/sync.yml` pulls upstream changes daily, re-applies the Universal Sync branding via `scripts/migrate.py`, and pushes.
+Please see the UniversalSync [documentation site][6] [[source]][17].
+
+All code is licensed under the [MPLv2 License][7].
+
+[1]: https://docs.universalsync.net/specs/bep-v1.html
+[2]: https://docs.universalsync.net/intro/getting-started.html
+[3]: https://github.com/yashhasan570/UniversalSync/blob/main/etc
+[5]: https://docs.universalsync.net/dev/building.html
+[6]: https://docs.universalsync.net/
+[7]: https://github.com/yashhasan570/UniversalSync/blob/main/LICENSE
+[8]: https://forum.universalsync.net/
+[10]: https://github.com/yashhasan570/UniversalSync/issues
+[11]: https://docs.universalsync.net/users/contrib.html#gui-wrappers
+[13]: https://github.com/yashhasan570/UniversalSync/blob/main/GOALS.md
+[14]: assets/logo-text-128.png
+[15]: https://universalsync.net/
+[16]: https://github.com/yashhasan570/UniversalSync/blob/main/README-Docker.md
+[17]: https://github.com/universalsync/docs

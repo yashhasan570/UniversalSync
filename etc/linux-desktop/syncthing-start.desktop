@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Start UniversalSync
+GenericName=File synchronization
+Comment=Starts the main universalsync process in the background.
+Exec=universalsync serve --no-browser --logfile=default
+Icon=universalsync
+Terminal=false
+Type=Application
+Keywords=synchronization;daemon;
+Categories=Network;FileTransfer;P2P

@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -77,7 +77,7 @@ func upgradeClientGet(url string) (*http.Response, context.CancelFunc, error) {
 
 	req.Header.Set("User-Agent", build.UserAgent())
 	if osVersion != "" {
-		req.Header.Set("Universal Sync-Os-Version", osVersion)
+		req.Header.Set("UniversalSync-Os-Version", osVersion)
 	}
 	resp, err := tlsutil.ShortLivedHTTPClient.Do(req)
 	if err != nil {

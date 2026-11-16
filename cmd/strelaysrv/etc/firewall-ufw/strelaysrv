@@ -1,9 +1,9 @@
 [strelaysrv]
-title=Universal Sync relay server
-description=Proxies traffic of universal sync client behind firewalls
+title=Syncthing relay server
+description=Proxies traffic of syncthing client behind firewalls
 ports=22067/tcp
 
 [strelaysrv-metrics]
-title=Universal Sync relay metrics
-description=Provides metrics about the universal sync relay server
+title=Syncthing relay metrics
+description=Provides metrics about the syncthing relay server
 ports=22070/tcp

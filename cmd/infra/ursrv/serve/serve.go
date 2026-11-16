@@ -1,4 +1,4 @@
-// Copyright (C) 2018 The Universal Sync Authors.
+// Copyright (C) 2018 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -74,8 +74,8 @@ var (
 		{regexp.MustCompile(`\svagrant@bullseye`), "F-Droid"},
 		{regexp.MustCompile(`\svagrant@bookworm`), "F-Droid"},
 
-		{regexp.MustCompile(`\sreproducible-build@Catfriend1-universalsync-android`), "Universal Sync-Fork Catfriend1 (3rd party)"},
-		{regexp.MustCompile(`\sreproducible-build@nel0x-universalsync-android-gplay`), "Universal Sync-Fork nel0x (3rd party)"},
+		{regexp.MustCompile(`\sreproducible-build@Catfriend1-universalsync-android`), "UniversalSync-Fork Catfriend1 (3rd party)"},
+		{regexp.MustCompile(`\sreproducible-build@nel0x-universalsync-android-gplay`), "UniversalSync-Fork nel0x (3rd party)"},
 
 		{regexp.MustCompile(`\sbuilduser@(archlinux|svetlemodry)`), "Arch (3rd party)"},
 		{regexp.MustCompile(`\suniversalsync@archlinux`), "Arch (3rd party)"},

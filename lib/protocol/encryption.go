@@ -1,4 +1,4 @@
-// Copyright (C) 2019 The Universal Sync Authors.
+// Copyright (C) 2019 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -24,8 +24,8 @@ import (
 	"golang.org/x/crypto/scrypt"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/yashhasan570/UniversalSync/internal/gen/bep"
-	"github.com/yashhasan570/UniversalSync/lib/rand"
+	"github.com/syncthing/syncthing/internal/gen/bep"
+	"github.com/syncthing/syncthing/lib/rand"
 )
 
 const (
@@ -35,7 +35,7 @@ const (
 	minPaddedSize         = 1024 // smallest block we'll allow
 	blockOverhead         = tagSize + nonceSize
 	maxPathComponent      = 200              // characters
-	encryptedDirExtension = ".universalsync-enc" // for top level dirs
+	encryptedDirExtension = ".syncthing-enc" // for top level dirs
 	miscreantAlgo         = "AES-SIV"
 	folderKeyCacheEntries = 1000
 	fileKeyCacheEntries   = 5000
@@ -536,7 +536,7 @@ func keysFromPasswords(keyGen *KeyGenerator, passwords map[string]string) map[st
 }
 
 func knownBytes(folderID string) []byte {
-	return []byte("universalsync" + folderID)
+	return []byte("syncthing" + folderID)
 }
 
 type KeyGenerator struct {
@@ -581,7 +581,7 @@ func (g *KeyGenerator) KeyFromPassword(folderID, password string) *[keySize]byte
 	return &key
 }
 
-var hkdfSalt = []byte("universalsync")
+var hkdfSalt = []byte("syncthing")
 
 type fileKeyCacheKey struct {
 	file string
@@ -610,7 +610,7 @@ func PasswordToken(keyGen *KeyGenerator, folderID, password string) []byte {
 }
 
 // slashify inserts slashes (and file extension) in the string to create an
-// appropriate tree. ABCDEFGH... => A.universalsync-enc/BC/DEFGH... We can use
+// appropriate tree. ABCDEFGH... => A.syncthing-enc/BC/DEFGH... We can use
 // forward slashes here because we're on the outside of native path formats,
 // the slash is the wire format.
 func slashify(s string) string {

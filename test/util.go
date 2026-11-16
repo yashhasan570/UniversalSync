@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -176,7 +176,7 @@ func alterFiles(dir string) error {
 		// Change capitalization
 		case r == 2 && comps > 3 && rand.Float64() < 0.2:
 			if build.IsDarwin || build.IsWindows {
-				// Universal Sync is currently broken for case-only renames on case-
+				// UniversalSync is currently broken for case-only renames on case-
 				// insensitive platforms.
 				// https://github.com/yashhasan570/UniversalSync/issues/1787
 				return nil

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!--
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 -->
-<html lang="en" ng-app="universalsync" ng-controller="Universal SyncController">
+<html lang="en" ng-app="universalsync" ng-controller="UniversalSyncController">
 <head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -15,7 +15,7 @@
   <link rel="shortcut icon" href="assets/img/favicon-default.png" ng-href="assets/img/favicon-{{universalsyncStatus()}}.png" type="image/x-icon"/>
   <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#0882c8"/>
 
-  <title ng-bind="thisDeviceName() + ' | Universal Sync'"></title>
+  <title ng-bind="thisDeviceName() + ' | UniversalSync'"></title>
   <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
   <link href="vendor/daterangepicker/daterangepicker.css" rel="stylesheet"/>
   <link href="assets/font/raleway.css" rel="stylesheet"/>
@@ -51,7 +51,7 @@
             </div>
             <div class="panel-body">
               <p>
-              The Universal Sync admin interface requires JavaScript. Please enable JavaScript in your web browser and try again.
+              The UniversalSync admin interface requires JavaScript. Please enable JavaScript in your web browser and try again.
               </p>
             </div>
           </div>
@@ -148,7 +148,7 @@
             </div>
             <div class="panel-body">
               <p>
-              <span translate>The Universal Sync admin interface is configured to allow remote access without a password.</span>
+              <span translate>The UniversalSync admin interface is configured to allow remote access without a password.</span>
               <b><span translate>This can easily give hackers access to read and change any files on your computer.</span></b>
               <span translate>Please set a GUI Authentication User and Password in the Settings dialog.</span>
               </p>
@@ -177,7 +177,7 @@
               </h3>
             </div>
             <div class="panel-body">
-              <p translate>The configuration has been saved but not activated. Universal Sync must restart to activate the new configuration.</p>
+              <p translate>The configuration has been saved but not activated. UniversalSync must restart to activate the new configuration.</p>
             </div>
             <div class="panel-footer">
               <button type="button" class="btn btn-sm btn-default pull-right" ng-click="restart()">
@@ -364,7 +364,7 @@
                 Incorrect user name or password.
               </p>
               <p ng-if="login.errors.failed" class="text-danger" translate>
-                Login failed, see Universal Sync logs for details.
+                Login failed, see UniversalSync logs for details.
               </p>
             </div>
             <div class="col-md-3 text-right">

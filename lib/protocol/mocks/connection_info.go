@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yashhasan570/UniversalSync/lib/protocol"
+	"github.com/syncthing/syncthing/lib/protocol"
 )
 
 type ConnectionInfo struct {

@@ -1,4 +1,4 @@
-// Copyright (C) 2014 The Universal Sync Authors.
+// Copyright (C) 2014 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -27,9 +27,9 @@ func main() {
 	log.SetOutput(os.Stdout)
 	log.SetFlags(0)
 
-	target := flag.String("target", "localhost:8384", "Target Universal Sync instance")
+	target := flag.String("target", "localhost:8384", "Target UniversalSync instance")
 	types := flag.String("types", "", "Filter for specific event types (comma-separated)")
-	apikey := flag.String("apikey", "", "Universal Sync API key")
+	apikey := flag.String("apikey", "", "UniversalSync API key")
 	flag.Parse()
 
 	if *apikey == "" {

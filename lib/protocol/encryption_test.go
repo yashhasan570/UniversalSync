@@ -1,4 +1,4 @@
-// Copyright (C) 2019 The Universal Sync Authors.
+// Copyright (C) 2019 The Syncthing Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -17,16 +17,16 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/yashhasan570/UniversalSync/internal/gen/bep"
-	"github.com/yashhasan570/UniversalSync/lib/build"
-	"github.com/yashhasan570/UniversalSync/lib/rand"
-	"github.com/yashhasan570/UniversalSync/lib/testutil"
+	"github.com/syncthing/syncthing/internal/gen/bep"
+	"github.com/syncthing/syncthing/lib/build"
+	"github.com/syncthing/syncthing/lib/rand"
+	"github.com/syncthing/syncthing/lib/testutil"
 )
 
 var (
 	testKeyGen = NewKeyGenerator()
 
-	// https://github.com/yashhasan570/UniversalSync/issues/8799
+	// https://github.com/syncthing/syncthing/issues/8799
 	cryptoIsBrokenUnderRaceDetector = (build.IsLinux || build.IsDarwin) && strings.HasPrefix(runtime.Version(), "go1.20")
 )
 
@@ -109,8 +109,8 @@ func TestKeyDerivation(t *testing.T) {
 func TestDecryptNameInvalid(t *testing.T) {
 	key := new([32]byte)
 	for _, c := range []string{
-		"T.universalsync-enc/OD",
-		"T.universalsync-enc/OD/",
+		"T.syncthing-enc/OD",
+		"T.syncthing-enc/OD/",
 		"T.wrong-extension/OD/PHVDD67S7FI2K5QQMPSOFSK",
 		"OD/PHVDD67S7FI2K5QQMPSOFSK",
 	} {

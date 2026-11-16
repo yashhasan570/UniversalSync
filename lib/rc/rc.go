@@ -1,10 +1,10 @@
-// Copyright (C) 2015 The Universal Sync Authors.
+// Copyright (C) 2015 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-// Package rc provides remote control of a Universal Sync process via the REST API.
+// Package rc provides remote control of a UniversalSync process via the REST API.
 package rc
 
 import (
@@ -54,7 +54,7 @@ type Process struct {
 	logfd *os.File
 }
 
-// NewProcess returns a new Process talking to Universal Sync at the specified address.
+// NewProcess returns a new Process talking to UniversalSync at the specified address.
 // Example: NewProcess("127.0.0.1:8082")
 func NewProcess(addr string) *Process {
 	p := &Process{
@@ -91,8 +91,8 @@ func (p *Process) LogTo(filename string) error {
 	return nil
 }
 
-// Start runs the specified Universal Sync binary with the given arguments.
-// Universal Sync should be configured to provide an API on the address given to
+// Start runs the specified UniversalSync binary with the given arguments.
+// UniversalSync should be configured to provide an API on the address given to
 // NewProcess. Event processing is started.
 func (p *Process) Start(bin string, args ...string) error {
 	cmd := exec.Command(bin, args...)
@@ -124,7 +124,7 @@ func (p *Process) wait() {
 	close(p.stopped)
 }
 
-// AwaitStartup waits for the Universal Sync process to start and perform initial
+// AwaitStartup waits for the UniversalSync process to start and perform initial
 // scans of all folders.
 func (p *Process) AwaitStartup() {
 	select {
@@ -133,7 +133,7 @@ func (p *Process) AwaitStartup() {
 	}
 }
 
-// Stop stops the running Universal Sync process. If the process was logging to a
+// Stop stops the running UniversalSync process. If the process was logging to a
 // local file (set by LogTo), the log file will be opened and checked for
 // panics and data races. The presence of either will be signalled in the form
 // of a returned error.
@@ -155,7 +155,7 @@ func (p *Process) Stop() (*os.ProcessState, error) {
 	return p.cmd.ProcessState, p.stopErr
 }
 
-// Stopped returns a channel that will be closed when Universal Sync has stopped.
+// Stopped returns a channel that will be closed when UniversalSync has stopped.
 func (p *Process) Stopped() chan struct{} {
 	return p.stopped
 }

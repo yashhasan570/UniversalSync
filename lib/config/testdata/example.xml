@@ -24,8 +24,8 @@
     </gui>
     <options>
         <listenAddress>0.0.0.0:22000</listenAddress>
-        <globalAnnounceServer>udp4://announce.universal sync.net:22026</globalAnnounceServer>
-        <globalAnnounceServer>udp6://announce-v6.universal sync.net:22026</globalAnnounceServer>
+        <globalAnnounceServer>udp4://:22026</globalAnnounceServer>
+        <globalAnnounceServer>udp6://announce-v6.universalsync.net:22026</globalAnnounceServer>
         <globalAnnounceEnabled>true</globalAnnounceEnabled>
         <localAnnounceEnabled>true</localAnnounceEnabled>
         <localAnnouncePort>21025</localAnnouncePort>

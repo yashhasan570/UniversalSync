@@ -1,4 +1,4 @@
-// Copyright (C) 2019 The Universal Sync Authors.
+// Copyright (C) 2019 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -128,7 +128,7 @@ func LongVersionFor(program string) string {
 }
 
 func UserAgent() string {
-	return fmt.Sprintf(`Universal Sync/%s (%s %s-%s)`, strings.TrimPrefix(Version, "v"), runtime.Version(), runtime.GOOS, runtime.GOARCH)
+	return fmt.Sprintf(`UniversalSync/%s (%s %s-%s)`, strings.TrimPrefix(Version, "v"), runtime.Version(), runtime.GOOS, runtime.GOARCH)
 }
 
 func TagsList() []string {

@@ -1,4 +1,4 @@
-// Copyright (C) 2015 The Universal Sync Authors.
+// Copyright (C) 2015 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -32,13 +32,13 @@ var (
 	emailRe           = regexp.MustCompile(`<([^\s]*)>`)
 	authorBotsRegexps = []string{
 		`\[bot\]`,
-		`Universal Sync.*Automation`,
+		`UniversalSync.*Automation`,
 	}
 )
 
 var authorBotsRe = regexp.MustCompile(strings.Join(authorBotsRegexps, "|"))
 
-const authorsHeader = `# This is the official list of Universal Sync authors for copyright purposes.
+const authorsHeader = `# This is the official list of UniversalSync authors for copyright purposes.
 #
 # THIS FILE IS MOSTLY AUTO GENERATED. IF YOU'VE MADE A COMMIT TO THE
 # REPOSITORY YOU WILL BE ADDED HERE AUTOMATICALLY WITHOUT THE NEED FOR

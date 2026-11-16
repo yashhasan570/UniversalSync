@@ -1,4 +1,4 @@
-// Copyright (C) 2019 The Universal Sync Authors.
+// Copyright (C) 2019 The UniversalSync Authors.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -132,7 +132,7 @@ func (p *githubReleases) servePing(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	w.Header().Set("Universal Sync-Num-Releases", strconv.Itoa(len(rels)))
+	w.Header().Set("UniversalSync-Num-Releases", strconv.Itoa(len(rels)))
 	w.WriteHeader(http.StatusOK)
 }
 
@@ -140,7 +140,7 @@ func (p *githubReleases) serveReleases(w http.ResponseWriter, req *http.Request)
 	rels := p.cache.Releases()
 
 	ua := req.Header.Get("User-Agent")
-	osv := req.Header.Get("Universal Sync-Os-Version")
+	osv := req.Header.Get("UniversalSync-Os-Version")
 	if ua != "" && osv != "" {
 		// We should determine the compatibility of the releases.
 		rels = filterForCompatibility(rels, ua, osv)
@@ -154,7 +154,7 @@ func (p *githubReleases) serveReleases(w http.ResponseWriter, req *http.Request)
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "GET")
 	w.Header().Set("Cache-Control", "public, max-age=900")
-	w.Header().Set("Vary", "User-Agent, Universal Sync-Os-Version")
+	w.Header().Set("Vary", "User-Agent, UniversalSync-Os-Version")
 	_ = json.NewEncoder(w).Encode(rels)
 
 	metricUpgradeChecks.Inc()
@@ -336,7 +336,7 @@ func fetchGithubReleases(ctx context.Context, url, assetURLTemplate string) ([]u
 
 	// Move the URL used for browser downloads to the URL field, and remove
 	// the browser URL field. This avoids going via the GitHub API for
-	// downloads, since Universal Sync uses the URL field.
+	// downloads, since UniversalSync uses the URL field.
 	for _, rel := range rels {
 		for j, asset := range rel.Assets {
 			if assetURLTemplate != "" {
