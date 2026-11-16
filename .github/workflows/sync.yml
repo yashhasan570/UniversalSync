@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Clone upstream
-        run: git clone --depth 1 https://github.com/universal sync/universal sync /tmp/upstream
+        run: git clone --depth 1 https://github.com/syncthing/syncthing /tmp/upstream
 
       - name: Sync rebranded source
         run: |
