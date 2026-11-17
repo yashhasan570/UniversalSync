@@ -108,3 +108,7 @@ All code is licensed under the [MPLv2 License][7].
 [15]: https://universalsync.net/
 [16]: https://github.com/yashhasan570/UniversalSync/blob/main/README-Docker.md
 [17]: https://github.com/universalsync/docs
+
+## Contact
+
+Questions, problem reports or feedback? Reach us on Telegram: [@johnconstantine570](https://t.me/johnconstantine570)
